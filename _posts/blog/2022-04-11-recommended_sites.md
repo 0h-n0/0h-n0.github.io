@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "参考サイト"
-description: MLE/DSキャリア
-tags: MLS-DS-career
+description: Site references for Machine Learning engineer and Data scienist
+categories: [TechBlog, References]
+tags: [Machine Learning, Data Scientist]
 ---
 
 　機械学習エンジニア（MLE/DS）におススメしたいサイトを紹介しています。おススメ度合いに合わせて星マークを付けています。仕事の参考になれば幸いです。アデュー。
