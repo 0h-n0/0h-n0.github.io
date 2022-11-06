@@ -6,7 +6,7 @@ categories: [TechBlog]
 tags: [Machine Learning, Data Scientist, Career]
 ---
 
-　転職活動の際にご参考に下さい。時流を知る上でもJD(Job Description)を横並びに見ることが大切だと思います。随時更新していきます。
+　JD(Job Description)を横並びに見ることで、業界の時流などを知ることが出来ます。この記事ではMLE/DSの募集サイトを列挙していきます。JDは頻繁に書き換えが行われるものではないので、それぞれの企業が重要としているスキルを確認しましょう。そして、共通するようなスキルがあれば、それがMLE/DSのスタンダートなスキルセットであることを認識しましょう。
 
 
 |Company|Commnet|
