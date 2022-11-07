@@ -2,7 +2,7 @@
 layout: post
 title: "参考サイト"
 description: Site references for Machine Learning engineer and Data scienist
-categories: [TechBlog, References]
+categories: [References]
 tags: [Machine Learning, Data Scientist]
 ---
 
