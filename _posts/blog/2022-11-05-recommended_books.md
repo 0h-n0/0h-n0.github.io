@@ -50,6 +50,7 @@ tags: [Machine Learning, Data Scientist]
 
 * ★★★★★: [良いコード/悪いコードで学ぶ設計入門 ―保守しやすい 成長し続けるコードの書き方](https://amzn.to/3DwmvoU)
   * 私がおすすめしなくてもエンジニアならば絶対に読む本。リーダブルコードを呼んだ人にこそおススメしたい。MLEやデータサイエンティストでもキャリアの幅を広げるために絶対読みたい本。
+  * [2022/11/22 Youtube live](https://www.youtube.com/watch?v=_qXG06v8HAI)
 * ★★★☆☆: [テスト駆動Python 第2版](https://amzn.to/3Wvebyx)
   * pythonテストライブラリのデファクトスタンダード。標準ライブラリのユニットテストでも十分なので会社によると思います。辞書的に使ってます。
 
