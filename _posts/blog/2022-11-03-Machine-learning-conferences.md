@@ -6,6 +6,9 @@ categories: [TechBlog]
 tags: [Machine Learning, Data Scientist, Conferences]
 ---
 
+　直近開催されるカンファレンス、セミナーや勉強会のリストを作成しています。上位に来るほど最新となっています。下記のリストは随時更新する予定です。
+
+
 |Date|Conference|Comment|
 |--:|--:|--:|
 |2023/05/25 ~ 2023/05/28|[PAKDD](https://pakdd2023.org/)|大阪開催です。|

@@ -6,7 +6,7 @@ categories: [References]
 tags: [Machine Learning, Data Scientist]
 ---
 
-　機械学習エンジニア（MLE/DS）におススメしたいサイトを紹介しています。おススメ度合いに合わせて星マークを付けています。仕事の参考になれば幸いです。アデュー。
+　機械学習エンジニア（MLE/DS）におススメしたいサイトを紹介しています。おススメ度合いに合わせて星マークを付けています。仕事の参考になれば幸いです。ブログなどの記事はTwitterやRSSフィードを利用して、最新情報をキャッチアップできるとよいです。
 
 # 機械学習
 
@@ -20,3 +20,14 @@ tags: [Machine Learning, Data Scientist]
 * ★★★☆☆: [Microsoft Recommenders](https://microsoft-recommenders.readthedocs.io/en/latest/index.html)
   * モデル数でRecBoleに劣るので私は使用したことがないです。けど、有名だと思います。速度比較なんかはやってみたいです。
   * [MIT License](https://github.com/microsoft/recommenders/blob/main/LICENSE)
+
+# BigTech
+
+* ★★★☆☆: [Customer-obsessed science](https://www.amazon.science/)
+* ★★★☆☆: [Microsoft Research](https://www.microsoft.com/en-us/research/)
+* ★★★☆☆: [Meta AI](https://ai.facebook.com/)
+* ★★★☆☆: [Google AI](https://ai.google/)
+* ★★★☆☆: [Machine Learning Research at Apple.](https://machinelearning.apple.com/)
+* ★★★☆☆: [DeepMind](https://www.deepmind.com/)
+* ★★★☆☆: [Nvidia Blog](https://blogs.nvidia.com/)
+* ★★★☆☆: [Baidu Research](http://research.baidu.com/Index)
