@@ -15,8 +15,8 @@ tags: [Machine Learning Engineer, Data Scientist, AWS, Cloud]
 |[登録しているAWSプロファイルリストの一覧](#登録しているawsプロファイルリストの一覧)|`aws configure list-profiles`|
 |[IAMユーザーやロール、それに紐づくクレデンシャルを知りたいとき](#iamユーザーやロールそれに紐づくクレデンシャルを知りたいとき)|`aws sts get-caller-identify`|
 |[IAMロールを作るとき](#iamロールを作るとき)|`aws iam create-role`|
-|[現在作成しているIAMロールの確認](#現在作成しているIAMロールの確認)|`aws iam list-roles`|
-|[IAMロールを削除する](#IAMロールを削除する)|`aws iam delete-role`|
+|[現在作成しているIAMロールの確認](#現在作成しているiamロールの確認)|`aws iam list-roles`|
+|[IAMロールを削除する](#iamロールを削除する)|`aws iam delete-role`|
 |[作成したポリシーファイルが間違っていないかの確認方法](#作成したポリシーファイルが間違っていないかの確認方法)|`aws accessanalyzer validate-policy`|
 
 
