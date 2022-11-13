@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "参考サイト"
+title: "DS/MLEのためのおススメサイト"
 description: Site references for Machine Learning engineer and Data scienist
 categories: [References]
 tags: [Machine Learning, Data Scientist]
