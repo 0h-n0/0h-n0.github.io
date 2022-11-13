@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "書籍『SolidityとEthereumによる実践スマートコントラクト開発 ―Truffle Suiteを用いた開発の基礎からデプロイまで』の環境設定補足"
+title: "第３章補足：書籍『SolidityとEthereumによる実践スマートコントラクト開発 ―Truffle Suiteを用いた開発の基礎からデプロイまで』"
 description: blockchain for machine learning engineers
 categories: [TechBlog]
 tags: [Blockchain, Solidity, Ethereum]
 ---
 
-オライリーの書籍『[SolidityとEthereumによる実践スマートコントラクト開発 ―Truffle Suiteを用いた開発の基礎からデプロイまで](https://amzn.to/3EkYG57)』を読みつつ、詰まったところや一部書き換えが必要なところをまとめました。この内容は本書の第三章の部分の補足となります。
+オライリーの書籍『[SolidityとEthereumによる実践スマートコントラクト開発 ―Truffle Suiteを用いた開発の基礎からデプロイまで](https://amzn.to/3EkYG57)』を読みつつ、詰まったところや一部書き換えが必要なところをまとめました。この内容は本書の第三章の部分の補足となります。最初はsolidityで概要を学びつつ、いずれはRustに移行したいです。Rustでの開発も盛んなようですし[^solidity-vs-rust]...。
 
 # 環境構築(for WLS, Linux(Ubuntu), mac)
-
+:house:
 --- 
 ## Parityのインストール(OpenEthereum)
 イーサリウムのクライアント環境であるParityをインストールします。Parityはrustで実装されており、他のクライアントと比べると高速らしいです。ただ、本に記載している通りにone-Linerでインストールしようとすると、Urlが死んでいるため地道にインストールしていきます。Openethererumはparityを引き継いだオープンソースとなります。parityのインストールとほぼ同四の手順でインストールできます。
@@ -152,7 +152,7 @@ v18.9.0
 * https://github.com/nvm-sh/nvm
 
 ---
-## Truffleのインストール
+## Truffle[^hardhat]のインストール
 
 ```shell
 $ npm install -g truffle
@@ -172,7 +172,20 @@ Solidity v0.5.16 (solc-js)
 Node v18.9.0
 Web3.js v1.7.4
 ```
+
+
 ---
 ## GanacheのGUIのインストール
 
-[ganache](https://trufflesuite.com/ganache/)にアクセスして各自のOSにあったバージョンをフルバージョンでインストールしてください。
+Ganacheはアプリケーションをすばやく試してみることが出来るローカルブロックチェーンです。[ganache](https://trufflesuite.com/ganache/)にアクセスして各自のOSにあったバージョンをフルバージョンでインストールしてください。
+
+```
+windowsで開発しているとき、wsl2上でtruffleを使っており、ganacheはwindowsでインスールした場合は追加で設定が必要となります。詳しい説明は、Qiitaにも上がっております[^ganache-setting-on-wsl2]。
+
+```
+{: .prompt-note }
+
+---
+[^hardhat]: [hardhat](https://hardhat.org/hardhat-runner/docs/other-guides/truffle-migration)の方がコンパイルが速いとかどうとか...。
+[^solidity-vs-rust]: [solidity-vs-rust](https://www.alchemy.com/overviews/solidity-vs-rust)
+[^ganache-setting-on-wsl2]: [Truffle and Ganache on wsl](https://qiita.com/daei/items/84c55dbe03ebb81da162)
