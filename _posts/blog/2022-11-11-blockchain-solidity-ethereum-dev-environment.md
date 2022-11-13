@@ -179,11 +179,9 @@ Web3.js v1.7.4
 
 Ganacheはアプリケーションをすばやく試してみることが出来るローカルブロックチェーンです。[ganache](https://trufflesuite.com/ganache/)にアクセスして各自のOSにあったバージョンをフルバージョンでインストールしてください。
 
-```
-windowsで開発しているとき、wsl2上でtruffleを使っており、ganacheはwindowsでインスールした場合は追加で設定が必要となります。詳しい説明は、Qiitaにも上がっております[^ganache-setting-on-wsl2]。
 
-```
-{: .prompt-note }
+> windowsで開発しているとき、wsl2上でtruffleを使っており、ganacheはwindowsでインスールした場合は追加で設定が必要となります。詳しい説明は、Qiitaにも上がっております[^ganache-setting-on-wsl2]。
+{: .prompt-info }
 
 ---
 [^hardhat]: [hardhat](https://hardhat.org/hardhat-runner/docs/other-guides/truffle-migration)の方がコンパイルが速いとかどうとか...。
