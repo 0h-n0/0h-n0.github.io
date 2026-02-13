@@ -1,16 +1,9 @@
 ---
 layout: post
-title: "NeurIPS 2024論文解説: HaloScope - 未ラベルLLM生成データを活用したハルシネーション検出"
-description: "ラベル付きデータ不要、自己教師あり学習によるハルシネーション検出フレームワーク。複数サンプリングと一貫性ベース検証で高精度を実現"
-categories: [blog, paper]
-tags: [llm, hallucination, self-supervised, neurips]
-date: 2026-02-14 12:00:00 +0900
-source_type: conference
-conference: NeurIPS 2024
-source_url: https://papers.nips.cc/paper_files/paper/2024/hash/ba92705991cfbbcedc26e27e833ebbae-Abstract-Conference.html
-zenn_article: 0a8f4d0e7c71bf
-zenn_url: https://zenn.dev/0h_n0/articles/0a8f4d0e7c71bf
-target_audience: "修士学生レベル"
+title: NeurIPS 2024論文解説: HaloScope - 未ラベルLLM生成データを活用したハルシネーション検出
+description: ラベル付きデータ不要、自己教師あり学習によるハルシネーション検出フレームワーク。複数サンプリングと一貫性ベース検証で高精度を実現
+categories: [TechBlog]
+tags: [LLM, Hallucination, NeurIPS]
 ---
 
 # NeurIPS 2024論文解説: HaloScope - 未ラベルLLM生成データを活用したハルシネーション検出
