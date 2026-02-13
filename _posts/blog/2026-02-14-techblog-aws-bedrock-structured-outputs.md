@@ -2,7 +2,7 @@
 layout: post
 title: "AWS ML Blog解説: Amazon Bedrockの構造化出力 - スキーマ準拠AI応答の実現"
 description: "Constrained Decodingによる確実なJSON Schema準拠、Pydanticモデル統合、本番環境での高信頼性構造化データ生成"
-categories: [blog, tech_blog]
+categories: [blog]
 tags: [aws, bedrock, structured-output, pydantic, json-schema]
 date: 2026-02-14 13:00:00 +0900
 source_type: tech_blog
