@@ -12,6 +12,7 @@ tags:
 toc: true
 toc_sticky: true
 math: true
+mermaid: true
 ---
 
 # AWS ML Blog解説: Amazon Bedrockの構造化出力 - スキーマ準拠AI応答の実現
@@ -111,14 +112,15 @@ result = json.loads(response["body"].read())
 
 ### Constrained Decodingの仕組み
 
-```
-[トークン生成]
-    ↓
-[スキーマ制約チェック]
-    ↓ (違反トークンはマスク)
-[確率分布の再正規化]
-    ↓
-[準拠トークンのみサンプリング]
+```mermaid
+graph TD
+    A[トークン生成] --> B[スキーマ制約チェック]
+    B --> C[確率分布の再正規化]
+    C --> D[準拠トークンのみサンプリング]
+
+    style B fill:#f9f,stroke:#333,stroke-width:2px
+    style C fill:#bbf,stroke:#333,stroke-width:2px
+    style D fill:#bfb,stroke:#333,stroke-width:2px
 ```
 
 **数式**:
@@ -131,13 +133,13 @@ P(t_i | \text{context}) & \text{if } t_i \in \mathcal{T}_{\text{valid}} \\
 $$
 
 $$
-\mathcal{T}_{\text{valid}} = \{ t : \text{partial\_json} + t \text{ is schema-compliant} \}
+\mathcal{T}_{\text{valid}} = \{ t : \text{partial-json} + t \text{ is schema-compliant} \}
 $$
 
 ここで、
 - $t_i$: 候補トークン
 - $\mathcal{T}_{\text{valid}}$: スキーマ準拠トークン集合
-- partial_json: これまでに生成されたJSON
+- $\text{partial-json}$: これまでに生成されたJSON
 
 ### Pydantic統合パターン
 
