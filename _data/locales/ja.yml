@@ -1,0 +1,72 @@
+# 日本語ロケールファイル
+
+# ----- Commons label -----
+
+layout:
+  post: 投稿
+  category: カテゴリ
+  tag: タグ
+
+# サイドバーのタブ
+tabs:
+  home: ホーム
+  categories: カテゴリ
+  tags: タグ
+  archives: アーカイブ
+  about: 概要
+
+# 検索バーと検索結果に表示されるテキスト
+search:
+  hint: 検索
+  cancel: キャンセル
+  no_results: 結果が見つかりませんでした
+
+# サイドバーパネル
+panel:
+  lastmod: 最近の更新
+  trending_tags: 人気のタグ
+  toc: 目次
+
+copyright:
+  # 投稿の下部に表示
+  license:
+    template: この投稿は :LICENSE_NAME でライセンスされています。
+    name: CC BY 4.0
+    link: https://creativecommons.org/licenses/by/4.0/
+
+  # フッターに表示
+  brief: 一部の権利を保有しています。
+  verbose: >-
+    特に明記されていない限り、このサイトのブログ投稿は
+    Creative Commons Attribution 4.0 International (CC BY 4.0) License でライセンスされています。
+
+meta: :PLATFORM と :THEME テーマで構築
+
+not_found:
+  statment: 申し訳ございません。URLが見つからないか、存在しないページを指しています。
+
+notification:
+  update_found: 新しいバージョンのコンテンツが利用可能です。
+  update: 更新
+
+# ----- 投稿関連ラベル -----
+
+post:
+  written_by: 投稿者
+  posted: 投稿日
+  updated: 更新日
+  words: 文字
+  pageview_measure: ビュー
+  read_time:
+    unit: 分
+    prompt: 読了時間
+  relate_posts: 関連記事
+  share: シェア
+  button:
+    next: 次へ
+    previous: 前へ
+    copy_code:
+      succeed: コピーしました！
+    share_link:
+      title: リンクをコピー
+      succeed: リンクをコピーしました！

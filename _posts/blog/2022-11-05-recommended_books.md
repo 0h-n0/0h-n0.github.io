@@ -1,14 +1,10 @@
 ---
-layout: single
+layout: post
 title: "参考図書まとめ"
-excerpt: Book references for Machine Learning engineer and Data scienist
-categories:
-  - References
-tags:
-  - Machine Learning
-  - Data Scientist
-toc: true
-toc_sticky: true
+description: Book references for Machine Learning engineer and Data scienist
+categories: [References]
+tags: [Machine Learning, Data Scientist]
+pin: False
 ---
 
 　機械学習エンジニア(MLE)とデータサイエンティスト(DS)向けの本を紹介。ちなみにAmazon評価信者！！！それぞれの本を恐れ多くも、MLEとDSにオススメ度を5段階評価を表しいます。書籍自体の良し悪しを評価しているのでは決してありません。

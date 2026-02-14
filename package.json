@@ -17,6 +17,7 @@
     "fixlint": "npx stylelint _sass/**/*.scss --fix"
   },
   "devDependencies": {
+    "@playwright/test": "^1.58.2",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-insert": "^0.5.0",

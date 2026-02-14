@@ -1,0 +1,62 @@
+{% comment %}
+  Get the last 5 posts sorted by date (newest first).
+{% endcomment %}
+
+{% assign MAX_SIZE = 5 %}
+
+{% comment %} site.posts はデフォルトで日付降順（新しい順）にソート済み {% endcomment %}
+{% assign update_list = site.posts | slice: 0, MAX_SIZE %}
+
+{% if update_list.size > 0 %}
+
+  <div id="access-lastmod" class="post">
+    <div class="panel-heading">{{- site.data.locales[site.lang].panel.lastmod -}}</div>
+    <ul class="post-content pl-0 pb-1 ml-1 mt-2">
+      {% for post in update_list %}
+        {% assign url = post.url | relative_url %}
+
+        {% comment %} 記事タイプに応じた絵文字を判定 {% endcomment %}
+        {% assign post_emoji = "✍️" %}
+        {% if post.categories contains "Paper" or post.categories contains "論文" or post.title contains "論文解説" %}
+          {% assign post_emoji = "📄" %}
+        {% elsif post.categories contains "TechBlog" or post.categories contains "技術" %}
+          {% assign post_emoji = "💻" %}
+        {% elsif post.categories contains "Tutorial" or post.categories contains "チュートリアル" %}
+          {% assign post_emoji = "🎓" %}
+        {% elsif post.categories contains "News" or post.categories contains "ニュース" %}
+          {% assign post_emoji = "📰" %}
+        {% endif %}
+
+      <li class="recent-post-item">
+        <a href="{{ url }}" class="post-link">
+          <span class="post-emoji">{{ post_emoji }}</span>
+          <span class="post-title-text">{{ post.title }}</span>
+        </a>
+
+        <div class="post-meta">
+          <div class="post-date">
+            {% include datetime.html date=post.date class="timeago" %}
+          </div>
+
+          {% if post.categories.size > 0 %}
+          <div class="post-category">
+            {% for category in post.categories limit:1 %}
+              <span class="category-badge">{{ category }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          {% if post.tags.size > 0 %}
+          <div class="post-tags">
+            {% for tag in post.tags limit:2 %}
+              <span class="tag-badge">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div> <!-- #access-lastmod -->
+
+{% endif %}
