@@ -97,19 +97,19 @@
       {% endif %}
 
       <div class="card related-post-card">
-        <a href="{{ post.url | relative_url }}">
-          <div class="card-body">
-            <div class="related-post-meta">
-              {% include datetime.html date=post.date class="small" %}
-              {% if post.categories.size > 0 %}
-              <div class="post-category">
-                {% for category in post.categories limit:1 %}
-                  <span class="category-badge">{{ category }}</span>
-                {% endfor %}
-              </div>
-              {% endif %}
+        <div class="card-body">
+          <div class="related-post-meta">
+            {% include datetime.html date=post.date class="small" %}
+            {% if post.categories.size > 0 %}
+            <div class="post-category">
+              {% for category in post.categories limit:1 %}
+                <a href="{{ site.baseurl }}/categories/{{ category | slugify | url_encode }}/" class="category-badge">{{ category }}</a>
+              {% endfor %}
             </div>
+            {% endif %}
+          </div>
 
+          <a href="{{ post.url | relative_url }}">
             <h3 class="pt-0 mt-1 mb-2" data-toc-skip>
               <span class="post-emoji">{{ related_emoji }}</span>
               {{ post.title }}
@@ -121,16 +121,16 @@
                 {{ content | markdownify | strip_html | truncate: 150 | escape }}
               </p>
             </div>
+          </a>
 
-            {% if post.tags.size > 0 %}
-            <div class="post-tags-inline">
-              {% for tag in post.tags limit:2 %}
-                <span class="tag-badge">{{ tag }}</span>
-              {% endfor %}
-            </div>
-            {% endif %}
+          {% if post.tags.size > 0 %}
+          <div class="post-tags-inline">
+            {% for tag in post.tags limit:2 %}
+              <a href="{{ site.baseurl }}/tags/{{ tag | slugify | url_encode }}/" class="tag-badge">{{ tag }}</a>
+            {% endfor %}
           </div>
-        </a>
+          {% endif %}
+        </div>
       </div>
     {% endfor %}
     </div> <!-- .card-deck -->
