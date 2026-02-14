@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "DS/MLEのためのおススメYoutube Channel"
 excerpt: Career for Machine Learning engineer and Data scienist
 categories:

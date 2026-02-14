@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "第３章補足：書籍『SolidityとEthereumによる実践スマートコントラクト開発 ―Truffle Suiteを用いた開発の基礎からデプロイまで』"
 excerpt: blockchain for machine learning engineers
 categories:

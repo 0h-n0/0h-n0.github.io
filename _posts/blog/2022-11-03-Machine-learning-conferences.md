@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "機械学習系学会"
 excerpt: Conferences for Machine Learning engineer and Data scienist
 categories:

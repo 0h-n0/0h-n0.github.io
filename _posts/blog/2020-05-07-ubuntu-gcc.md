@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Ubuntu20.04でgcc-9からgcc-8に変更する方法"
 excerpt: Ubuntu Settings
 categories:

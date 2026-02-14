@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "DS/MLEのためのおススメサイト"
 excerpt: Site references for Machine Learning engineer and Data scienist
 categories:

@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "2022年度11月現在：AI企業の募集要項とリンクまとめ"
 excerpt: Career for Machine Learning engineer and Data scienist
 categories:

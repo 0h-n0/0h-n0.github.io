@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Google Adsenseのads.txtをGithub pagesでホストされているjekyllのサイトへデプロイする方法"
 excerpt: how to deploy your ads.txt on your site
 categories:

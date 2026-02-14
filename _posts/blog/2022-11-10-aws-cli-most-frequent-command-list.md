@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "AWS CLIでよく使う基本的なコマンド(逆引き)"
 excerpt: AWS Command Line interface fundamental command list
 categories:

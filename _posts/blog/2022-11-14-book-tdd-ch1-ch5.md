@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "書籍『テスト駆動開発』を読みつつ、Pythonで書き直してみる。"
 excerpt: book Test Driven Development
 categories:
