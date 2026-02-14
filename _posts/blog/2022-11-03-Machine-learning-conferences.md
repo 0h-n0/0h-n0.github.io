@@ -1,9 +1,15 @@
 ---
-layout: post
+layout: single
 title: "機械学習系学会"
-description: Conferences for Machine Learning engineer and Data scienist
-categories: [TechBlog]
-tags: [Machine Learning, Data Scientist, Conferences]
+excerpt: Conferences for Machine Learning engineer and Data scienist
+categories:
+  - TechBlog
+tags:
+  - Machine Learning
+  - Data Scientist
+  - Conferences
+toc: true
+toc_sticky: true
 ---
 
 　直近開催されるカンファレンス、セミナーや勉強会のリストを作成しています。上位に来るほど最新となっています。下記のリストは随時更新する予定です。

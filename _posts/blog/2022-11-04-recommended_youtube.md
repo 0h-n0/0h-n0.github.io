@@ -1,9 +1,15 @@
 ---
-layout: post
+layout: single
 title: "DS/MLEのためのおススメYoutube Channel"
-description: Career for Machine Learning engineer and Data scienist
-categories: [TechBlog]
-tags: [Machine Learning, Data Scientist, Career]
+excerpt: Career for Machine Learning engineer and Data scienist
+categories:
+  - TechBlog
+tags:
+  - Machine Learning
+  - Data Scientist
+  - Career
+toc: true
+toc_sticky: true
 ---
 
 　お世話になっております。おばんどす。現在、youtubeの教育コンテンツの成長がすさまじく、機械学習全般のコンテンツも豊富にあります。ここでは、私が登録している機械学習系のYoutube channelを紹介していきます。<font color="Lavender">非常にボリューミーなので、すべてを確認するというスタンスではなく、興味がある動画をピックアップして、さらっと確認した方が良いです。(1.5倍速推奨)</font>[別の記事]({% post_url 2022-11-04-recommended_sites %})で、おすすめサイトをまとめているので、そちらもご参考にしてください。

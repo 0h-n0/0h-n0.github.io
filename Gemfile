@@ -2,9 +2,10 @@
 
 source "https://rubygems.org"
 
+# Minimal Mistakes Theme
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll-include-cache", group: :jekyll_plugins
 gem "jemoji"
-
-gemspec
 
 group :test do
   gem "html-proofer", "~> 3.18"

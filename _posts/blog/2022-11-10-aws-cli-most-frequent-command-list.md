@@ -1,9 +1,16 @@
 ---
-layout: post
+layout: single
 title: "AWS CLIでよく使う基本的なコマンド(逆引き)"
-description: AWS Command Line interface fundamental command list
-categories: [TechBlog]
-tags: [Machine Learning Engineer, Data Scientist, AWS, Cloud]
+excerpt: AWS Command Line interface fundamental command list
+categories:
+  - TechBlog
+tags:
+  - Machine Learning Engineer
+  - Data Scientist
+  - AWS
+  - Cloud
+toc: true
+toc_sticky: true
 ---
 
  AWS CLIでよく使うコマンドなどを逆引きでまとめました。この記事は随時更新予定です。

@@ -1,10 +1,14 @@
 ---
-layout: post
+layout: single
 title: "Google Adsenseのads.txtをGithub pagesでホストされているjekyllのサイトへデプロイする方法"
-description: how to deploy your ads.txt on your site
-categories: [TechBlog]
-tags: [Jekyll, Google AdSense]
-mermaid: true
+excerpt: how to deploy your ads.txt on your site
+categories:
+  - TechBlog
+tags:
+  - Jekyll
+  - Google AdSense
+toc: true
+toc_sticky: true
 ---
 
 
