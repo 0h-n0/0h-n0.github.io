@@ -142,6 +142,9 @@ exclude:
   - gulpfile.js
   - node_modules
   - package*.json
+  - vendor
+  - Gemfile
+  - Gemfile.lock
 
 jekyll-archives:
   enabled: [categories, tags]
