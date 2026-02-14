@@ -4,6 +4,8 @@ title: "NeurIPS 2024論文解説: HaloScope - 未ラベルLLM生成データを�
 description: "ラベル付きデータ不要、自己教師あり学習によるハルシネーション検出フレームワーク。複数サンプリングと一貫性ベース検証で高精度を実現"
 categories: [TechBlog]
 tags: [LLM, Hallucination, NeurIPS]
+math: true
+mermaid: true
 ---
 
 # NeurIPS 2024論文解説: HaloScope - 未ラベルLLM生成データを活用したハルシネーション検出

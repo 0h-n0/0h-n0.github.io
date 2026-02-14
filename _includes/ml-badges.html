@@ -1,0 +1,42 @@
+<!-- ML論文用バッジセット -->
+<!--
+使用方法:
+{% include ml-badges.html
+   arxiv="2106.09685"
+   github="microsoft/LoRA"
+   colab="https://colab.research.google.com/..."
+   hf_space="https://huggingface.co/spaces/..."
+%}
+-->
+
+<div class="ml-badges" style="margin: 1rem 0;">
+  {% if include.arxiv %}
+  <a href="https://arxiv.org/abs/{{ include.arxiv }}" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/arXiv-{{ include.arxiv }}-b31b1b.svg" alt="arXiv">
+  </a>
+  {% endif %}
+
+  {% if include.github %}
+  <a href="https://github.com/{{ include.github }}" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/GitHub-{{ include.github | replace: '/', '%2F' }}-blue.svg" alt="GitHub">
+  </a>
+  {% endif %}
+
+  {% if include.colab %}
+  <a href="{{ include.colab }}" target="_blank" rel="noopener noreferrer">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+  </a>
+  {% endif %}
+
+  {% if include.hf_space %}
+  <a href="{{ include.hf_space }}" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Space-blue" alt="HF Space">
+  </a>
+  {% endif %}
+
+  {% if include.paperswithcode %}
+  <a href="https://paperswithcode.com/paper/{{ include.paperswithcode }}" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Papers%20with%20Code-{{ include.paperswithcode }}-21CBCE.svg" alt="Papers with Code">
+  </a>
+  {% endif %}
+</div>

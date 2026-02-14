@@ -4,6 +4,8 @@ title: "Ubuntu20.04でgcc-9からgcc-8に変更する方法"
 description: Ubuntu Settings
 categories: [TechBlog]
 tags: [Ubuntu, gcc]
+math: true
+mermaid: true
 ---
 
 ubuntuを20.04にアップデートするとデフォルトのGCCがバージョン9系になっています。そのため、cudaが使えず、GPU系のプログラムをコンパイルすることができません。このポストではgcc-9.3からgccをダウングレードする方法を紹介します。

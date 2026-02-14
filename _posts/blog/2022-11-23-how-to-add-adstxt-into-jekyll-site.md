@@ -5,6 +5,7 @@ description: how to deploy your ads.txt on your site
 categories: [TechBlog]
 tags: [Jekyll, Google AdSense]
 mermaid: true
+math: true
 ---
 
 

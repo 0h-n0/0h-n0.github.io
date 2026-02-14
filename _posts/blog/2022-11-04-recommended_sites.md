@@ -4,6 +4,8 @@ title: "DS/MLEのためのおススメサイト"
 description: Site references for Machine Learning engineer and Data scienist
 categories: [References]
 tags: [Machine Learning, Data Scientist]
+math: true
+mermaid: true
 ---
 
 　機械学習エンジニア（MLE/DS）におススメしたいサイトを紹介しています。おススメ度合いに合わせて星マークを付けています。仕事の参考になれば幸いです。ブログなどの記事はTwitterやRSSフィードを利用して、最新情報をキャッチアップできるとよいです。

@@ -124,6 +124,7 @@ paginate: 10
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
+  math_engine: mathjax  # 数式レンダリング（ML論文用）
   syntax_highlighter: rouge
   syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
     css_class: highlight

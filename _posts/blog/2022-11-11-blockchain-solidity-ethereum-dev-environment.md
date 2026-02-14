@@ -4,6 +4,8 @@ title: "第３章補足：書籍『SolidityとEthereumによる実践スマー�
 description: blockchain for machine learning engineers
 categories: [TechBlog]
 tags: [Blockchain, Solidity, Ethereum]
+math: true
+mermaid: true
 ---
 
 オライリーの書籍『[SolidityとEthereumによる実践スマートコントラクト開発 ―Truffle Suiteを用いた開発の基礎からデプロイまで](https://amzn.to/3EkYG57)』を読みつつ、詰まったところや一部書き換えが必要なところをまとめました。この内容は本書の第三章の部分の補足となります。最初はsolidityで概要を学びつつ、いずれはRustに移行したいです。Rustでの開発も盛んなようですし[^solidity-vs-rust]...。

@@ -1,0 +1,38 @@
+<!-- Plotly.js インタラクティブグラフサポート -->
+<!--
+使用方法:
+
+1. Python側でグラフを生成:
+   import plotly.graph_objects as go
+   fig = go.Figure(data=go.Scatter(x=[1,2,3], y=[4,5,6]))
+   fig.write_html("assets/graphs/my_graph.html")
+
+2. 記事側で埋め込み:
+   {% include plotly.html graph_id="loss-curve" graph_file="assets/graphs/training_loss.html" %}
+-->
+
+<!-- Plotly.js CDN読み込み（ページに一度だけ読み込む） -->
+{% unless page.plotly_loaded %}
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+{% assign plotly_loaded = true %}
+{% endunless %}
+
+<!-- グラフコンテナ -->
+{% if include.graph_file %}
+<div id="{{ include.graph_id }}" class="plotly-graph" style="margin: 2rem 0;">
+  <!-- グラフHTMLファイルをインクルード -->
+  <iframe
+    src="{{ site.baseurl }}/{{ include.graph_file }}"
+    width="100%"
+    height="600px"
+    frameborder="0"
+    style="border: 1px solid #e0e0e0; border-radius: 8px;"
+  ></iframe>
+</div>
+{% endif %}
+
+{% if include.caption %}
+<p class="graph-caption" style="text-align: center; font-style: italic; color: #666; margin-top: -1rem;">
+  {{ include.caption }}
+</p>
+{% endif %}
