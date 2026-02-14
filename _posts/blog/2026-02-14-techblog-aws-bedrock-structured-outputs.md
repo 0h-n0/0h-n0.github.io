@@ -11,6 +11,7 @@ tags:
   - Pydantic
 toc: true
 toc_sticky: true
+math: true
 ---
 
 # AWS ML Blog解説: Amazon Bedrockの構造化出力 - スキーマ準拠AI応答の実現
