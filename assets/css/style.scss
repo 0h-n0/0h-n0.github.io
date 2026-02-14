@@ -561,3 +561,34 @@ h1[data-toc-skip] {
     }
   }
 }
+
+/* ========================================
+   シンタックスハイライト修正
+   ======================================== */
+
+/* ライトモード: 欠けている色定義を追加 */
+.highlight .n {
+  color: #333333 !important; /* Name (変数名、関数呼び出しなど) */
+}
+
+.highlight code {
+  color: #2f2f2f !important; /* コード全体のデフォルト色 */
+  background-color: transparent !important;
+}
+
+/* ダークモード */
+[data-mode="dark"] {
+  .highlight .n {
+    color: #e6e6e6 !important; /* Name (変数名、関数呼び出しなど) */
+  }
+
+  .highlight code {
+    color: #e6e6e6 !important; /* コード全体のデフォルト色 */
+    background-color: transparent !important;
+  }
+
+  /* その他の要素も調整 */
+  .highlight .nn {
+    color: #aaa !important; /* Name.Namespace */
+  }
+}
