@@ -3,8 +3,11 @@ layout: page
 # The Home page layout
 ---
 
-{% assign pinned = site.posts | where: "pin", "true" %}
-{% assign default = site.posts | where_exp: "item", "item.pin != true and item.hidden != true" %}
+{% comment %} 日付が新しい順にソート（site.postsはデフォルトで日付降順） {% endcomment %}
+{% assign all_posts = site.posts %}
+
+{% assign pinned = all_posts | where: "pin", "true" %}
+{% assign default = all_posts | where_exp: "item", "item.pin != true and item.hidden != true" %}
 
 {% assign posts = "" | split: "" %}
 
@@ -42,48 +45,75 @@ layout: page
 
 {% for post in posts %}
 
-  <div class="post-preview">
-    <h1>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </h1>
+  {% comment %} 記事タイプに応じた絵文字を判定 {% endcomment %}
+  {% assign post_emoji = "✍️" %}
+  {% if post.categories contains "Paper" or post.categories contains "論文" or post.title contains "論文解説" %}
+    {% assign post_emoji = "📄" %}
+  {% elsif post.categories contains "TechBlog" or post.categories contains "技術" %}
+    {% assign post_emoji = "💻" %}
+  {% elsif post.categories contains "Tutorial" or post.categories contains "チュートリアル" %}
+    {% assign post_emoji = "🎓" %}
+  {% elsif post.categories contains "News" or post.categories contains "ニュース" %}
+    {% assign post_emoji = "📰" %}
+  {% endif %}
 
-    <div class="post-content">
+  <article class="post-preview card-style">
+
+    {% if post.pin %}
+    <div class="pin-indicator">
+      <i class="fas fa-thumbtack"></i>
+      <span>{{ site.data.locales[site.lang].post.pin_prompt }}</span>
+    </div>
+    {% endif %}
+
+    <div class="post-header">
+      <h1 class="post-title">
+        <span class="post-emoji">{{ post_emoji }}</span>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h1>
+    </div>
+
+    <div class="post-excerpt">
       <p>
         {% include no-linenos.html content=post.content %}
         {{ content | markdownify | strip_html | truncate: 200 | escape }}
       </p>
     </div>
 
-    <div class="post-meta text-muted d-flex">
-      <div class="mr-auto">
+    <div class="post-meta-info">
 
+      <div class="meta-primary">
         <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        {% include datetime.html date=post.date %}
+        <span class="meta-date">
+          <i class="far fa-calendar fa-fw"></i>
+          {% include datetime.html date=post.date class="timeago" %}
+        </span>
 
         <!-- categories -->
         {% if post.categories.size > 0 %}
-          <i class="far fa-folder-open fa-fw"></i>
-          <span>
-          {% for category in post.categories %}
-            {{ category }}
-            {%- unless forloop.last -%},{%- endunless -%}
+        <span class="meta-categories">
+          {% for category in post.categories limit:2 %}
+            <span class="category-badge">{{ category }}</span>
           {% endfor %}
-          </span>
+        </span>
         {% endif %}
-
       </div>
 
-      {% if post.pin %}
-      <div class="pin">
-        <i class="fas fa-thumbtack fa-fw"></i>
-        <span>{{ site.data.locales[site.lang].post.pin_prompt }}</span>
+      <!-- tags -->
+      {% if post.tags.size > 0 %}
+      <div class="meta-tags">
+        {% for tag in post.tags limit:3 %}
+          <span class="tag-badge">{{ tag }}</span>
+        {% endfor %}
+        {% if post.tags.size > 3 %}
+          <span class="tag-more">+{{ post.tags.size | minus: 3 }}</span>
+        {% endif %}
       </div>
       {% endif %}
 
-    </div> <!-- .post-meta -->
+    </div> <!-- .post-meta-info -->
 
-  </div> <!-- .post-review -->
+  </article> <!-- .post-preview -->
 
 {% endfor %}
 

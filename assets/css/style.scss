@@ -10,20 +10,554 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 @import "{{ site.theme }}";
 
 /* append your custom style below */
-$font-family: serif;
-//$font-family: "Noto Sans Japanese","メイリオ", sans-serif;
 
+/* Google Fonts: Noto Sans JP (読みやすいゴシック体) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+$font-family-base: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
 
 body {
-    font-family: $font-family;
+    font-family: $font-family-base;
 }
 
 p {
-  font-family: serif;
+  font-family: $font-family-base;
 }
 
-/* h1見出しのフォント指定 */
-h1 {
-  font-family: sans-serif;
+/* 見出しのフォント */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-base;
+  font-weight: 700;
 }
-  
+
+/* ========================================
+   サイドバー記事リスト - モダンカードデザイン
+   ======================================== */
+
+#panel-wrapper #access-lastmod.post ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* 記事アイテム - カードスタイル */
+#panel-wrapper #access-lastmod.post ul li.recent-post-item {
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.4 !important;
+  white-space: normal !important;
+  display: block !important;
+  list-style: none !important;
+
+  /* カードデザイン */
+  background: var(--card-bg, rgba(128, 128, 128, 0.05));
+  border-radius: 8px;
+  padding: 0.9rem;
+  border: 1px solid var(--card-border, rgba(128, 128, 128, 0.15));
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* ホバーエフェクト */
+#access-lastmod li.recent-post-item:hover {
+  background: var(--card-hover-bg, rgba(128, 128, 128, 0.08));
+  border-color: var(--link-color, #4a90e2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* タイトルリンク */
+#access-lastmod li.recent-post-item a.post-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#access-lastmod li.recent-post-item a.post-link:hover {
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+
+/* 絵文字アイコン */
+#access-lastmod .post-emoji {
+  font-size: 1.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* タイトルテキスト */
+#access-lastmod .post-title-text {
+  flex: 1;
+  word-break: break-word;
+  font-size: 0.9rem;
+}
+
+/* メタ情報エリア */
+#access-lastmod .post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--text-muted-color);
+  margin-top: 0.5rem;
+}
+
+/* 日付 */
+#access-lastmod .post-date {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-muted-color);
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+#access-lastmod .post-date::before {
+  content: "📅";
+  margin-right: 0.25rem;
+  font-size: 0.85rem;
+}
+
+/* カテゴリバッジ */
+#access-lastmod .post-category {
+  display: inline-flex;
+}
+
+#access-lastmod .category-badge {
+  display: inline-block;
+  background: var(--tag-bg, rgba(74, 144, 226, 0.1));
+  color: var(--tag-color, #4a90e2);
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  border: 1px solid var(--tag-border, rgba(74, 144, 226, 0.2));
+}
+
+/* タグバッジ */
+#access-lastmod .post-tags {
+  display: inline-flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+#access-lastmod .tag-badge {
+  display: inline-block;
+  background: var(--tag-secondary-bg, rgba(128, 128, 128, 0.1));
+  color: var(--tag-secondary-color, #666);
+  padding: 0.1rem 0.4rem;
+  border-radius: 10px;
+  font-size: 0.65rem;
+  font-weight: 400;
+  border: 1px solid var(--tag-secondary-border, rgba(128, 128, 128, 0.2));
+}
+
+/* ダークモード対応 */
+[data-mode="dark"] #access-lastmod li.recent-post-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-mode="dark"] #access-lastmod li.recent-post-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--link-color);
+}
+
+[data-mode="dark"] #access-lastmod .category-badge {
+  background: rgba(74, 144, 226, 0.15);
+  color: #6db3f2;
+  border-color: rgba(74, 144, 226, 0.3);
+}
+
+[data-mode="dark"] #access-lastmod .tag-badge {
+  background: rgba(255, 255, 255, 0.08);
+  color: #aaa;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+
+/* ========================================
+   ホームページ記事リスト - モダンカードデザイン
+   ======================================== */
+
+#post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 記事カード */
+.post-preview.card-style {
+  background: var(--card-bg, rgba(128, 128, 128, 0.03));
+  border: 1px solid var(--card-border, rgba(128, 128, 128, 0.12));
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.post-preview.card-style:hover {
+  background: var(--card-hover-bg, rgba(128, 128, 128, 0.05));
+  border-color: var(--link-color, #4a90e2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+/* ピン留めインジケーター */
+.post-preview .pin-indicator {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: var(--pin-bg, rgba(255, 193, 7, 0.15));
+  color: var(--pin-color, #f57c00);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid var(--pin-border, rgba(255, 193, 7, 0.3));
+}
+
+.post-preview .pin-indicator i {
+  font-size: 0.8rem;
+}
+
+/* タイトルセクション */
+.post-preview .post-header {
+  margin-bottom: 1rem;
+}
+
+.post-preview h1.post-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.post-preview .post-emoji {
+  font-size: 1.8rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.post-preview h1.post-title a {
+  color: var(--heading-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  flex: 1;
+}
+
+.post-preview h1.post-title a:hover {
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+
+/* 抜粋 */
+.post-preview .post-excerpt {
+  margin-bottom: 1rem;
+}
+
+.post-preview .post-excerpt p {
+  color: var(--text-color);
+  line-height: 1.7;
+  margin: 0;
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+/* メタ情報エリア */
+.post-preview .post-meta-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color, rgba(128, 128, 128, 0.1));
+}
+
+.post-preview .meta-primary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--text-muted-color);
+}
+
+.post-preview .meta-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.post-preview .meta-date i {
+  opacity: 0.7;
+}
+
+/* カテゴリバッジ */
+.post-preview .meta-categories {
+  display: inline-flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.post-preview .category-badge {
+  display: inline-block;
+  background: var(--category-bg, rgba(74, 144, 226, 0.12));
+  color: var(--category-color, #4a90e2);
+  padding: 0.25rem 0.7rem;
+  border-radius: 14px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid var(--category-border, rgba(74, 144, 226, 0.25));
+  transition: all 0.2s ease;
+}
+
+.post-preview .category-badge:hover {
+  background: var(--category-hover-bg, rgba(74, 144, 226, 0.2));
+  transform: translateY(-1px);
+}
+
+/* タグバッジ */
+.post-preview .meta-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.post-preview .tag-badge {
+  display: inline-block;
+  background: var(--tag-bg-home, rgba(128, 128, 128, 0.08));
+  color: var(--tag-color-home, #666);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 400;
+  border: 1px solid var(--tag-border-home, rgba(128, 128, 128, 0.15));
+  transition: all 0.2s ease;
+}
+
+.post-preview .tag-badge:hover {
+  background: var(--tag-hover-bg, rgba(128, 128, 128, 0.15));
+  transform: translateY(-1px);
+}
+
+.post-preview .tag-more {
+  display: inline-block;
+  color: var(--text-muted-color);
+  font-size: 0.7rem;
+  padding: 0.2rem 0.4rem;
+  opacity: 0.7;
+}
+
+/* ダークモード対応 */
+[data-mode="dark"] .post-preview.card-style {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-mode="dark"] .post-preview.card-style:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--link-color);
+}
+
+[data-mode="dark"] .post-preview .pin-indicator {
+  background: rgba(255, 193, 7, 0.1);
+  border-color: rgba(255, 193, 7, 0.2);
+}
+
+[data-mode="dark"] .post-preview .category-badge {
+  background: rgba(74, 144, 226, 0.15);
+  color: #6db3f2;
+  border-color: rgba(74, 144, 226, 0.3);
+}
+
+[data-mode="dark"] .post-preview .tag-badge {
+  background: rgba(255, 255, 255, 0.06);
+  color: #aaa;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-mode="dark"] .post-preview .post-meta-info {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 768px) {
+  .post-preview.card-style {
+    padding: 1.2rem;
+  }
+
+  .post-preview h1.post-title {
+    font-size: 1.3rem;
+  }
+
+  .post-preview .post-emoji {
+    font-size: 1.5rem;
+  }
+}
+
+/* ============================================
+   記事詳細ページ専用スタイル
+   ============================================ */
+
+/* 記事詳細ページ - タイトル絵文字 */
+h1[data-toc-skip] {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .post-emoji {
+    font-size: 1.2em;
+    line-height: 1;
+  }
+}
+
+/* 記事詳細ページ - カテゴリ・タグのバッジ */
+.post-tail-wrapper {
+  .post-meta {
+    .category-badge {
+      display: inline-block;
+      background: var(--category-bg, rgba(74, 144, 226, 0.12));
+      color: var(--category-color, #4a90e2);
+      padding: 0.25rem 0.7rem;
+      border-radius: 14px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      border: 1px solid var(--category-border, rgba(74, 144, 226, 0.25));
+      transition: all 0.2s ease;
+      margin-right: 0.5rem;
+      margin-bottom: 0.3rem;
+      text-decoration: none;
+    }
+
+    .category-badge:hover {
+      background: var(--category-hover-bg, rgba(74, 144, 226, 0.2));
+      transform: translateY(-1px);
+    }
+  }
+
+  .post-tags {
+    .tag-badge {
+      display: inline-block;
+      background: var(--tag-bg-home, rgba(128, 128, 128, 0.08));
+      color: var(--tag-color-home, #666);
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      font-weight: 400;
+      border: 1px solid var(--tag-border-home, rgba(128, 128, 128, 0.15));
+      transition: all 0.2s ease;
+      margin-right: 0.5rem;
+      margin-bottom: 0.3rem;
+      text-decoration: none;
+    }
+
+    .tag-badge:hover {
+      background: var(--tag-hover-bg, rgba(128, 128, 128, 0.15));
+      transform: translateY(-1px);
+    }
+  }
+}
+
+/* 関連記事カード - モダンデザイン */
+#related-posts {
+  .related-post-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    .card-body {
+      padding: 1.25rem;
+    }
+
+    .related-post-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted-color);
+
+      .post-category {
+        .category-badge {
+          font-size: 0.7rem;
+          padding: 0.2rem 0.5rem;
+        }
+      }
+    }
+
+    h3 {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+      font-size: 1rem;
+      line-height: 1.4;
+
+      .post-emoji {
+        font-size: 1.1em;
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+      }
+    }
+
+    .post-tags-inline {
+      margin-top: 0.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+
+      .tag-badge {
+        font-size: 0.7rem;
+        padding: 0.15rem 0.5rem;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+/* ダークモード対応 */
+[data-mode="dark"] {
+  h1[data-toc-skip] .post-emoji {
+    filter: brightness(1.1);
+  }
+
+  .post-tail-wrapper {
+    .post-meta .category-badge {
+      background: rgba(74, 144, 226, 0.15);
+      color: #6db3f2;
+      border-color: rgba(74, 144, 226, 0.3);
+    }
+
+    .post-tags .tag-badge {
+      background: rgba(255, 255, 255, 0.06);
+      color: #aaa;
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+  }
+
+  #related-posts .related-post-card {
+    .related-post-meta {
+      color: var(--text-muted-color);
+    }
+  }
+}

@@ -9,7 +9,22 @@ tail_includes:
   - comments
 ---
 
-<h1 data-toc-skip>{{ page.title }}</h1>
+{% comment %} 記事タイプに応じた絵文字を判定 {% endcomment %}
+{% assign post_emoji = "✍️" %}
+{% if page.categories contains "Paper" or page.categories contains "論文" or page.title contains "論文解説" %}
+  {% assign post_emoji = "📄" %}
+{% elsif page.categories contains "TechBlog" or page.categories contains "技術" %}
+  {% assign post_emoji = "💻" %}
+{% elsif page.categories contains "Tutorial" or page.categories contains "チュートリアル" %}
+  {% assign post_emoji = "🎓" %}
+{% elsif page.categories contains "News" or page.categories contains "ニュース" %}
+  {% assign post_emoji = "📰" %}
+{% endif %}
+
+<h1 data-toc-skip>
+  <span class="post-emoji">{{ post_emoji }}</span>
+  {{ page.title }}
+</h1>
 
 <div class="post-meta text-muted">
     <!-- published date -->
@@ -107,8 +122,7 @@ tail_includes:
   <div class="post-meta mb-3">
     <i class="far fa-folder-open fa-fw mr-1"></i>
     {% for category in page.categories %}
-      <a href='{{ site.baseurl }}/categories/{{ category | slugify | url_encode }}/'>{{ category }}</a>
-      {%- unless forloop.last -%}, {%- endunless -%}
+      <a href='{{ site.baseurl }}/categories/{{ category | slugify | url_encode }}/' class="category-badge">{{ category }}</a>
     {% endfor %}
   </div>
   {% endif %}
@@ -117,12 +131,9 @@ tail_includes:
   {% if page.tags.size > 0 %}
   <div class="post-tags">
     <i class="fa fa-tags fa-fw mr-1"></i>
-      {% for tag in page.tags %}
-      <a href="{{ site.baseurl }}/tags/{{ tag | slugify | url_encode }}/"
-          class="post-tag no-text-decoration" >
-        {{- tag -}}
-      </a>
-      {% endfor %}
+    {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}/tags/{{ tag | slugify | url_encode }}/" class="tag-badge">{{ tag }}</a>
+    {% endfor %}
   </div>
   {% endif %}
 
