@@ -1,5 +1,8 @@
 # Cross-origin CDN URLs for assets
 
+jquery:
+  js: https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js
+
 polyfill:
   js: https://polyfill.io/v3/polyfill.min.js?features=es6
 
