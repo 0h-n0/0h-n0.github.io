@@ -1,7 +1,8 @@
 ---
-layout: single
+layout: page
 title: "404: Page not found"
 permalink: /404.html
+
 redirect_from:
   - /norobots/
   - /assets/
@@ -9,5 +10,5 @@ redirect_from:
 ---
 
 <div class="lead">
-  <p>Sorry, the page you were looking for could not be found.</p>
+  <p>{{site.data.locales[site.lang].not_found.statment }}</p>
 </div>
