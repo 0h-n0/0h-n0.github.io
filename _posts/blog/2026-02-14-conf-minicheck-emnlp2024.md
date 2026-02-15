@@ -10,6 +10,8 @@ tags:
   - EMNLP
 toc: true
 toc_sticky: true
+math: true
+mermaid: true
 ---
 
 ## 論文概要（Abstract）

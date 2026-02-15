@@ -11,6 +11,8 @@ source_url: https://arxiv.org/abs/2406.11200
 zenn_article: a32342e48355ae
 zenn_url: https://zenn.dev/0h_n0/articles/a32342e48355ae
 target_audience: "修士学生レベル"
+math: true
+mermaid: true
 ---
 
 # カンファレンス論文解説: AvaTaR - LLMエージェントのツール使用最適化

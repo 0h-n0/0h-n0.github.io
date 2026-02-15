@@ -11,6 +11,8 @@ source_url: https://arxiv.org/abs/2410.12837
 zenn_article: ac14636a973cac
 zenn_url: https://zenn.dev/0h_n0/articles/ac14636a973cac
 target_audience: "修士学生レベル"
+math: true
+mermaid: true
 ---
 
 ## 論文概要

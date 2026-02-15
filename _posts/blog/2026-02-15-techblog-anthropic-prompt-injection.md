@@ -11,6 +11,8 @@ source_url: https://www.anthropic.com/research/prompt-injection-defenses
 zenn_article: a32342e48355ae
 zenn_url: https://zenn.dev/0h_n0/articles/a32342e48355ae
 target_audience: "修士学生レベル"
+math: true
+mermaid: true
 ---
 
 # Anthropic研究解説: プロンプトインジェクション防御の最前線

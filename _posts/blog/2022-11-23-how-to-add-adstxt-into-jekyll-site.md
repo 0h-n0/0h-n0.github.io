@@ -9,6 +9,8 @@ tags:
   - Google AdSense
 toc: true
 toc_sticky: true
+math: true
+mermaid: true
 ---
 
 

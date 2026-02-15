@@ -11,6 +11,8 @@ source_url: https://research.google/blog/speculative-rag-enhancing-retrieval-aug
 zenn_article: ac14636a973cac
 zenn_url: https://zenn.dev/0h_n0/articles/ac14636a973cac
 target_audience: "修士学生レベル"
+math: true
+mermaid: true
 ---
 
 ## 概要

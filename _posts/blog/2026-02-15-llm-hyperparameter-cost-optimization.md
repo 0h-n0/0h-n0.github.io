@@ -11,6 +11,8 @@ source_url: https://arxiv.org/abs/2311.09668
 zenn_article: cc2c10a61cfeac
 zenn_url: https://zenn.dev/0h_n0/articles/cc2c10a61cfeac
 target_audience: "修士学生レベル"
+math: true
+mermaid: true
 ---
 
 ## 論文概要

@@ -9,6 +9,8 @@ tags:
   - gcc
 toc: true
 toc_sticky: true
+math: true
+mermaid: true
 ---
 
 ubuntuを20.04にアップデートするとデフォルトのGCCがバージョン9系になっています。そのため、cudaが使えず、GPU系のプログラムをコンパイルすることができません。このポストではgcc-9.3からgccをダウングレードする方法を紹介します。

@@ -11,6 +11,8 @@ source_url: https://ai.meta.com/blog/code-llama-large-language-model-coding/
 zenn_article: 32981c687ab3cf
 zenn_url: https://zenn.dev/0h_n0/articles/32981c687ab3cf
 target_audience: "修士学生レベル"
+math: true
+mermaid: true
 ---
 
 # Meta Code Llama解説: オープンソースで実現する最先端コード生成
