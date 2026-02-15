@@ -11,6 +11,8 @@ tags:
   - Cloud
 toc: true
 toc_sticky: true
+math: true
+mermaid: true
 ---
 
  AWS CLIでよく使うコマンドなどを逆引きでまとめました。この記事は随時更新予定です。

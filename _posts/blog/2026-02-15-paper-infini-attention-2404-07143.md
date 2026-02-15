@@ -11,6 +11,8 @@ source_url: https://arxiv.org/abs/2404.07143
 zenn_article: a32342e48355ae
 zenn_url: https://zenn.dev/0h_n0/articles/a32342e48355ae
 target_audience: "修士学生レベル"
+math: true
+mermaid: true
 ---
 
 # 論文解説: Infini-attention - 無限長コンテキストを実現する圧縮メモリ機構

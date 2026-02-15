@@ -10,6 +10,8 @@ tags:
   - Conferences
 toc: true
 toc_sticky: true
+math: true
+mermaid: true
 ---
 
 　直近開催されるカンファレンス、セミナーや勉強会のリストを作成しています。上位に来るほど最新となっています。下記のリストは随時更新する予定です。

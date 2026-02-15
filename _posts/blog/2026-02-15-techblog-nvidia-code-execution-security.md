@@ -11,6 +11,8 @@ source_url: https://developer.nvidia.com/blog/how-code-execution-drives-key-risk
 zenn_article: a32342e48355ae
 zenn_url: https://zenn.dev/0h_n0/articles/a32342e48355ae
 target_audience: "修士学生レベル"
+math: true
+mermaid: true
 ---
 
 # NVIDIA研究解説: エージェントAIシステムのコード実行セキュリティ

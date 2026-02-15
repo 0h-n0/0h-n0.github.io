@@ -10,6 +10,8 @@ source_url: https://deepmind.google/blog/introducing-codemender-an-ai-agent-for-
 zenn_article: 32981c687ab3cf
 zenn_url: https://zenn.dev/0h_n0/articles/32981c687ab3cf
 target_audience: "修士学生レベル"
+math: true
+mermaid: true
 ---
 
 ## 1. ブログ概要

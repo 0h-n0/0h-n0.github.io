@@ -1,0 +1,80 @@
+name: PR Review
+
+on:
+  pull_request:
+    branches: [master, main]
+    paths:
+      - '_posts/blog/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Install Dependencies
+        run: |
+          bundle install
+
+      - name: Build Jekyll Site
+        run: |
+          JEKYLL_ENV=production bundle exec jekyll build
+
+      - name: Validate HTML
+        run: |
+          bundle exec htmlproofer _site \
+            --disable-external \
+            --check-html \
+            --allow_hash_href \
+            --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+
+      - name: Check Math Blocks
+        run: |
+          # Check all markdown files in _posts/blog/
+          EXIT_CODE=0
+          for file in _posts/blog/*.md; do
+            if [ -f "$file" ]; then
+              MATH_OPEN=$(grep -c '^\$\$' "$file" || true)
+              if [ $((MATH_OPEN % 2)) -ne 0 ]; then
+                echo "❌ Error: Unpaired math blocks in $file"
+                EXIT_CODE=1
+              fi
+            fi
+          done
+          exit $EXIT_CODE
+
+      - name: Validate Frontmatter
+        run: |
+          # Check required frontmatter fields for new articles (2026-*)
+          EXIT_CODE=0
+          for file in _posts/blog/2026-*.md; do
+            if [ -f "$file" ]; then
+              FRONTMATTER=$(awk '/^---$/{flag=!flag;next}flag' "$file")
+
+              # Check required fields
+              if ! echo "$FRONTMATTER" | grep -q "^layout: post"; then
+                echo "❌ Error: Missing 'layout: post' in $file"
+                EXIT_CODE=1
+              fi
+              if ! echo "$FRONTMATTER" | grep -q "^title:"; then
+                echo "❌ Error: Missing 'title:' in $file"
+                EXIT_CODE=1
+              fi
+              if ! echo "$FRONTMATTER" | grep -q "^math: true"; then
+                echo "❌ Error: Missing 'math: true' in $file"
+                EXIT_CODE=1
+              fi
+              if ! echo "$FRONTMATTER" | grep -q "^mermaid: true"; then
+                echo "❌ Error: Missing 'mermaid: true' in $file"
+                EXIT_CODE=1
+              fi
+            fi
+          done
+          exit $EXIT_CODE

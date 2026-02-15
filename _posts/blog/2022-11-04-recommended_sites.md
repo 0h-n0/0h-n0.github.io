@@ -9,6 +9,8 @@ tags:
   - Data Scientist
 toc: true
 toc_sticky: true
+math: true
+mermaid: true
 ---
 
 　機械学習エンジニア（MLE/DS）におススメしたいサイトを紹介しています。おススメ度合いに合わせて星マークを付けています。仕事の参考になれば幸いです。ブログなどの記事はTwitterやRSSフィードを利用して、最新情報をキャッチアップできるとよいです。

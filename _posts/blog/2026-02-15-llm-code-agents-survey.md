@@ -11,6 +11,8 @@ source_url: https://arxiv.org/abs/2508.00083
 zenn_article: 32981c687ab3cf
 zenn_url: https://zenn.dev/0h_n0/articles/32981c687ab3cf
 target_audience: "修士学生レベル"
+math: true
+mermaid: true
 ---
 
 # 論文解説: LLMベースのコード生成エージェント完全サーベイ

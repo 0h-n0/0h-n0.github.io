@@ -11,6 +11,8 @@ source_url: https://claude.com/blog/equipping-agents-for-the-real-world-with-age
 zenn_article: a32342e48355ae
 zenn_url: https://zenn.dev/0h_n0/articles/a32342e48355ae
 target_audience: "修士学生レベル"
+math: true
+mermaid: true
 ---
 
 # Anthropic Agent Skills解説：プロダクション環境でのLLMエージェント拡張戦略

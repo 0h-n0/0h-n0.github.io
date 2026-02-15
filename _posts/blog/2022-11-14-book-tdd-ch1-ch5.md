@@ -8,6 +8,8 @@ tags:
   - TDD
 toc: true
 toc_sticky: true
+math: true
+mermaid: true
 ---
 
 　オライリーの書籍『[テスト駆動開発](https://amzn.to/3hyTQIF)』を読みつつ、詰まったところや一部書き換えが必要なところをまとめました。そして一部のサンプルをpythonベースで書き換えています。詳しい内容は是非とも書籍を購入して確認してください。
