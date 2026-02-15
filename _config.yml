@@ -162,6 +162,9 @@ kramdown:
 
 # Collections
 collections:
+  tabs:
+    output: true
+    sort_by: order
   posts:
     output: true
     permalink: /posts/:title/
