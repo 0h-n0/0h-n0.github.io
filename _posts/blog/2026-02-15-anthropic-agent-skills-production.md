@@ -80,7 +80,7 @@ system_prompt_skills = [
 3. **検証**: `python scripts/validate_fields.py fields.json`
 4. **フォーム入力**: `python scripts/fill_form.py input.pdf fields.json output.pdf`
 
-詳細なAPI仕様は [reference.md](reference.md) を参照。
+詳細なAPI仕様は `reference.md` を参照。
 ```
 
 #### Level 3: Referenced Files（参照ファイル層）
@@ -468,14 +468,14 @@ python scripts/process.py input.pdf output.pdf
 ```
 
 ## Advanced Usage
-See [reference.md](reference.md) for API details.
+See `reference.md` for API details.
 
 ## Troubleshooting
 - Error: "Module not found" → Run `pip install pdfplumber`
 - Error: "Permission denied" → Check file permissions
 
 ## Examples
-See [examples.md](examples.md).
+See `examples.md`.
 ```
 
 ### 7.2 スクリプト作成ガイドライン
