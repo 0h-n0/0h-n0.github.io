@@ -10,6 +10,8 @@ arxiv_id: 2309.03409
 source_url: https://arxiv.org/abs/2309.03409
 zenn_article: 21f1740dc0ddd9
 zenn_url: https://zenn.dev/0h_n0/articles/21f1740dc0ddd9
+math: true
+mermaid: true
 target_audience: "修士学生レベル"
 ---
 
