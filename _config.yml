@@ -19,9 +19,9 @@ timezone: Asia/Tokyo
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: HOGEHOGE for MLE/DS                          # the main title
+title: 0h-n0 TechBLog                          # the main title
 
-tagline: 機械学習エンジニアとデータサイエンティストのための情報共有サイト   # it will display as the sub-title
+tagline: MLE, DSのための記事生成、自分の知識保管のために使っています。   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   機械学習エンジニアとデータサイエンティストのための情報共有サイト。深層学習、機械学習、MLOps、グラフニューラルネットワーク、
@@ -76,6 +76,12 @@ google_analytics:
   pv:
     proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
     cache_path:       # the local PV cache data, friendly to visitors from GFW region
+
+# Google AdSense設定
+google_adsense:
+  enabled: true  # 本番環境で有効化（開発環境では無効）
+  client_id: ca-pub-6700597481519786
+  auto_ads: true  # 自動広告を使用（Googleが最適な位置に配置）
 
 # Prefer color scheme setting.
 #

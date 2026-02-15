@@ -1,0 +1,41 @@
+// Google AdSense スタイル
+.adsense-container {
+  margin: 1.5rem 0;
+  text-align: center;
+  min-height: 100px; // CLS（Cumulative Layout Shift）対策
+
+  // 広告読み込み中のプレースホルダー（開発環境のみ表示）
+  &:empty::before {
+    content: "広告";
+    display: block;
+    color: var(--text-muted-color);
+    font-size: 0.875rem;
+    padding: 2rem;
+    border: 1px dashed var(--border-color);
+    border-radius: 4px;
+  }
+}
+
+// 記事上部広告
+.ad-post-top {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+// 記事下部広告
+.ad-post-bottom {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+// ダークモード対応
+[data-mode="dark"] {
+  .adsense-container:empty::before {
+    border-color: var(--border-color);
+    color: var(--text-muted-color);
+  }
+}
