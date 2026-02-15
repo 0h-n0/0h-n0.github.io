@@ -9,11 +9,11 @@ layout:
 
 # サイドバーのタブ
 tabs:
-  home: ホーム
-  categories: カテゴリ
-  tags: タグ
-  archives: アーカイブ
-  about: 概要
+  home: Home
+  categories: Categories
+  tags: Tags
+  archives: Archives
+  about: About
 
 # 検索バーと検索結果に表示されるテキスト
 search:
