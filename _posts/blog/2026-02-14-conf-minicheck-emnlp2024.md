@@ -12,7 +12,11 @@ toc: true
 toc_sticky: true
 ---
 
-# EMNLP 2024論文解説: MiniCheck - 高速・高精度なLLMファクトチェック
+## 論文概要（Abstract）
+
+MiniCheckは、LLM出力がグラウンディングドキュメント（参照文書）に基づいているかを検証する**軽量・高速**なファクトチェックモデルです。
+
+従来のGPT-4ベース検証（APIコスト高、レイテンシ大）に対し、**BERTベースの小型モデル（110M parameters）**で同等以上の精度を達成します。Zenn記事の「引用接地（Citation Grounding）」を、より効率的に実装する手法です。
 
 この記事は [Zenn記事: LLM出力検証の実践：Pydanticで95%精度を実現する3層戦略](https://zenn.dev/0h_n0/articles/0a8f4d0e7c71bf) の深掘りです。
 
@@ -26,12 +30,6 @@ toc_sticky: true
 ## カンファレンス情報
 
 EMNLP（Empirical Methods in Natural Language Processing）は、自然言語処理分野のトップカンファレンスの1つです。実証的手法に重点を置き、実用的な手法が評価されます。
-
-## 論文概要（Abstract）
-
-MiniCheckは、LLM出力がグラウンディングドキュメント（参照文書）に基づいているかを検証する**軽量・高速**なファクトチェックモデルです。
-
-従来のGPT-4ベース検証（APIコスト高、レイテンシ大）に対し、**BERTベースの小型モデル（110M parameters）**で同等以上の精度を達成します。Zenn記事の「引用接地（Citation Grounding）」を、より効率的に実装する手法です。
 
 ## 主要な貢献（Key Contributions）
 

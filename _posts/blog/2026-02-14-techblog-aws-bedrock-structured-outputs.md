@@ -8,7 +8,11 @@ math: true
 mermaid: true
 ---
 
-# AWS ML Blog解説: Amazon Bedrockの構造化出力 - スキーマ準拠AI応答の実現
+## ブログ概要
+
+Amazon Bedrockに**Structured Outputs**機能が追加され、Foundation ModelsがJSON Schemaに確実に準拠した応答を生成できるようになりました。本機能は**Constrained Decoding**を使用し、モデルがスキーマ違反を生成することを防ぎます。
+
+Zenn記事ではPydanticによる**事後検証**を紹介しましたが、Amazon Bedrockは**生成時制約**により、そもそもスキーマ違反が発生しないアプローチです。
 
 この記事は <a href="https://zenn.dev/0h_n0/articles/0a8f4d0e7c71bf" target="_blank" rel="noopener noreferrer">Zenn記事: LLM出力検証の実践：Pydanticで95%精度を実現する3層戦略</a> の深掘りです。
 
@@ -17,12 +21,6 @@ mermaid: true
 - **種別**: 企業テックブログ（AWS Machine Learning Blog）
 - **URL**: <a href="https://aws.amazon.com/blogs/machine-learning/structured-outputs-on-amazon-bedrock-schema-compliant-ai-responses/" target="_blank" rel="noopener noreferrer">Structured Outputs on Amazon Bedrock</a>
 - **組織**: Amazon Web Services (AWS)
-
-## ブログ概要
-
-Amazon Bedrockに**Structured Outputs**機能が追加され、Foundation ModelsがJSON Schemaに確実に準拠した応答を生成できるようになりました。本機能は**Constrained Decoding**を使用し、モデルがスキーマ違反を生成することを防ぎます。
-
-Zenn記事ではPydanticによる**事後検証**を紹介しましたが、Amazon Bedrockは**生成時制約**により、そもそもスキーマ違反が発生しないアプローチです。
 
 ## 技術的背景
 
