@@ -176,14 +176,9 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: false
-      share: true
-      related: true
+      layout: post
+      comments: true
       toc: true
-      toc_sticky: true
 
 sass:
   style: compressed
