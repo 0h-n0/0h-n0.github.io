@@ -4,7 +4,7 @@ title: "論文解説: HaloScope — ラベルなしLLM生成文からのHallucin
 description: "NeurIPS 2024 Spotlight論文。LLMの潜在表現空間にHallucination部分空間を発見し、ラベルなしデータのみで高精度な検出を実現する手法を解説"
 categories: [blog, paper, arxiv]
 tags: [hallucination, LLM, validation, guardrails, deepeval]
-date: 2026-02-17 09:00:00 +0900
+date: 2026-02-16 12:00:00 +0900
 source_type: arxiv
 arxiv_id: "2409.17504"
 source_url: https://arxiv.org/abs/2409.17504
