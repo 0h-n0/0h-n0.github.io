@@ -63,6 +63,21 @@ LLMエージェントがツールを使って反復的にタスクを解決す�
 
 ### Observation Maskingのアルゴリズム
 
+```mermaid
+flowchart TD
+    A[エージェント実行開始] --> B[ターン t: アクション実行]
+    B --> C[ツール出力 o_t を受信]
+    C --> D{ウィンドウ判定\ni >= t - M ?}
+    D -- Yes 直近Mターン内 --> E[観測 o_i をそのまま保持]
+    D -- No 古いターン --> F[プレースホルダーに置換\nPrevious N lines omitted]
+    E --> G[推論 r_i とアクション a_i は常に保持]
+    F --> G
+    G --> H[コンテキスト構築\n全ターンのr_i, a_i + 直近のo_i]
+    H --> I{タスク完了?}
+    I -- No --> B
+    I -- Yes --> J[結果出力]
+```
+
 エージェントの軌跡（trajectory）を以下のように形式化する：
 
 $$

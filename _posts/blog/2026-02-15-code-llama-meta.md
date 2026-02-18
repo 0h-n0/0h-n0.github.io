@@ -2,7 +2,7 @@
 layout: post
 title: "Meta Code Llama解説: オープンソースで実現する最先端コード生成"
 description: "Llama 2ベースの70Bパラメータモデルが、HumanEvalで53.7%を達成。100K トークンの拡張コンテキストで実用的なコード生成を実現"
-categories: [blog, tech_blog, meta]
+categories: [blog, tech_blog]
 tags: [LLM, code-generation, open-source, Code-Llama, Meta-AI]
 date: 2026-02-15 21:37:00 +0900
 source_type: tech_blog
@@ -54,6 +54,15 @@ code_llama = {
 ### 追加学習プロセス
 
 Code Llamaの開発は、**継続的な学習アプローチ**を採用：
+
+```mermaid
+graph LR
+    A["Llama 2<br/>2Tトークン<br/>汎用テキスト"] --> B["Code Llama Base<br/>+500Bトークン<br/>コード特化"]
+    B --> C["Code Llama Python<br/>+100Bトークン<br/>Python特化"]
+    B --> D["Code Llama Instruct<br/>RLHF適用<br/>自然言語指示対応"]
+    C --> E["コンテキスト拡張<br/>4K→100Kトークン"]
+    D --> E
+```
 
 1. **Llama 2 (General Text):** 2T トークンで事前学習
 2. **Code Llama (Code-Specific):** さらに500B トークンのコードで学習

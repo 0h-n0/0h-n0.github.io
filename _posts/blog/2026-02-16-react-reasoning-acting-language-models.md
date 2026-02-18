@@ -64,6 +64,22 @@ Chain-of-Thought（CoT）プロンプティングは推論ステップを明示�
 
 ### ReActプロンプト設計
 
+```mermaid
+sequenceDiagram
+    participant U as ユーザー
+    participant LLM as LLM (ReAct)
+    participant ENV as 外部環境\n(Wikipedia等)
+    U->>LLM: Question: {question}
+    LLM->>LLM: Thought 1: 推論ステップ
+    LLM->>ENV: Action 1: search[entity]
+    ENV->>LLM: Observation 1: 検索結果
+    LLM->>LLM: Thought 2: 観察に基づく推論
+    LLM->>ENV: Action 2: lookup[keyword]
+    ENV->>LLM: Observation 2: ページ内検索結果
+    LLM->>LLM: Thought n: 最終推論
+    LLM->>U: Action n: finish[answer]
+```
+
 ReActは、Few-shot in-context learningで実現されます。プロンプトには1〜2個の例（exemplar）のみを含めます。
 
 **プロンプト構造**:
@@ -121,6 +137,20 @@ $$
 ここで、$\text{context}(s_t)$ は質問、過去の思考・行動・観察のシーケンスです。
 
 ### アルゴリズム
+
+```mermaid
+flowchart TD
+    START[入力質問] --> CTX[コンテキスト初期化]
+    CTX --> THT[Thought生成\nLLMが推論ステップを出力]
+    THT --> ACT[Action生成\nLLMが行動を決定]
+    ACT --> FIN{finish[answer]\nか?}
+    FIN -->|Yes| OUT[最終回答を返す]
+    FIN -->|No| EXEC[環境でActionを実行\nsearch / lookup / goto 等]
+    EXEC --> OBS[Observation取得\n環境からの結果]
+    OBS --> MAXS{最大ステップ数\n到達?}
+    MAXS -->|No| THT
+    MAXS -->|Yes| FAIL[Failed to solve]
+```
 
 ReActの実行フローを擬似コードで表現します。
 

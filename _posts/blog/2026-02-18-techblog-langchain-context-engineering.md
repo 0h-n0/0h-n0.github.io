@@ -49,6 +49,34 @@ Drew Breunigが整理したコンテキストの4つの失敗モードは、設�
 
 ## 実装アーキテクチャ（Architecture）
 
+```mermaid
+graph TB
+    subgraph Write["Write戦略: 外部への書き出し"]
+        W1["Scratchpad\nInMemoryStore\nタスク実行中の一時ノート"]
+        W2["Memory\nセッション間の長期記憶\n反省・定期的合成"]
+    end
+
+    subgraph Select["Select戦略: 動的な検索と選択"]
+        S1["RAGベースのツール選択\nBigtool セマンティック検索\n精度3倍向上"]
+        S2["コードエージェントRAG\nAST+埋め込み+grep+知識グラフ\nリランキングで統合"]
+    end
+
+    subgraph Compress["Compress戦略: コンテキストの圧縮"]
+        C1["要約 Summarization\n再帰的・階層的・自動Compact\n使用率95%でトリガー"]
+        C2["トリミング\nハードコードヒューリスティクス\n学習済みプルーナー"]
+    end
+
+    subgraph Isolate["Isolate戦略: コンテキストの分離"]
+        I1["マルチエージェント\n専門コンテキストウィンドウ\nトークン最大15倍増"]
+        I2["環境ベースの分離\nE2Bサンドボックス\nバイナリアセットを外部保持"]
+    end
+
+    ContextRot["Context Rot\nコンテキスト肥大化問題"] --> Write
+    ContextRot --> Select
+    ContextRot --> Compress
+    ContextRot --> Isolate
+```
+
 ### Write戦略: 外部への書き出し
 
 エージェントが重要な情報をコンテキストウィンドウの外に永続化する戦略。

@@ -64,6 +64,23 @@ Llama Guardは以下の6カテゴリを定義する：
 
 Llama Guardの推論は、以下の入出力フォーマットで行われる：
 
+```mermaid
+graph TB
+    A[会話入力\nプロンプトまたはレスポンス] --> B[Llama Guard\nプロンプトテンプレート構築]
+    B --> C["[INST] Task: Check unsafe content\n安全性タクソノミー定義\nO1: Violence & Hate\nO2: Sexual Content\nO3: Guns & Illegal Weapons\nO4: Controlled Substances\nO5: Suicide & Self-Harm\nO6: Criminal Planning"]
+    C --> D[Llama 2-7B ベース\nファインチューニング済みモデル]
+    D --> E{分類判定}
+    E -- 安全 --> F["出力: safe"]
+    E -- 危険 --> G["出力: unsafe\n該当カテゴリ O1-O6"]
+    F --> H[通過: LLMレスポンスを返却]
+    G --> I[ブロック: エラーレスポンスまたは代替応答]
+
+    style F fill:#ccffcc
+    style G fill:#ffcccc
+    style H fill:#ccffcc
+    style I fill:#ffcccc
+```
+
 **入力テンプレート**:
 ```
 [INST] Task: Check if there is unsafe content in

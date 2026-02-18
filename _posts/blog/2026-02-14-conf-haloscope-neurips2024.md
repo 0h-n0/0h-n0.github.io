@@ -1,17 +1,18 @@
 ---
 layout: post
 title: "NeurIPS 2024論文解説: HaloScope - 未ラベルLLM生成データを活用したハルシネーション検出"
-excerpt: "ラベル付きデータ不要、自己教師あり学習によるハルシネーション検出フレームワーク。複数サンプリングと一貫性ベース検証で高精度を実現"
-categories:
-  - TechBlog
-tags:
-  - LLM
-  - Hallucination
-  - NeurIPS
-toc: true
-toc_sticky: true
+description: "ラベル付きデータ不要、自己教師あり学習によるハルシネーション検出フレームワーク。複数サンプリングと一貫性ベース検証で高精度を実現"
+categories: [blog, paper, conference]
+tags: [llm, hallucination, neurips, self-supervised]
+date: 2026-02-14 00:00:00 +0900
+source_type: conference
+conference: "NeurIPS 2024"
+source_url: https://papers.nips.cc/paper_files/paper/2024/hash/ba92705991cfbbcedc26e27e833ebbae-Abstract-Conference.html
+zenn_article: 0a8f4d0e7c71bf
+zenn_url: https://zenn.dev/0h_n0/articles/0a8f4d0e7c71bf
 math: true
 mermaid: true
+target_audience: "修士学生レベル"
 ---
 
 ## 論文概要（Abstract）
@@ -87,6 +88,22 @@ def sampling_consistency_check(
         "variance": variance,
         "avg_overlap": avg_overlap
     }
+```
+
+```mermaid
+flowchart TD
+    A[未ラベルLLM生成テキスト] --> B[同一プロンプトでN回サンプリング]
+    B --> C[セマンティック類似度計算]
+    B --> D[n-gramオーバーラップ計算]
+    C --> E{一貫性判定}
+    D --> E
+    E -->|一貫性高い| F[疑似ラベル: clean=0]
+    E -->|一貫性低い| G[疑似ラベル: hallucination=1]
+    F --> H[疑似ラベルデータセット]
+    G --> H
+    H --> I[BERTベース分類器の訓練]
+    I --> J[ハルシネーション検出器]
+    J --> K[新規テキストの推論]
 ```
 
 ### アルゴリズム: 疑似ラベル生成

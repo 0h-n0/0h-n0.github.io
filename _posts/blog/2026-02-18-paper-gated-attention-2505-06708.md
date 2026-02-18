@@ -48,6 +48,23 @@ target_audience: "修士学生レベル"
 
 ### Gated Attentionの定式化
 
+```mermaid
+graph TB
+    A[入力 X] --> B[Q = XW_Q\nクエリ射影]
+    A --> C[K = XW_K\nキー射影]
+    A --> D[V = XW_V\nバリュー射影]
+    A --> E[G = XW_G\nゲート射影\nゼロ初期化]
+    B --> F[Scaled Dot-Product Attention\nFlash Attention互換]
+    C --> F
+    D --> F
+    F --> G[SDPA出力]
+    E --> H[sigmoid G\n各要素を 0~1 に変換]
+    G --> I[要素積 ⊙\nHadamard積]
+    H --> I
+    I --> J[Gated Attention出力\n非線形・スパース・Sink-Free]
+    J --> K[出力射影 W_O]
+```
+
 入力$X \in \mathbb{R}^{n \times d}$（$n$トークン、隠れ次元$d$）に対し：
 
 **標準SDPA**:

@@ -1,0 +1,854 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - link "avatar" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "avatar" [ref=e6]
+      - link "0h-n0 TechBLog" [ref=e8] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e9]: MLE, DSのための記事生成、自分の知識保管のために使っています。
+    - list [ref=e10]:
+      - listitem [ref=e11]:
+        - link "HOME" [ref=e12] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e13]:
+        - link "CATEGORIES" [ref=e14] [cursor=pointer]:
+          - /url: /tabs/categories.html
+      - listitem [ref=e15]:
+        - link "TAGS" [ref=e16] [cursor=pointer]:
+          - /url: /tabs/tags.html
+      - listitem [ref=e17]:
+        - link "ARCHIVES" [ref=e18] [cursor=pointer]:
+          - /url: /tabs/archives.html
+      - listitem [ref=e19]:
+        - link "ABOUT" [ref=e20] [cursor=pointer]:
+          - /url: /tabs/about.html
+    - generic [ref=e21]:
+      - button "Switch Mode"
+      - link "github":
+        - /url: https://github.com/0h-n0
+      - link "twitter":
+        - /url: https://x.com/XrZRTgC1ko96643
+      - link "email":
+        - /url: "\n          javascript:location.href = 'mailto:' + ['kbu94982','gmail.com'].join('@')"
+      - link "rss":
+        - /url: /feed.xml
+  - generic [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - link "Home" [ref=e27] [cursor=pointer]:
+          - /url: /
+        - text: ›
+      - text: "AWS ML Blog解説: Amazon Bedrockの構造化出力 - スキーマ準拠AI応答の実現"
+    - searchbox "search" [ref=e29]
+  - generic [ref=e30]:
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e34]:
+          - 'heading "💻 AWS ML Blog解説: Amazon Bedrockの構造化出力 - スキーマ準拠AI応答の実現" [level=1] [ref=e35]':
+            - generic [ref=e36]: 💻
+            - text: "AWS ML Blog解説: Amazon Bedrockの構造化出力 - スキーマ準拠AI応答の実現"
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - text: 投稿日
+              - emphasis [ref=e39]: 2026/02/14
+            - generic [ref=e40]:
+              - text: • 更新日
+              - emphasis [ref=e41]: 2026/02/14
+            - generic [ref=e42]:
+              - generic [ref=e43]:
+                - text: 投稿者
+                - emphasis [ref=e44]:
+                  - link "0h-n0" [ref=e45] [cursor=pointer]:
+                    - /url: https://github.com/0h-n0
+              - generic [ref=e47]:
+                - emphasis [ref=e48]: 9 分
+                - text: 読了時間
+          - generic [ref=e49]:
+            - 'heading "AWS ML Blog解説: Amazon Bedrockの構造化出力 - スキーマ準拠AI応答の実現" [level=1] [ref=e50]'
+            - paragraph [ref=e51]:
+              - text: この記事は
+              - 'link "Zenn記事: LLM出力検証の実践：Pydanticで95%精度を実現する3層戦略" [ref=e52] [cursor=pointer]':
+                - /url: https://zenn.dev/0h_n0/articles/0a8f4d0e7c71bf
+              - text: の深掘りです。
+            - heading "情報源" [level=2] [ref=e53]
+            - list [ref=e54]:
+              - listitem [ref=e55]:
+                - strong [ref=e56]: 種別
+                - text: ": 企業テックブログ（AWS Machine Learning Blog）"
+              - listitem [ref=e57]:
+                - strong [ref=e58]: URL
+                - text: ":"
+                - link "Structured Outputs on Amazon Bedrock" [ref=e59] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/blogs/machine-learning/structured-outputs-on-amazon-bedrock-schema-compliant-ai-responses/
+              - listitem [ref=e60]:
+                - strong [ref=e61]: 組織
+                - text: ": Amazon Web Services (AWS)"
+            - heading "ブログ概要" [level=2] [ref=e62]:
+              - text: ブログ概要
+              - link:
+                - /url: "#ブログ概要"
+            - paragraph [ref=e63]:
+              - text: Amazon Bedrockに
+              - strong [ref=e64]: Structured Outputs
+              - text: 機能が追加され、Foundation ModelsがJSON Schemaに確実に準拠した応答を生成できるようになりました。本機能は
+              - strong [ref=e65]: Constrained Decoding
+              - text: を使用し、モデルがスキーマ違反を生成することを防ぎます。
+            - paragraph [ref=e66]:
+              - text: Zenn記事ではPydanticによる
+              - strong [ref=e67]: 事後検証
+              - text: を紹介しましたが、Amazon Bedrockは
+              - strong [ref=e68]: 生成時制約
+              - text: により、そもそもスキーマ違反が発生しないアプローチです。
+            - heading "技術的背景" [level=2] [ref=e69]:
+              - text: 技術的背景
+              - link:
+                - /url: "#技術的背景"
+            - heading "従来のアプローチの問題点" [level=3] [ref=e70]
+            - paragraph [ref=e71]:
+              - strong [ref=e72]: Prompt Engineering + Post-Validation
+              - text: ":"
+            - generic [ref=e73]:
+              - generic [ref=e74]:
+                - generic [ref=e75]: Python
+                - button "copy" [ref=e76] [cursor=pointer]
+              - code [ref=e78]:
+                - table [ref=e79]:
+                  - rowgroup [ref=e80]:
+                    - 'row "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 # 従来: プロンプトでJSONを要求 + Pydantic検証 prompt = \"\"\" 以下のJSON形式で返してください: { \"name\": \"string\", \"age\": \"number\" } \"\"\" response = llm.generate(prompt) # 検証（失敗する可能性あり） try: data = UserModel.model_validate_json(response) except ValidationError: # 再生成（トークン浪費） response = llm.generate(prompt)" [ref=e81]':
+                      - cell "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17" [ref=e82]:
+                        - generic [ref=e83]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+                      - 'cell "# 従来: プロンプトでJSONを要求 + Pydantic検証 prompt = \"\"\" 以下のJSON形式で返してください: { \"name\": \"string\", \"age\": \"number\" } \"\"\" response = llm.generate(prompt) # 検証（失敗する可能性あり） try: data = UserModel.model_validate_json(response) except ValidationError: # 再生成（トークン浪費） response = llm.generate(prompt)" [ref=e84]':
+                        - generic [ref=e85]: "# 従来: プロンプトでJSONを要求 + Pydantic検証 prompt = \"\"\" 以下のJSON形式で返してください: { \"name\": \"string\", \"age\": \"number\" } \"\"\" response = llm.generate(prompt) # 検証（失敗する可能性あり） try: data = UserModel.model_validate_json(response) except ValidationError: # 再生成（トークン浪費） response = llm.generate(prompt)"
+            - paragraph [ref=e86]:
+              - strong [ref=e87]: 問題点
+              - text: ":"
+            - list [ref=e88]:
+              - listitem [ref=e89]:
+                - strong [ref=e90]: 失敗率15-20%
+                - text: ": モデルが自由にスキーマ違反を生成"
+              - listitem [ref=e91]:
+                - strong [ref=e92]: 再試行コスト
+                - text: ": 失敗時の再生成でトークン浪費"
+              - listitem [ref=e93]:
+                - strong [ref=e94]: レイテンシ
+                - text: ": 検証→再生成のループで遅延"
+            - 'heading "Amazon Bedrockの解決策: Constrained Decoding" [level=3] [ref=e95]'
+            - paragraph [ref=e96]:
+              - strong [ref=e97]: 生成時に制約を強制
+              - text: ":"
+            - generic [ref=e98]:
+              - generic [ref=e99]:
+                - generic [ref=e100]: Python
+                - button "copy" [ref=e101] [cursor=pointer]
+              - code [ref=e103]:
+                - table [ref=e104]:
+                  - rowgroup [ref=e105]:
+                    - 'row "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 import boto3 import json bedrock = boto3.client(\"bedrock-runtime\") # JSON Schemaを定義 schema = { \"type\": \"object\", \"properties\": { \"name\": {\"type\": \"string\"}, \"age\": {\"type\": \"number\"} }, \"required\": [\"name\", \"age\"] } # Structured Outputs APIで生成 response = bedrock.invoke_model( modelId=\"anthropic.claude-3-sonnet-20240229-v1:0\", body=json.dumps({ \"anthropic_version\": \"bedrock-2023-05-31\", \"max_tokens\": 1024, \"messages\": [ {\"role\": \"user\", \"content\": \"Extract user info\"} ], \"response_format\": { # Constrained Decoding \"type\": \"json_object\", \"json_schema\": schema } }) ) # 確実にスキーマ準拠 result = json.loads(response[\"body\"].read()) # → {\"name\": \"John\", \"age\": 30} # 100%準拠" [ref=e106]':
+                      - cell "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34" [ref=e107]:
+                        - generic [ref=e108]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34
+                      - 'cell "import boto3 import json bedrock = boto3.client(\"bedrock-runtime\") # JSON Schemaを定義 schema = { \"type\": \"object\", \"properties\": { \"name\": {\"type\": \"string\"}, \"age\": {\"type\": \"number\"} }, \"required\": [\"name\", \"age\"] } # Structured Outputs APIで生成 response = bedrock.invoke_model( modelId=\"anthropic.claude-3-sonnet-20240229-v1:0\", body=json.dumps({ \"anthropic_version\": \"bedrock-2023-05-31\", \"max_tokens\": 1024, \"messages\": [ {\"role\": \"user\", \"content\": \"Extract user info\"} ], \"response_format\": { # Constrained Decoding \"type\": \"json_object\", \"json_schema\": schema } }) ) # 確実にスキーマ準拠 result = json.loads(response[\"body\"].read()) # → {\"name\": \"John\", \"age\": 30} # 100%準拠" [ref=e109]':
+                        - generic [ref=e110]: "import boto3 import json bedrock = boto3.client(\"bedrock-runtime\") # JSON Schemaを定義 schema = { \"type\": \"object\", \"properties\": { \"name\": {\"type\": \"string\"}, \"age\": {\"type\": \"number\"} }, \"required\": [\"name\", \"age\"] } # Structured Outputs APIで生成 response = bedrock.invoke_model( modelId=\"anthropic.claude-3-sonnet-20240229-v1:0\", body=json.dumps({ \"anthropic_version\": \"bedrock-2023-05-31\", \"max_tokens\": 1024, \"messages\": [ {\"role\": \"user\", \"content\": \"Extract user info\"} ], \"response_format\": { # Constrained Decoding \"type\": \"json_object\", \"json_schema\": schema } }) ) # 確実にスキーマ準拠 result = json.loads(response[\"body\"].read()) # → {\"name\": \"John\", \"age\": 30} # 100%準拠"
+            - paragraph [ref=e111]:
+              - strong [ref=e112]: 効果
+              - text: ":"
+            - list [ref=e113]:
+              - listitem [ref=e114]:
+                - strong [ref=e115]: 失敗率0%
+                - text: ": スキーマ違反が生成不可能"
+              - listitem [ref=e116]:
+                - strong [ref=e117]: 1回で完了
+                - text: ": 再試行不要"
+              - listitem [ref=e118]:
+                - strong [ref=e119]: 低レイテンシ
+                - text: ": 200ms以内（検証オーバーヘッドなし）"
+            - heading "実装アーキテクチャ" [level=2] [ref=e120]
+            - heading "Constrained Decodingの仕組み" [level=3] [ref=e121]
+            - document [ref=e123]:
+              - generic [ref=e126]:
+                - generic [ref=e131]: トークン生成
+                - generic [ref=e136]: スキーマ制約チェック
+                - generic [ref=e141]: 確率分布の再正規化
+                - generic [ref=e146]: 準拠トークンのみサンプリング
+            - paragraph [ref=e147]:
+              - strong [ref=e148]: 数式
+              - text: ":"
+            - generic [ref=e149]:
+              - generic [ref=e150]:
+                - generic [ref=e151]:
+                  - generic [ref=e153]: P
+                  - generic [ref=e156]: ′
+                - generic [ref=e158]: (
+                - generic [ref=e159]:
+                  - generic [ref=e161]: t
+                  - generic [ref=e164]: i
+                - generic [ref=e167]: "|"
+                - generic [ref=e168]:
+                  - generic [ref=e169]: c
+                  - generic [ref=e170]: o
+                  - generic [ref=e171]: "n"
+                  - generic [ref=e172]: t
+                  - generic [ref=e173]: e
+                  - generic [ref=e174]: x
+                  - generic [ref=e175]: t
+                - generic [ref=e177]: )
+                - generic [ref=e179]: =
+                - generic [ref=e180]:
+                  - generic [ref=e182]: "{"
+                  - generic [ref=e185]:
+                    - generic [ref=e186]:
+                      - generic [ref=e187]:
+                        - generic [ref=e189]: P
+                        - generic [ref=e191]: (
+                        - generic [ref=e192]:
+                          - generic [ref=e194]: t
+                          - generic [ref=e197]: i
+                        - generic [ref=e200]: "|"
+                        - generic [ref=e201]:
+                          - generic [ref=e202]: c
+                          - generic [ref=e203]: o
+                          - generic [ref=e204]: "n"
+                          - generic [ref=e205]: t
+                          - generic [ref=e206]: e
+                          - generic [ref=e207]: x
+                          - generic [ref=e208]: t
+                        - generic [ref=e210]: )
+                      - generic [ref=e211]:
+                        - generic [ref=e212]:
+                          - generic [ref=e213]: i
+                          - generic [ref=e214]: f
+                        - generic [ref=e215]:
+                          - generic [ref=e217]: t
+                          - generic [ref=e220]: i
+                        - generic [ref=e222]: ∈
+                        - generic [ref=e223]:
+                          - generic [ref=e226]: T
+                          - generic [ref=e229]:
+                            - generic [ref=e230]: v
+                            - generic [ref=e231]: a
+                            - generic [ref=e232]: l
+                            - generic [ref=e233]: i
+                            - generic [ref=e234]: d
+                    - generic [ref=e235]:
+                      - generic [ref=e238]: "0"
+                      - generic [ref=e240]:
+                        - generic [ref=e241]: o
+                        - generic [ref=e242]: t
+                        - generic [ref=e243]: h
+                        - generic [ref=e244]: e
+                        - generic [ref=e245]: r
+                        - generic [ref=e246]: w
+                        - generic [ref=e247]: i
+                        - generic [ref=e248]: s
+                        - generic [ref=e249]: e
+              - math [ref=e251]:
+                - generic [ref=e252]:
+                  - generic [ref=e253]: P
+                  - generic [ref=e254]: ′
+                - generic [ref=e255]: (
+                - generic [ref=e256]:
+                  - generic [ref=e257]: t
+                  - generic [ref=e258]: i
+                - generic [ref=e260]: "|"
+                - generic [ref=e261]: context
+                - generic [ref=e262]: )
+                - generic [ref=e263]: =
+                - generic [ref=e264]:
+                  - generic [ref=e265]: "{"
+                  - generic [ref=e266]:
+                    - generic [ref=e267]:
+                      - generic [ref=e268]:
+                        - generic [ref=e269]: P
+                        - generic [ref=e270]: (
+                        - generic [ref=e271]:
+                          - generic [ref=e272]: t
+                          - generic [ref=e273]: i
+                        - generic [ref=e275]: "|"
+                        - generic [ref=e276]: context
+                        - generic [ref=e277]: )
+                      - generic [ref=e278]:
+                        - generic [ref=e279]: if
+                        - generic [ref=e280]:
+                          - generic [ref=e281]: t
+                          - generic [ref=e282]: i
+                        - generic [ref=e283]: ∈
+                        - generic [ref=e284]:
+                          - generic [ref=e286]: T
+                          - generic [ref=e288]: valid
+                    - generic [ref=e289]:
+                      - generic [ref=e291]: "0"
+                      - generic [ref=e293]: otherwise
+            - generic [ref=e294]:
+              - generic [ref=e295]:
+                - generic [ref=e296]:
+                  - generic [ref=e299]: T
+                  - generic [ref=e302]:
+                    - generic [ref=e303]: v
+                    - generic [ref=e304]: a
+                    - generic [ref=e305]: l
+                    - generic [ref=e306]: i
+                    - generic [ref=e307]: d
+                - generic [ref=e309]: =
+                - generic [ref=e311]: "{"
+                - generic [ref=e313]: t
+                - generic [ref=e315]: ":"
+                - generic [ref=e316]:
+                  - generic [ref=e317]: p
+                  - generic [ref=e318]: a
+                  - generic [ref=e319]: r
+                  - generic [ref=e320]: t
+                  - generic [ref=e321]: i
+                  - generic [ref=e322]: a
+                  - generic [ref=e323]: l
+                  - generic [ref=e324]: "-"
+                  - generic [ref=e325]: j
+                  - generic [ref=e326]: s
+                  - generic [ref=e327]: o
+                  - generic [ref=e328]: "n"
+                - generic [ref=e330]: +
+                - generic [ref=e332]: t
+                - generic [ref=e333]:
+                  - generic [ref=e334]: i
+                  - generic [ref=e335]: s
+                  - generic [ref=e336]: s
+                  - generic [ref=e337]: c
+                  - generic [ref=e338]: h
+                  - generic [ref=e339]: e
+                  - generic [ref=e340]: m
+                  - generic [ref=e341]: a
+                  - generic [ref=e342]: "-"
+                  - generic [ref=e343]: c
+                  - generic [ref=e344]: o
+                  - generic [ref=e345]: m
+                  - generic [ref=e346]: p
+                  - generic [ref=e347]: l
+                  - generic [ref=e348]: i
+                  - generic [ref=e349]: a
+                  - generic [ref=e350]: "n"
+                  - generic [ref=e351]: t
+                - generic [ref=e353]: "}"
+              - math [ref=e355]:
+                - generic [ref=e356]:
+                  - generic [ref=e358]: T
+                  - generic [ref=e360]: valid
+                - generic [ref=e361]: =
+                - generic [ref=e362]: "{"
+                - generic [ref=e363]: t
+                - generic [ref=e364]: ":"
+                - generic [ref=e365]: partial-json
+                - generic [ref=e366]: +
+                - generic [ref=e367]: t
+                - generic [ref=e368]: is schema-compliant
+                - generic [ref=e369]: "}"
+            - paragraph [ref=e370]: ここで、
+            - list [ref=e371]:
+              - listitem [ref=e372]:
+                - generic [ref=e373]:
+                  - generic [ref=e375]:
+                    - generic [ref=e377]: t
+                    - generic [ref=e380]: i
+                  - math [ref=e382]:
+                    - generic [ref=e383]:
+                      - generic [ref=e384]: t
+                      - generic [ref=e385]: i
+                - text: ": 候補トークン"
+              - listitem [ref=e386]:
+                - generic [ref=e387]:
+                  - generic [ref=e389]:
+                    - generic [ref=e392]: T
+                    - generic [ref=e395]:
+                      - generic [ref=e396]: v
+                      - generic [ref=e397]: a
+                      - generic [ref=e398]: l
+                      - generic [ref=e399]: i
+                      - generic [ref=e400]: d
+                  - math [ref=e402]:
+                    - generic [ref=e403]:
+                      - generic [ref=e405]: T
+                      - generic [ref=e407]: valid
+                - text: ": スキーマ準拠トークン集合"
+              - listitem [ref=e408]:
+                - generic [ref=e409]:
+                  - generic [ref=e411]:
+                    - generic [ref=e412]: p
+                    - generic [ref=e413]: a
+                    - generic [ref=e414]: r
+                    - generic [ref=e415]: t
+                    - generic [ref=e416]: i
+                    - generic [ref=e417]: a
+                    - generic [ref=e418]: l
+                    - generic [ref=e419]: "-"
+                    - generic [ref=e420]: j
+                    - generic [ref=e421]: s
+                    - generic [ref=e422]: o
+                    - generic [ref=e423]: "n"
+                  - math [ref=e425]:
+                    - generic [ref=e426]: partial-json
+                - text: ": これまでに生成されたJSON"
+            - heading "Pydantic統合パターン" [level=3] [ref=e427]
+            - generic [ref=e428]:
+              - generic [ref=e429]:
+                - generic [ref=e430]: Python
+                - button "copy" [ref=e431] [cursor=pointer]
+              - code [ref=e433]:
+                - table [ref=e434]:
+                  - rowgroup [ref=e435]:
+                    - 'row "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 from pydantic import BaseModel class UserInfo(BaseModel): \"\"\"ユーザー情報モデル\"\"\" name: str age: int email: str # Pydantic → JSON Schema変換 schema = UserInfo.model_json_schema() # Bedrock API呼び出し response = bedrock.invoke_model( modelId=\"...\", body=json.dumps({ \"messages\": [...], \"response_format\": { \"type\": \"json_object\", \"json_schema\": schema # Pydanticスキーマ } }) ) # Pydanticで型安全にアクセス user = UserInfo.model_validate_json(response[\"body\"].read()) print(user.name) # 型ヒント有効" [ref=e436]':
+                      - cell "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26" [ref=e437]:
+                        - generic [ref=e438]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+                      - 'cell "from pydantic import BaseModel class UserInfo(BaseModel): \"\"\"ユーザー情報モデル\"\"\" name: str age: int email: str # Pydantic → JSON Schema変換 schema = UserInfo.model_json_schema() # Bedrock API呼び出し response = bedrock.invoke_model( modelId=\"...\", body=json.dumps({ \"messages\": [...], \"response_format\": { \"type\": \"json_object\", \"json_schema\": schema # Pydanticスキーマ } }) ) # Pydanticで型安全にアクセス user = UserInfo.model_validate_json(response[\"body\"].read()) print(user.name) # 型ヒント有効" [ref=e439]':
+                        - generic [ref=e440]: "from pydantic import BaseModel class UserInfo(BaseModel): \"\"\"ユーザー情報モデル\"\"\" name: str age: int email: str # Pydantic → JSON Schema変換 schema = UserInfo.model_json_schema() # Bedrock API呼び出し response = bedrock.invoke_model( modelId=\"...\", body=json.dumps({ \"messages\": [...], \"response_format\": { \"type\": \"json_object\", \"json_schema\": schema # Pydanticスキーマ } }) ) # Pydanticで型安全にアクセス user = UserInfo.model_validate_json(response[\"body\"].read()) print(user.name) # 型ヒント有効"
+            - heading "パフォーマンス最適化" [level=2] [ref=e441]
+            - heading "レスポンスタイム比較" [level=3] [ref=e442]
+            - table [ref=e444]:
+              - rowgroup [ref=e445]:
+                - row "アプローチ 平均レイテンシ 失敗率 トークン消費" [ref=e446]:
+                  - columnheader "アプローチ" [ref=e447]
+                  - columnheader "平均レイテンシ" [ref=e448]
+                  - columnheader "失敗率" [ref=e449]
+                  - columnheader "トークン消費" [ref=e450]
+              - rowgroup [ref=e451]:
+                - row "Prompt Engineering 800ms 18% 1.0x" [ref=e452]:
+                  - cell "Prompt Engineering" [ref=e453]
+                  - cell "800ms" [ref=e454]
+                  - cell "18%" [ref=e455]
+                  - cell "1.0x" [ref=e456]
+                - row "Prompt + Pydantic検証 850ms 0%（検証後） 1.18x（再試行含む）" [ref=e457]:
+                  - cell "Prompt + Pydantic検証" [ref=e458]
+                  - cell "850ms" [ref=e459]
+                  - cell "0%（検証後）" [ref=e460]
+                  - cell "1.18x（再試行含む）" [ref=e461]
+                - row "Constrained Decoding 200ms 0% 1.0x" [ref=e462]:
+                  - cell "Constrained Decoding" [ref=e463]:
+                    - strong [ref=e464]: Constrained Decoding
+                  - cell "200ms" [ref=e465]:
+                    - strong [ref=e466]: 200ms
+                  - cell "0%" [ref=e467]:
+                    - strong [ref=e468]: 0%
+                  - cell "1.0x" [ref=e469]:
+                    - strong [ref=e470]: 1.0x
+            - paragraph [ref=e471]:
+              - strong [ref=e472]: 改善効果
+              - text: ":"
+            - list [ref=e473]:
+              - listitem [ref=e474]: レイテンシ 75%削減
+              - listitem [ref=e475]: トークン消費 18%削減（再試行ゼロ）
+            - heading "スケーラビリティ" [level=3] [ref=e476]
+            - generic [ref=e477]:
+              - generic [ref=e478]:
+                - generic [ref=e479]: Python
+                - button "copy" [ref=e480] [cursor=pointer]
+              - code [ref=e482]:
+                - table [ref=e483]:
+                  - rowgroup [ref=e484]:
+                    - 'row "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 # 本番環境での大量リクエスト処理 import asyncio async def process_batch(requests: list) -> list: \"\"\"1000件/秒のスループット\"\"\" tasks = [] for req in requests: task = bedrock_async.invoke_model( modelId=\"...\", body=json.dumps({ \"messages\": req[\"messages\"], \"response_format\": {\"json_schema\": req[\"schema\"]} }) ) tasks.append(task) # 並列実行 responses = await asyncio.gather(*tasks) return responses # 使用例 results = asyncio.run(process_batch(requests)) # → 1000件を1秒で処理（200ms/req × 並列5）" [ref=e485]':
+                      - cell "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24" [ref=e486]:
+                        - generic [ref=e487]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+                      - 'cell "# 本番環境での大量リクエスト処理 import asyncio async def process_batch(requests: list) -> list: \"\"\"1000件/秒のスループット\"\"\" tasks = [] for req in requests: task = bedrock_async.invoke_model( modelId=\"...\", body=json.dumps({ \"messages\": req[\"messages\"], \"response_format\": {\"json_schema\": req[\"schema\"]} }) ) tasks.append(task) # 並列実行 responses = await asyncio.gather(*tasks) return responses # 使用例 results = asyncio.run(process_batch(requests)) # → 1000件を1秒で処理（200ms/req × 並列5）" [ref=e488]':
+                        - generic [ref=e489]: "# 本番環境での大量リクエスト処理 import asyncio async def process_batch(requests: list) -> list: \"\"\"1000件/秒のスループット\"\"\" tasks = [] for req in requests: task = bedrock_async.invoke_model( modelId=\"...\", body=json.dumps({ \"messages\": req[\"messages\"], \"response_format\": {\"json_schema\": req[\"schema\"]} }) ) tasks.append(task) # 並列実行 responses = await asyncio.gather(*tasks) return responses # 使用例 results = asyncio.run(process_batch(requests)) # → 1000件を1秒で処理（200ms/req × 並列5）"
+            - heading "運用での学び" [level=2] [ref=e490]
+            - 'heading "学び1: 複雑スキーマの制限" [level=3] [ref=e491]'
+            - paragraph [ref=e492]:
+              - strong [ref=e493]: 問題
+              - text: ": 深くネストしたスキーマでは生成品質が低下"
+            - generic [ref=e494]:
+              - generic [ref=e495]:
+                - generic [ref=e496]: JSON
+                - button "copy" [ref=e497] [cursor=pointer]
+              - code [ref=e499]:
+                - table [ref=e500]:
+                  - rowgroup [ref=e501]:
+                    - 'row "1 2 3 4 5 6 7 8 9 10 11 12 // 避けるべきパターン { \"level1\": { \"level2\": { \"level3\": { \"level4\": { \"value\": \"...\" } } } } }" [ref=e502]':
+                      - cell "1 2 3 4 5 6 7 8 9 10 11 12" [ref=e503]:
+                        - generic [ref=e504]: 1 2 3 4 5 6 7 8 9 10 11 12
+                      - 'cell "// 避けるべきパターン { \"level1\": { \"level2\": { \"level3\": { \"level4\": { \"value\": \"...\" } } } } }" [ref=e505]':
+                        - generic [ref=e506]: "// 避けるべきパターン { \"level1\": { \"level2\": { \"level3\": { \"level4\": { \"value\": \"...\" } } } } }"
+            - paragraph [ref=e507]:
+              - strong [ref=e508]: 解決策
+              - text: ": フラットな構造に設計"
+            - generic [ref=e509]:
+              - generic [ref=e510]:
+                - generic [ref=e511]: JSON
+                - button "copy" [ref=e512] [cursor=pointer]
+              - code [ref=e514]:
+                - table [ref=e515]:
+                  - rowgroup [ref=e516]:
+                    - 'row "1 2 3 4 // 推奨パターン { \"level1_level2_level3_level4_value\": \"...\" }" [ref=e517]':
+                      - cell "1 2 3 4" [ref=e518]:
+                        - generic [ref=e519]: 1 2 3 4
+                      - 'cell "// 推奨パターン { \"level1_level2_level3_level4_value\": \"...\" }" [ref=e520]':
+                        - generic [ref=e521]: "// 推奨パターン { \"level1_level2_level3_level4_value\": \"...\" }"
+            - 'heading "学び2: Enumの有効活用" [level=3] [ref=e522]'
+            - paragraph [ref=e523]:
+              - strong [ref=e524]: ベストプラクティス
+              - text: ":"
+            - generic [ref=e525]:
+              - generic [ref=e526]:
+                - generic [ref=e527]: JSON
+                - button "copy" [ref=e528] [cursor=pointer]
+              - code [ref=e530]:
+                - table [ref=e531]:
+                  - rowgroup [ref=e532]:
+                    - 'row "1 2 3 4 5 6 { \"status\": { \"type\": \"string\", \"enum\": [\"pending\", \"approved\", \"rejected\"] } }" [ref=e533]':
+                      - cell "1 2 3 4 5 6" [ref=e534]:
+                        - generic [ref=e535]: 1 2 3 4 5 6
+                      - 'cell "{ \"status\": { \"type\": \"string\", \"enum\": [\"pending\", \"approved\", \"rejected\"] } }" [ref=e536]':
+                        - generic [ref=e537]: "{ \"status\": { \"type\": \"string\", \"enum\": [\"pending\", \"approved\", \"rejected\"] } }"
+            - paragraph [ref=e538]:
+              - strong [ref=e539]: 効果
+              - text: ": 無効な値の生成が完全に防止される"
+            - heading "学術研究との関連" [level=2] [ref=e540]
+            - heading "関連論文" [level=3] [ref=e541]
+            - list [ref=e542]:
+              - listitem [ref=e543]:
+                - strong [ref=e544]: Constrained Text Generation
+                - text: ": Johnson et al. (2023) - 構造制約下でのデコーディング手法"
+              - listitem [ref=e545]:
+                - strong [ref=e546]: Grammar-Based Decoding
+                - text: ": Willard & Louf (2023) - 形式文法によるLLM制御"
+            - heading "Amazon Bedrockの独自性" [level=3] [ref=e547]
+            - list [ref=e548]:
+              - listitem [ref=e549]:
+                - strong [ref=e550]: Production-Ready
+                - text: ": 学術研究を本番環境に最適化"
+              - listitem [ref=e551]:
+                - strong [ref=e552]: Multi-Model Support
+                - text: ": Claude, LLaMA, Titanなど複数モデルで利用可能"
+              - listitem [ref=e553]:
+                - strong [ref=e554]: Managed Service
+                - text: ": インフラ管理不要"
+            - heading "まとめと実践への示唆" [level=2] [ref=e555]
+            - heading "まとめ" [level=3] [ref=e556]
+            - list [ref=e557]:
+              - listitem [ref=e558]:
+                - strong [ref=e559]: Constrained Decoding
+                - text: ": スキーマ違反を根本的に防止"
+              - listitem [ref=e560]:
+                - strong [ref=e561]: Pydantic統合
+                - text: ": 型安全なPython開発が可能"
+              - listitem [ref=e562]:
+                - strong [ref=e563]: 本番運用
+                - text: ": レイテンシ200ms以内、失敗率0%"
+            - heading "実践への示唆" [level=3] [ref=e564]
+            - paragraph [ref=e565]:
+              - strong [ref=e566]: Zenn記事の3層戦略との組み合わせ
+              - text: ":"
+            - table [ref=e568]:
+              - rowgroup [ref=e569]:
+                - row "Layer 従来（Zenn記事） Amazon Bedrock 統合効果" [ref=e570]:
+                  - columnheader "Layer" [ref=e571]
+                  - columnheader "従来（Zenn記事）" [ref=e572]
+                  - columnheader "Amazon Bedrock" [ref=e573]
+                  - columnheader "統合効果" [ref=e574]
+              - rowgroup [ref=e575]:
+                - row "第1層 Pydanticスキーマ検証 Constrained Decoding スキーマ違反ゼロ" [ref=e576]:
+                  - cell "第1層" [ref=e577]
+                  - cell "Pydanticスキーマ検証" [ref=e578]
+                  - cell "Constrained Decoding" [ref=e579]:
+                    - strong [ref=e580]: Constrained Decoding
+                  - cell "スキーマ違反ゼロ" [ref=e581]
+                - row "第2層 Citation Grounding - ハルシネーション検出（変更なし）" [ref=e582]:
+                  - cell "第2層" [ref=e583]
+                  - cell "Citation Grounding" [ref=e584]
+                  - cell "-" [ref=e585]
+                  - cell "ハルシネーション検出（変更なし）" [ref=e586]
+                - row "第3層 LLMセマンティック検証 - セマンティック検証（変更なし）" [ref=e587]:
+                  - cell "第3層" [ref=e588]
+                  - cell "LLMセマンティック検証" [ref=e589]
+                  - cell "-" [ref=e590]
+                  - cell "セマンティック検証（変更なし）" [ref=e591]
+            - paragraph [ref=e592]:
+              - strong [ref=e593]: 推奨アーキテクチャ
+              - text: ":"
+            - list [ref=e594]:
+              - listitem [ref=e595]: Amazon BedrockのStructured Outputsで確実なJSON生成
+              - listitem [ref=e596]: Pydanticで型安全アクセス
+              - listitem [ref=e597]: Citation Groundingでハルシネーション検出
+            - heading "参考文献" [level=2] [ref=e598]
+            - list [ref=e599]:
+              - listitem [ref=e600]:
+                - strong [ref=e601]: Blog URL
+                - text: ":"
+                - link "Structured Outputs on Amazon Bedrock - AWS ML Blog" [ref=e602] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/blogs/machine-learning/structured-outputs-on-amazon-bedrock-schema-compliant-ai-responses/
+              - listitem [ref=e603]:
+                - strong [ref=e604]: Related Zenn article
+                - text: ":"
+                - link "LLM出力検証の実践：Pydanticで95%精度を実現する3層戦略" [ref=e605] [cursor=pointer]:
+                  - /url: https://zenn.dev/0h_n0/articles/0a8f4d0e7c71bf
+              - listitem [ref=e606]:
+                - strong [ref=e607]: Pydantic
+                - text: ":"
+                - link "Pydantic Documentation" [ref=e608] [cursor=pointer]:
+                  - /url: https://docs.pydantic.dev/
+              - listitem [ref=e609]:
+                - strong [ref=e610]: Amazon Bedrock
+                - text: ":"
+                - link "Amazon Bedrock - AWS" [ref=e611] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/bedrock/
+          - generic [ref=e612]:
+            - link "TechBlog" [ref=e614] [cursor=pointer]:
+              - /url: /categories/techblog/
+            - generic [ref=e615]:
+              - link "AWS" [ref=e616] [cursor=pointer]:
+                - /url: /tags/aws/
+              - link "Bedrock" [ref=e617] [cursor=pointer]:
+                - /url: /tags/bedrock/
+              - link "StructuredOutput" [ref=e618] [cursor=pointer]:
+                - /url: /tags/structuredoutput/
+              - link "Pydantic" [ref=e619] [cursor=pointer]:
+                - /url: /tags/pydantic/
+            - generic [ref=e620]:
+              - generic [ref=e621]:
+                - text: この投稿は
+                - link "CC BY 4.0" [ref=e622] [cursor=pointer]:
+                  - /url: https://creativecommons.org/licenses/by/4.0/
+                - text: でライセンスされています。
+              - generic [ref=e623]: "シェア:"
+        - generic [ref=e624]:
+          - generic [ref=e625]:
+            - generic [ref=e626]:
+              - generic [ref=e627]: 最近の更新
+              - list [ref=e628]:
+                - listitem [ref=e629]:
+                  - 'link "💻 AWS ML Blog解説: Amazon Bedrockの構造化出力 - スキーマ準拠AI応答の実現" [ref=e630] [cursor=pointer]':
+                    - /url: /posts/techblog-aws-bedrock-structured-outputs/
+                    - generic [ref=e631]: 💻
+                    - generic [ref=e632]: "AWS ML Blog解説: Amazon Bedrockの構造化出力 - スキーマ準拠AI応答の実現"
+                  - generic [ref=e633]:
+                    - generic [ref=e634]:
+                      - text: 📅
+                      - emphasis [ref=e635]: 2026/02/14
+                    - link "TechBlog" [ref=e637] [cursor=pointer]:
+                      - /url: /categories/techblog/
+                    - generic [ref=e638]:
+                      - link "AWS" [ref=e639] [cursor=pointer]:
+                        - /url: /tags/aws/
+                      - link "Bedrock" [ref=e640] [cursor=pointer]:
+                        - /url: /tags/bedrock/
+                - listitem [ref=e641]:
+                  - 'link "📄 論文解説: Hallucination Detection and Mitigation - LLMハルシネーションの多面的検出と緩和戦略" [ref=e642] [cursor=pointer]':
+                    - /url: /posts/paper-2601-09929/
+                    - generic [ref=e643]: 📄
+                    - generic [ref=e644]: "論文解説: Hallucination Detection and Mitigation - LLMハルシネーションの多面的検出と緩和戦略"
+                  - generic [ref=e645]:
+                    - generic [ref=e646]:
+                      - text: 📅
+                      - emphasis [ref=e647]: 2026/02/14
+                    - link "TechBlog" [ref=e649] [cursor=pointer]:
+                      - /url: /categories/techblog/
+                    - generic [ref=e650]:
+                      - link "LLM" [ref=e651] [cursor=pointer]:
+                        - /url: /tags/llm/
+                      - link "Hallucination" [ref=e652] [cursor=pointer]:
+                        - /url: /tags/hallucination/
+                - listitem [ref=e653]:
+                  - 'link "📄 論文解説: STED and Consistency Scoring - LLM構造化出力の信頼性評価フレームワーク" [ref=e654] [cursor=pointer]':
+                    - /url: /posts/paper-2512-23712/
+                    - generic [ref=e655]: 📄
+                    - generic [ref=e656]: "論文解説: STED and Consistency Scoring - LLM構造化出力の信頼性評価フレームワーク"
+                  - generic [ref=e657]:
+                    - generic [ref=e658]:
+                      - text: 📅
+                      - emphasis [ref=e659]: 2026/02/14
+                    - link "TechBlog" [ref=e661] [cursor=pointer]:
+                      - /url: /categories/techblog/
+                    - generic [ref=e662]:
+                      - link "LLM" [ref=e663] [cursor=pointer]:
+                        - /url: /tags/llm/
+                      - link "Validation" [ref=e664] [cursor=pointer]:
+                        - /url: /tags/validation/
+                - listitem [ref=e665]:
+                  - 'link "📄 EMNLP 2024論文解説: MiniCheck - 高速・高精度なLLMファクトチェック" [ref=e666] [cursor=pointer]':
+                    - /url: /posts/conf-minicheck-emnlp2024/
+                    - generic [ref=e667]: 📄
+                    - generic [ref=e668]: "EMNLP 2024論文解説: MiniCheck - 高速・高精度なLLMファクトチェック"
+                  - generic [ref=e669]:
+                    - generic [ref=e670]:
+                      - text: 📅
+                      - emphasis [ref=e671]: 2026/02/14
+                    - link "TechBlog" [ref=e673] [cursor=pointer]:
+                      - /url: /categories/techblog/
+                    - generic [ref=e674]:
+                      - link "LLM" [ref=e675] [cursor=pointer]:
+                        - /url: /tags/llm/
+                      - link "FactChecking" [ref=e676] [cursor=pointer]:
+                        - /url: /tags/factchecking/
+                - listitem [ref=e677]:
+                  - 'link "📄 NeurIPS 2024論文解説: HaloScope - 未ラベルLLM生成データを活用したハルシネーション検出" [ref=e678] [cursor=pointer]':
+                    - /url: /posts/conf-haloscope-neurips2024/
+                    - generic [ref=e679]: 📄
+                    - generic [ref=e680]: "NeurIPS 2024論文解説: HaloScope - 未ラベルLLM生成データを活用したハルシネーション検出"
+                  - generic [ref=e681]:
+                    - generic [ref=e682]:
+                      - text: 📅
+                      - emphasis [ref=e683]: 2026/02/14
+                    - link "TechBlog" [ref=e685] [cursor=pointer]:
+                      - /url: /categories/techblog/
+                    - generic [ref=e686]:
+                      - link "LLM" [ref=e687] [cursor=pointer]:
+                        - /url: /tags/llm/
+                      - link "Hallucination" [ref=e688] [cursor=pointer]:
+                        - /url: /tags/hallucination/
+            - generic [ref=e689]:
+              - generic [ref=e690]: 人気のタグ
+              - generic [ref=e691]:
+                - link "Data Scientist" [ref=e692] [cursor=pointer]:
+                  - /url: /tags/data-scientist/
+                - link "Machine Learning" [ref=e693] [cursor=pointer]:
+                  - /url: /tags/machine-learning/
+                - link "LLM" [ref=e694] [cursor=pointer]:
+                  - /url: /tags/llm/
+                - link "arXiv" [ref=e695] [cursor=pointer]:
+                  - /url: /tags/arxiv/
+                - link "AWS" [ref=e696] [cursor=pointer]:
+                  - /url: /tags/aws/
+                - link "Career" [ref=e697] [cursor=pointer]:
+                  - /url: /tags/career/
+                - link "Hallucination" [ref=e698] [cursor=pointer]:
+                  - /url: /tags/hallucination/
+                - link "StructuredOutput" [ref=e699] [cursor=pointer]:
+                  - /url: /tags/structuredoutput/
+                - link "Bedrock" [ref=e700] [cursor=pointer]:
+                  - /url: /tags/bedrock/
+                - link "Blockchain" [ref=e701] [cursor=pointer]:
+                  - /url: /tags/blockchain/
+          - generic [ref=e702]:
+            - generic [ref=e703]: 目次
+            - navigation [ref=e704]:
+              - list [ref=e705]:
+                - listitem [ref=e706]:
+                  - link "情報源" [ref=e707] [cursor=pointer]:
+                    - /url: "#情報源"
+                - listitem [ref=e708]:
+                  - link "ブログ概要" [ref=e709] [cursor=pointer]:
+                    - /url: "#ブログ概要"
+                - listitem [ref=e710]:
+                  - link "技術的背景" [ref=e711] [cursor=pointer]:
+                    - /url: "#技術的背景"
+                - listitem [ref=e712]:
+                  - link "実装アーキテクチャ" [ref=e713] [cursor=pointer]:
+                    - /url: "#実装アーキテクチャ"
+                - listitem [ref=e714]:
+                  - link "パフォーマンス最適化" [ref=e715] [cursor=pointer]:
+                    - /url: "#パフォーマンス最適化"
+                - listitem [ref=e716]:
+                  - link "運用での学び" [ref=e717] [cursor=pointer]:
+                    - /url: "#運用での学び"
+                - listitem [ref=e718]:
+                  - link "学術研究との関連" [ref=e719] [cursor=pointer]:
+                    - /url: "#学術研究との関連"
+                - listitem [ref=e720]:
+                  - link "まとめと実践への示唆" [ref=e721] [cursor=pointer]:
+                    - /url: "#まとめと実践への示唆"
+                - listitem [ref=e722]:
+                  - link "参考文献" [ref=e723] [cursor=pointer]:
+                    - /url: "#参考文献"
+              - list [ref=e724]:
+                - listitem [ref=e725]:
+                  - link "情報源" [ref=e726] [cursor=pointer]:
+                    - /url: "#情報源"
+                - listitem [ref=e727]:
+                  - link "ブログ概要" [ref=e728] [cursor=pointer]:
+                    - /url: "#ブログ概要"
+                - listitem [ref=e729]:
+                  - link "技術的背景" [ref=e730] [cursor=pointer]:
+                    - /url: "#技術的背景"
+                - listitem [ref=e731]:
+                  - link "実装アーキテクチャ" [ref=e732] [cursor=pointer]:
+                    - /url: "#実装アーキテクチャ"
+                - listitem [ref=e733]:
+                  - link "パフォーマンス最適化" [ref=e734] [cursor=pointer]:
+                    - /url: "#パフォーマンス最適化"
+                - listitem [ref=e735]:
+                  - link "運用での学び" [ref=e736] [cursor=pointer]:
+                    - /url: "#運用での学び"
+                - listitem [ref=e737]:
+                  - link "学術研究との関連" [ref=e738] [cursor=pointer]:
+                    - /url: "#学術研究との関連"
+                - listitem [ref=e739]:
+                  - link "まとめと実践への示唆" [ref=e740] [cursor=pointer]:
+                    - /url: "#まとめと実践への示唆"
+                - listitem [ref=e741]:
+                  - link "参考文献" [ref=e742] [cursor=pointer]:
+                    - /url: "#参考文献"
+      - generic [ref=e744]:
+        - generic [ref=e745]:
+          - heading "関連記事" [level=3] [ref=e746]
+          - generic [ref=e747]:
+            - generic [ref=e749]:
+              - generic [ref=e750]:
+                - emphasis [ref=e751]: 2022/11/10
+                - link "TechBlog" [ref=e753] [cursor=pointer]:
+                  - /url: /categories/techblog/
+              - link "💻 AWS CLIでよく使う基本的なコマンド(逆引き) AWS CLIでよく使うコマンドなどを逆引きでまとめました。この記事は随時更新予定です。 逆引きコマンドチートシート command 登録しているAWSプロファイルリストの一覧 aws c..." [ref=e754] [cursor=pointer]:
+                - /url: /posts/aws-cli-most-frequent-command-list/
+                - heading "💻 AWS CLIでよく使う基本的なコマンド(逆引き)" [level=3] [ref=e755]:
+                  - generic [ref=e756]: 💻
+                  - text: AWS CLIでよく使う基本的なコマンド(逆引き)
+                - paragraph [ref=e758]: AWS CLIでよく使うコマンドなどを逆引きでまとめました。この記事は随時更新予定です。 逆引きコマンドチートシート command 登録しているAWSプロファイルリストの一覧 aws c...
+              - generic [ref=e759]:
+                - link "Machine Learning Engineer" [ref=e760] [cursor=pointer]:
+                  - /url: /tags/machine-learning-engineer/
+                - link "Data Scientist" [ref=e761] [cursor=pointer]:
+                  - /url: /tags/data-scientist/
+            - generic [ref=e763]:
+              - generic [ref=e764]:
+                - emphasis [ref=e765]: 2026/02/14
+                - link "TechBlog" [ref=e767] [cursor=pointer]:
+                  - /url: /categories/techblog/
+              - 'link "📄 論文解説: STED and Consistency Scoring - LLM構造化出力の信頼性評価フレームワーク 論文解説: STED and Consistency Scoring - LLM構造化出力の信頼性評価フレームワーク この記事は Zenn記事: LLM出力検証の実践：Pydanticで95%精度を実現する3層戦略 の深掘りです。 情報源 arXiv ID: 2512.23712 ..." [ref=e768] [cursor=pointer]':
+                - /url: /posts/paper-2512-23712/
+                - 'heading "📄 論文解説: STED and Consistency Scoring - LLM構造化出力の信頼性評価フレームワーク" [level=3] [ref=e769]':
+                  - generic [ref=e770]: 📄
+                  - text: "論文解説: STED and Consistency Scoring - LLM構造化出力の信頼性評価フレームワーク"
+                - paragraph [ref=e772]: "論文解説: STED and Consistency Scoring - LLM構造化出力の信頼性評価フレームワーク この記事は Zenn記事: LLM出力検証の実践：Pydanticで95%精度を実現する3層戦略 の深掘りです。 情報源 arXiv ID: 2512.23712 ..."
+              - generic [ref=e773]:
+                - link "LLM" [ref=e774] [cursor=pointer]:
+                  - /url: /tags/llm/
+                - link "Validation" [ref=e775] [cursor=pointer]:
+                  - /url: /tags/validation/
+            - generic [ref=e777]:
+              - generic [ref=e778]:
+                - emphasis [ref=e779]: 2022/11/11
+                - link "TechBlog" [ref=e781] [cursor=pointer]:
+                  - /url: /categories/techblog/
+              - link "💻 第３章補足：書籍『SolidityとEthereumによる実践スマートコントラクト開発 ―Truffle Suiteを用いた開発の基礎からデプロイまで』 オライリーの書籍『SolidityとEthereumによる実践スマートコントラクト開発 ―Truffle Suiteを用いた開発の基礎からデプロイまで』を読みつつ、詰まったところや一部書き換えが必要なところをまとめました。この内容は本書の第三章の部分の補足となります。最初はsolidityで概..." [ref=e782] [cursor=pointer]:
+                - /url: /posts/blockchain-solidity-ethereum-dev-environment/
+                - heading "💻 第３章補足：書籍『SolidityとEthereumによる実践スマートコントラクト開発 ―Truffle Suiteを用いた開発の基礎からデプロイまで』" [level=3] [ref=e783]:
+                  - generic [ref=e784]: 💻
+                  - text: 第３章補足：書籍『SolidityとEthereumによる実践スマートコントラクト開発 ―Truffle Suiteを用いた開発の基礎からデプロイまで』
+                - paragraph [ref=e786]: オライリーの書籍『SolidityとEthereumによる実践スマートコントラクト開発 ―Truffle Suiteを用いた開発の基礎からデプロイまで』を読みつつ、詰まったところや一部書き換えが必要なところをまとめました。この内容は本書の第三章の部分の補足となります。最初はsolidityで概...
+              - generic [ref=e787]:
+                - link "Blockchain" [ref=e788] [cursor=pointer]:
+                  - /url: /tags/blockchain/
+                - link "Solidity" [ref=e789] [cursor=pointer]:
+                  - /url: /tags/solidity/
+        - generic [ref=e790]:
+          - 'link "前へ 論文解説: Hallucination Detection and Mitigation - LLMハルシネーションの多面的検出と緩和戦略" [ref=e791] [cursor=pointer]':
+            - /url: /posts/paper-2601-09929/
+            - text: 前へ
+            - paragraph [ref=e792]: "論文解説: Hallucination Detection and Mitigation - LLMハルシネーションの多面的検出と緩和戦略"
+          - generic [ref=e793]:
+            - text: 次へ
+            - paragraph [ref=e794]: "-"
+    - text: "# # # # # # # # # #"
+  - contentinfo [ref=e795]:
+    - generic [ref=e797]:
+      - paragraph [ref=e799]:
+        - text: © 2026
+        - link "0h-n0" [ref=e800] [cursor=pointer]:
+          - /url: https://github.com/0h-n0
+        - text: . 一部の権利を保有しています。
+      - paragraph [ref=e802]:
+        - link "Jekyll" [ref=e803] [cursor=pointer]:
+          - /url: https://jekyllrb.com
+        - text: と
+        - link "Chirpy" [ref=e804] [cursor=pointer]:
+          - /url: https://github.com/cotes2020/jekyll-theme-chirpy
+        - text: テーマで構築
+  - button "back-to-top" [ref=e805] [cursor=pointer]
+```

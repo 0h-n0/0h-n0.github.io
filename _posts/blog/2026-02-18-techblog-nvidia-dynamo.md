@@ -2,14 +2,15 @@
 layout: post
 title: "技術ブログ解説: NVIDIA Dynamo — MoE推論のための分散サービングフレームワーク"
 description: "NVIDIA Dynamoの分離型Prefill/Decode、KVキャッシュルーティング、NIXLライブラリを技術的に解説。Qwen3.5等のMoEモデル推論基盤"
-categories: [blog, tech_blog, nvidia]
+categories: [blog, tech_blog]
 tags: [nvidia, inference, moe, vllm, distributed-systems, gpu]
 date: 2026-02-18 16:00:00 +0900
 source_type: tech_blog
+source_domain: developer.nvidia.com
 source_url: https://developer.nvidia.com/blog/introducing-nvidia-dynamo-a-low-latency-distributed-inference-framework-for-scaling-reasoning-ai-models/
 zenn_article: 657d35a2bbf71d
 zenn_url: https://zenn.dev/0h_n0/articles/657d35a2bbf71d
-math: false
+math: true
 mermaid: true
 target_audience: "修士学生レベル"
 ---

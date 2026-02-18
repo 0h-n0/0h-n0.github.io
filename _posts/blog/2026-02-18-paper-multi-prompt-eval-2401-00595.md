@@ -105,6 +105,17 @@ LLMの評価では、MMLUやHumanEvalなどのベンチマークで1つのプロ
 
 ### マルチプロンプト評価の5ステップアルゴリズム
 
+```mermaid
+flowchart TD
+    A[候補プロンプトプール\n20〜30種を用意] --> B[キャリブレーション\n3〜5モデルで全候補を評価]
+    B --> C[性能スコア行列を構築\nshape: n_prompts × n_models]
+    C --> D[KMeansクラスタリング\nn_select個のクラスターに分類]
+    D --> E[各クラスターから代表プロンプトを選択\nクラスター中心に最も近いもの]
+    E --> F[最終評価プロンプトセット\n5〜10種を確定]
+    F --> G[全対象モデルで評価\n各プロンプトのスコアを収集]
+    G --> H[平均・標準偏差を報告\n単一値ではなく分布として提示]
+```
+
 ```python
 from sklearn.cluster import KMeans
 import numpy as np

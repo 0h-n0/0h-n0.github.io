@@ -119,6 +119,29 @@ GDRO（Gated Delta Rule Operator）はGDNのチャンクワイズ並列計算を
 2. **Intra-chunk（チャンク内・並列）**: SMA形式の行列積でチャンク内出力を計算
 3. **Inter-chunk（チャンク間・逐次）**: 前チャンクの状態を効率的に引き継ぎ
 
+```mermaid
+flowchart TD
+    A[入力シーケンス T トークン] --> B[チャンク分割\nサイズ L=64~128]
+    B --> C[チャンク c=1]
+    B --> D[チャンク c=2]
+    B --> E[チャンク c=C]
+    C --> F[Intra-chunk 並列計算\nSMA行列積]
+    D --> G[Intra-chunk 並列計算\nSMA行列積]
+    E --> H[Intra-chunk 並列計算\nSMA行列積]
+    C --> I[チャンク状態 s_c\nW_t = α_t × I - β_t k_t k_t^T]
+    I --> J[Inter-chunk 逐次伝搬\nQ_c × state]
+    J --> G
+    G --> K[チャンク状態更新]
+    K --> L[Inter-chunk 逐次伝搬]
+    L --> H
+    F --> M[O_intra + O_inter]
+    G --> N[O_intra + O_inter]
+    H --> O[O_intra + O_inter]
+    M --> P[出力結合\n全チャンク連結]
+    N --> P
+    O --> P
+```
+
 ```python
 def gdro_forward(Q, K, V, alpha, beta, chunk_size=64):
     """Gated Delta Rule Operator - チャンクワイズ並列計算

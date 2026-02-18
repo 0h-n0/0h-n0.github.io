@@ -37,8 +37,21 @@ Speculative RAGは、**文書の並列分割処理**と**確率ベース検証**
 
 Speculative RAGは4つのステージで動作します。
 
-```
-検索 → 並列ドラフト生成 → 検証 → 最終選択
+```mermaid
+graph LR
+    Q[ユーザークエリ] --> RET[検索\nContriever]
+    RET --> DOC[文書集合 D]
+    DOC --> SP1[サブセット D₁]
+    DOC --> SP2[サブセット D₂]
+    DOC --> SP3[サブセット D₃]
+    SP1 --> DR1[Specialist Drafter\nMistral-7B\n→ 回答A₁ + 根拠R₁]
+    SP2 --> DR2[Specialist Drafter\nMistral-7B\n→ 回答A₂ + 根拠R₂]
+    SP3 --> DR3[Specialist Drafter\nMistral-7B\n→ 回答A₃ + 根拠R₃]
+    DR1 --> VER[Generalist Verifier\nMixtral-8x7B\n確信度スコア計算]
+    DR2 --> VER
+    DR3 --> VER
+    VER --> SEL[最高スコア選択\nargmax sᵢ]
+    SEL --> ANS[最終回答 A*]
 ```
 
 **ステージ詳細**:

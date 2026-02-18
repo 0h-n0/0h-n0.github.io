@@ -2,10 +2,17 @@
 layout: post
 title: "AWS ML Blog解説: Amazon Bedrockの構造化出力 - スキーマ準拠AI応答の実現"
 description: "Constrained Decodingによる確実なJSON Schema準拠、Pydanticモデル統合、本番環境での高信頼性構造化データ生成"
-categories: [TechBlog]
-tags: [AWS, Bedrock, StructuredOutput, Pydantic]
+categories: [blog, tech_blog]
+tags: [aws, bedrock, structured-output, pydantic]
+date: 2026-02-14 00:00:00 +0900
+source_type: tech_blog
+source_domain: aws.amazon.com
+source_url: https://aws.amazon.com/blogs/machine-learning/structured-outputs-on-amazon-bedrock-schema-compliant-ai-responses/
+zenn_article: 0a8f4d0e7c71bf
+zenn_url: https://zenn.dev/0h_n0/articles/0a8f4d0e7c71bf
 math: true
 mermaid: true
+target_audience: "修士学生レベル"
 ---
 
 ## ブログ概要
@@ -14,12 +21,12 @@ Amazon Bedrockに**Structured Outputs**機能が追加され、Foundation Models
 
 Zenn記事ではPydanticによる**事後検証**を紹介しましたが、Amazon Bedrockは**生成時制約**により、そもそもスキーマ違反が発生しないアプローチです。
 
-この記事は <a href="https://zenn.dev/0h_n0/articles/0a8f4d0e7c71bf" target="_blank" rel="noopener noreferrer">Zenn記事: LLM出力検証の実践：Pydanticで95%精度を実現する3層戦略</a> の深掘りです。
+この記事は [Zenn記事: LLM出力検証の実践：Pydanticで95%精度を実現する3層戦略](https://zenn.dev/0h_n0/articles/0a8f4d0e7c71bf) の深掘りです。
 
 ## 情報源
 
 - **種別**: 企業テックブログ（AWS Machine Learning Blog）
-- **URL**: <a href="https://aws.amazon.com/blogs/machine-learning/structured-outputs-on-amazon-bedrock-schema-compliant-ai-responses/" target="_blank" rel="noopener noreferrer">Structured Outputs on Amazon Bedrock</a>
+- **URL**: [Structured Outputs on Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/structured-outputs-on-amazon-bedrock-schema-compliant-ai-responses/)
 - **組織**: Amazon Web Services (AWS)
 
 ## 技術的背景
@@ -289,7 +296,7 @@ results = asyncio.run(process_batch(requests))
 
 ## 参考文献
 
-- **Blog URL**: <a href="https://aws.amazon.com/blogs/machine-learning/structured-outputs-on-amazon-bedrock-schema-compliant-ai-responses/" target="_blank" rel="noopener noreferrer">Structured Outputs on Amazon Bedrock - AWS ML Blog</a>
-- **Related Zenn article**: <a href="https://zenn.dev/0h_n0/articles/0a8f4d0e7c71bf" target="_blank" rel="noopener noreferrer">LLM出力検証の実践：Pydanticで95%精度を実現する3層戦略</a>
-- **Pydantic**: <a href="https://docs.pydantic.dev/" target="_blank" rel="noopener noreferrer">Pydantic Documentation</a>
-- **Amazon Bedrock**: <a href="https://aws.amazon.com/bedrock/" target="_blank" rel="noopener noreferrer">Amazon Bedrock - AWS</a>
+- **Blog URL**: [Structured Outputs on Amazon Bedrock - AWS ML Blog](https://aws.amazon.com/blogs/machine-learning/structured-outputs-on-amazon-bedrock-schema-compliant-ai-responses/)
+- **Related Zenn article**: [LLM出力検証の実践：Pydanticで95%精度を実現する3層戦略](https://zenn.dev/0h_n0/articles/0a8f4d0e7c71bf)
+- **Pydantic**: [Pydantic Documentation](https://docs.pydantic.dev/)
+- **Amazon Bedrock**: [Amazon Bedrock - AWS](https://aws.amazon.com/bedrock/)

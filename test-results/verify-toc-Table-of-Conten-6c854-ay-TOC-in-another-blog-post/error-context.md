@@ -1,0 +1,549 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - link "avatar" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "avatar" [ref=e6]
+      - link "0h-n0 TechBLog" [ref=e8] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e9]: MLE, DSのための記事生成、自分の知識保管のために使っています。
+    - list [ref=e10]:
+      - listitem [ref=e11]:
+        - link "HOME" [ref=e12] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e13]:
+        - link "CATEGORIES" [ref=e14] [cursor=pointer]:
+          - /url: /tabs/categories.html
+      - listitem [ref=e15]:
+        - link "TAGS" [ref=e16] [cursor=pointer]:
+          - /url: /tabs/tags.html
+      - listitem [ref=e17]:
+        - link "ARCHIVES" [ref=e18] [cursor=pointer]:
+          - /url: /tabs/archives.html
+      - listitem [ref=e19]:
+        - link "ABOUT" [ref=e20] [cursor=pointer]:
+          - /url: /tabs/about.html
+    - generic [ref=e21]:
+      - button "Switch Mode"
+      - link "github":
+        - /url: https://github.com/0h-n0
+      - link "twitter":
+        - /url: https://x.com/XrZRTgC1ko96643
+      - link "email":
+        - /url: "\n          javascript:location.href = 'mailto:' + ['kbu94982','gmail.com'].join('@')"
+      - link "rss":
+        - /url: /feed.xml
+  - generic [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - link "Home" [ref=e27] [cursor=pointer]:
+          - /url: /
+        - text: ›
+      - text: AWS CLIでよく使う基本的なコマンド(逆引き)
+    - searchbox "search" [ref=e29]
+  - generic [ref=e30]:
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e34]:
+          - heading "💻 AWS CLIでよく使う基本的なコマンド(逆引き)" [level=1] [ref=e35]:
+            - generic [ref=e36]: 💻
+            - text: AWS CLIでよく使う基本的なコマンド(逆引き)
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - text: 投稿日
+              - emphasis [ref=e39]: 2022/11/10
+            - generic [ref=e40]:
+              - text: • 更新日
+              - emphasis [ref=e41]: 2026/02/14
+            - generic [ref=e42]:
+              - generic [ref=e43]:
+                - text: 投稿者
+                - emphasis [ref=e44]:
+                  - link "0h-n0" [ref=e45] [cursor=pointer]:
+                    - /url: https://github.com/0h-n0
+              - generic [ref=e47]:
+                - emphasis [ref=e48]: 5 分
+                - text: 読了時間
+          - generic [ref=e49]:
+            - paragraph [ref=e50]: AWS CLIでよく使うコマンドなどを逆引きでまとめました。この記事は随時更新予定です。
+            - heading "逆引きコマンドチートシート" [level=2] [ref=e51]
+            - table [ref=e53]:
+              - rowgroup [ref=e54]:
+                - row "command" [ref=e55]:
+                  - columnheader [ref=e56]
+                  - columnheader "command" [ref=e57]
+              - rowgroup [ref=e58]:
+                - row "登録しているAWSプロファイルリストの一覧 aws configure list-profiles" [ref=e59]:
+                  - cell "登録しているAWSプロファイルリストの一覧" [ref=e60]:
+                    - link "登録しているAWSプロファイルリストの一覧" [ref=e61] [cursor=pointer]:
+                      - /url: "#登録しているawsプロファイルリストの一覧"
+                  - cell "aws configure list-profiles" [ref=e62]:
+                    - code [ref=e63]: aws configure list-profiles
+                - row "IAMユーザーやロール、それに紐づくクレデンシャルを知りたいとき aws sts get-caller-identify" [ref=e64]:
+                  - cell "IAMユーザーやロール、それに紐づくクレデンシャルを知りたいとき" [ref=e65]:
+                    - link "IAMユーザーやロール、それに紐づくクレデンシャルを知りたいとき" [ref=e66] [cursor=pointer]:
+                      - /url: "#iamユーザーやロールそれに紐づくクレデンシャルを知りたいとき"
+                  - cell "aws sts get-caller-identify" [ref=e67]:
+                    - code [ref=e68]: aws sts get-caller-identify
+                - row "IAMロールを作るとき aws iam create-role" [ref=e69]:
+                  - cell "IAMロールを作るとき" [ref=e70]:
+                    - link "IAMロールを作るとき" [ref=e71] [cursor=pointer]:
+                      - /url: "#iamロールを作るとき"
+                  - cell "aws iam create-role" [ref=e72]:
+                    - code [ref=e73]: aws iam create-role
+                - row "現在作成しているIAMロールの確認 aws iam list-roles" [ref=e74]:
+                  - cell "現在作成しているIAMロールの確認" [ref=e75]:
+                    - link "現在作成しているIAMロールの確認" [ref=e76] [cursor=pointer]:
+                      - /url: "#現在作成しているiamロールの確認"
+                  - cell "aws iam list-roles" [ref=e77]:
+                    - code [ref=e78]: aws iam list-roles
+                - row "IAMロールを削除する aws iam delete-role" [ref=e79]:
+                  - cell "IAMロールを削除する" [ref=e80]:
+                    - link "IAMロールを削除する" [ref=e81] [cursor=pointer]:
+                      - /url: "#iamロールを削除する"
+                  - cell "aws iam delete-role" [ref=e82]:
+                    - code [ref=e83]: aws iam delete-role
+                - row "作成したポリシーファイルが間違っていないかの確認方法 aws accessanalyzer validate-policy" [ref=e84]:
+                  - cell "作成したポリシーファイルが間違っていないかの確認方法" [ref=e85]:
+                    - link "作成したポリシーファイルが間違っていないかの確認方法" [ref=e86] [cursor=pointer]:
+                      - /url: "#作成したポリシーファイルが間違っていないかの確認方法"
+                  - cell "aws accessanalyzer validate-policy" [ref=e87]:
+                    - code [ref=e88]: aws accessanalyzer validate-policy
+            - heading "認証情報やアカウント切り替えなどの基礎コマンド" [level=2] [ref=e89]
+            - heading "登録しているAWSプロファイルリストの一覧" [level=3] [ref=e90]
+            - generic [ref=e91]:
+              - generic [ref=e92]:
+                - generic [ref=e93]: Shell
+                - button "copy" [ref=e94] [cursor=pointer]
+              - code [ref=e96]:
+                - table [ref=e97]:
+                  - rowgroup [ref=e98]:
+                    - row "1 2 3 4 $ aws configure list-profiles default hogehoge higehige" [ref=e99]:
+                      - cell "1 2 3 4" [ref=e100]:
+                        - generic [ref=e101]: 1 2 3 4
+                      - cell "$ aws configure list-profiles default hogehoge higehige" [ref=e102]:
+                        - generic [ref=e103]: $ aws configure list-profiles default hogehoge higehige
+            - heading "コマンド毎でのプロファイルの切り替え" [level=3] [ref=e104]
+            - generic [ref=e105]:
+              - generic [ref=e106]:
+                - generic [ref=e107]: Shell
+                - button "copy" [ref=e108] [cursor=pointer]
+              - code [ref=e110]:
+                - table [ref=e111]:
+                  - rowgroup [ref=e112]:
+                    - 'row "1 2 3 4 5 6 $ aws sts get-caller-identify --profile hogehoge { \"UserId\": \"UserIDForHogehoge\", \"Account\": \"AcountHogehoge\" \"Arn\": \"arn:aws:iam::AcountHogehoge:user/hogehoge\" }" [ref=e113]':
+                      - cell "1 2 3 4 5 6" [ref=e114]:
+                        - generic [ref=e115]: 1 2 3 4 5 6
+                      - 'cell "$ aws sts get-caller-identify --profile hogehoge { \"UserId\": \"UserIDForHogehoge\", \"Account\": \"AcountHogehoge\" \"Arn\": \"arn:aws:iam::AcountHogehoge:user/hogehoge\" }" [ref=e116]':
+                        - generic [ref=e117]: "$ aws sts get-caller-identify --profile hogehoge { \"UserId\": \"UserIDForHogehoge\", \"Account\": \"AcountHogehoge\" \"Arn\": \"arn:aws:iam::AcountHogehoge:user/hogehoge\" }"
+            - heading "IAMユーザーやロール、それに紐づくクレデンシャルを知りたいとき" [level=3] [ref=e118]
+            - generic [ref=e119]:
+              - generic [ref=e120]:
+                - generic [ref=e121]: Shell
+                - button "copy" [ref=e122] [cursor=pointer]
+              - code [ref=e124]:
+                - table [ref=e125]:
+                  - rowgroup [ref=e126]:
+                    - 'row "1 2 3 4 5 6 7 8 9 10 11 12 $ aws sts get-caller-identify { \"UserId\": \"UserID\", \"Account\": \"Acount\" \"Arn\": \"arn:aws:iam::AcountHogehoge:user/username\" } $ # key{UserId, Account, Arn}を指定することで情報の一部を取得可能 $ aws sts get-caller-identify --query Arn \"arn:aws:iam::AcountHogehoge:user/username\" $ # アウトプットのスタイルも指定可能 $ aws sts get-caller-identity --query Arn --output text arn:aws:iam::AcountHogehoge:user/username" [ref=e127]':
+                      - cell "1 2 3 4 5 6 7 8 9 10 11 12" [ref=e128]:
+                        - generic [ref=e129]: 1 2 3 4 5 6 7 8 9 10 11 12
+                      - 'cell "$ aws sts get-caller-identify { \"UserId\": \"UserID\", \"Account\": \"Acount\" \"Arn\": \"arn:aws:iam::AcountHogehoge:user/username\" } $ # key{UserId, Account, Arn}を指定することで情報の一部を取得可能 $ aws sts get-caller-identify --query Arn \"arn:aws:iam::AcountHogehoge:user/username\" $ # アウトプットのスタイルも指定可能 $ aws sts get-caller-identity --query Arn --output text arn:aws:iam::AcountHogehoge:user/username" [ref=e130]':
+                        - generic [ref=e131]: "$ aws sts get-caller-identify { \"UserId\": \"UserID\", \"Account\": \"Acount\" \"Arn\": \"arn:aws:iam::AcountHogehoge:user/username\" } $ # key{UserId, Account, Arn}を指定することで情報の一部を取得可能 $ aws sts get-caller-identify --query Arn \"arn:aws:iam::AcountHogehoge:user/username\" $ # アウトプットのスタイルも指定可能 $ aws sts get-caller-identity --query Arn --output text arn:aws:iam::AcountHogehoge:user/username"
+            - list [ref=e132]:
+              - listitem [ref=e133]:
+                - link "公式ドキュメント：aws sts get-caller-identify" [ref=e134] [cursor=pointer]:
+                  - /url: https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sts/get-caller-identity.html
+            - heading "作成したポリシーファイルが間違っていないかの確認方法" [level=3] [ref=e135]
+            - paragraph [ref=e136]:
+              - text: 下記のように、
+              - code [ref=e137]: policy-template.json
+              - text: を作成する。
+            - generic [ref=e138]:
+              - generic [ref=e139]:
+                - generic [ref=e140]: JSON
+                - button "copy" [ref=e141] [cursor=pointer]
+              - code [ref=e143]:
+                - table [ref=e144]:
+                  - rowgroup [ref=e145]:
+                    - 'row "1 2 3 4 5 6 7 8 9 10 11 12 { \"Version\": \"2012-10-17\", \"Statement\": [ { \"Effect\": \"Allow\", \"Principal\": { \"AWS\": \"arn:aws:iam::AcountHogehoge:user/hogehoge\" }, \"Action\": \"sts:AssumeRole\" } ] }" [ref=e146]':
+                      - cell "1 2 3 4 5 6 7 8 9 10 11 12" [ref=e147]:
+                        - generic [ref=e148]: 1 2 3 4 5 6 7 8 9 10 11 12
+                      - 'cell "{ \"Version\": \"2012-10-17\", \"Statement\": [ { \"Effect\": \"Allow\", \"Principal\": { \"AWS\": \"arn:aws:iam::AcountHogehoge:user/hogehoge\" }, \"Action\": \"sts:AssumeRole\" } ] }" [ref=e149]':
+                        - generic [ref=e150]: "{ \"Version\": \"2012-10-17\", \"Statement\": [ { \"Effect\": \"Allow\", \"Principal\": { \"AWS\": \"arn:aws:iam::AcountHogehoge:user/hogehoge\" }, \"Action\": \"sts:AssumeRole\" } ] }"
+            - paragraph [ref=e151]: 下記のCLIコマンドで確認することで、間違っている箇所があればエラーがでる。指示にしたがって修正する。
+            - generic [ref=e152]:
+              - generic [ref=e153]:
+                - generic [ref=e154]: Shell
+                - button "copy" [ref=e155] [cursor=pointer]
+              - code [ref=e157]:
+                - table [ref=e158]:
+                  - rowgroup [ref=e159]:
+                    - row "1 $ aws accessanalyzer validate-policy --policy-document file://policy-template.json --policy-type IDENTITY_POLICY" [ref=e160]:
+                      - cell "1" [ref=e161]:
+                        - generic [ref=e162]: "1"
+                      - cell "$ aws accessanalyzer validate-policy --policy-document file://policy-template.json --policy-type IDENTITY_POLICY" [ref=e163]:
+                        - generic [ref=e164]: $ aws accessanalyzer validate-policy --policy-document file://policy-template.json --policy-type IDENTITY_POLICY
+            - list [ref=e165]:
+              - listitem [ref=e166]:
+                - link "公式ドキュメント：aws accessanalyzer validate-policy" [ref=e167] [cursor=pointer]:
+                  - /url: https://awscli.amazonaws.com/v2/documentation/api/latest/reference/accessanalyzer/validate-policy.html
+            - separator [ref=e168]
+            - heading "aws iam の後によく使うコマンド" [level=2] [ref=e169]:
+              - generic [ref=e170]:
+                - code [ref=e171]: aws iam
+                - text: の後によく使うコマンド
+            - paragraph [ref=e172]: まずは公式ドキュメントを参考にしましょう。
+            - list [ref=e173]:
+              - listitem [ref=e174]:
+                - link "AWS Identity and Access Management (IAM)" [ref=e175] [cursor=pointer]:
+                  - /url: https://aws.amazon.com/jp/iam/
+              - listitem [ref=e176]:
+                - link "IAMのベストプラクティス" [ref=e177] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html
+            - heading "IAMロールを作るとき" [level=3] [ref=e178]
+            - paragraph [ref=e179]:
+              - text: 下記のように、
+              - code [ref=e180]: policy-template.json
+              - text: を作成する。
+            - generic [ref=e181]:
+              - generic [ref=e182]:
+                - generic [ref=e183]: JSON
+                - button "copy" [ref=e184] [cursor=pointer]
+              - code [ref=e186]:
+                - table [ref=e187]:
+                  - rowgroup [ref=e188]:
+                    - 'row "1 2 3 4 5 6 7 8 9 10 11 12 { \"Version\": \"2012-10-17\", \"Statement\": [ { \"Effect\": \"Allow\", \"Principal\": { \"AWS\": \"arn:aws:iam::AcountHogehoge:user/hogehoge\" }, \"Action\": \"sts:AssumeRole\" } ] }" [ref=e189]':
+                      - cell "1 2 3 4 5 6 7 8 9 10 11 12" [ref=e190]:
+                        - generic [ref=e191]: 1 2 3 4 5 6 7 8 9 10 11 12
+                      - 'cell "{ \"Version\": \"2012-10-17\", \"Statement\": [ { \"Effect\": \"Allow\", \"Principal\": { \"AWS\": \"arn:aws:iam::AcountHogehoge:user/hogehoge\" }, \"Action\": \"sts:AssumeRole\" } ] }" [ref=e192]':
+                        - generic [ref=e193]: "{ \"Version\": \"2012-10-17\", \"Statement\": [ { \"Effect\": \"Allow\", \"Principal\": { \"AWS\": \"arn:aws:iam::AcountHogehoge:user/hogehoge\" }, \"Action\": \"sts:AssumeRole\" } ] }"
+            - paragraph [ref=e194]:
+              - text: 上記のコマンドでIAMロールを作成する。jsonファイルにエラーがあるとコマンドを実行することができない。エラーの出力がわかりにくいため、エラーが出る場合は
+              - link "作成したポリシーファイルが間違っていないかの確認方法" [ref=e195] [cursor=pointer]:
+                - /url: "#作成したポリシーファイルが間違っていないかの確認方法"
+              - text: で確認する方が良い。
+            - generic [ref=e196]:
+              - generic [ref=e197]:
+                - generic [ref=e198]: Shell
+                - button "copy" [ref=e199] [cursor=pointer]
+              - code [ref=e201]:
+                - table [ref=e202]:
+                  - rowgroup [ref=e203]:
+                    - row "1 $ aws iam create-role --role-name HOGEHOGERole --assume-role-policy-document file://policy-template.json" [ref=e204]:
+                      - cell "1" [ref=e205]:
+                        - generic [ref=e206]: "1"
+                      - cell "$ aws iam create-role --role-name HOGEHOGERole --assume-role-policy-document file://policy-template.json" [ref=e207]:
+                        - generic [ref=e208]: $ aws iam create-role --role-name HOGEHOGERole --assume-role-policy-document file://policy-template.json
+            - heading "現在作成しているIAMロールの確認" [level=3] [ref=e209]
+            - paragraph [ref=e210]: 以下のコマンドで出力することが出来ます。
+            - generic [ref=e211]:
+              - generic [ref=e212]:
+                - generic [ref=e213]: Shell
+                - button "copy" [ref=e214] [cursor=pointer]
+              - code [ref=e216]:
+                - table [ref=e217]:
+                  - rowgroup [ref=e218]:
+                    - row "1 $ aws iam list-roles" [ref=e219]:
+                      - cell "1" [ref=e220]:
+                        - generic [ref=e221]: "1"
+                      - cell "$ aws iam list-roles" [ref=e222]:
+                        - generic [ref=e223]: $ aws iam list-roles
+            - paragraph [ref=e224]: 上記のコマンドでは出力が冗長になり過ぎるので、以下のオプションで適切にフィルタリングするとよい。
+            - generic [ref=e225]:
+              - generic [ref=e226]:
+                - generic [ref=e227]: Shell
+                - button "copy" [ref=e228] [cursor=pointer]
+              - code [ref=e230]:
+                - table [ref=e231]:
+                  - rowgroup [ref=e232]:
+                    - row "1 $ aws iam list-roles --query 'Roles[*].RoleName'" [ref=e233]:
+                      - cell "1" [ref=e234]:
+                        - generic [ref=e235]: "1"
+                      - cell "$ aws iam list-roles --query 'Roles[*].RoleName'" [ref=e236]:
+                        - generic [ref=e237]: $ aws iam list-roles --query 'Roles[*].RoleName'
+            - paragraph [ref=e238]: grep するのもおススメ
+            - generic [ref=e239]:
+              - generic [ref=e240]:
+                - generic [ref=e241]: Shell
+                - button "copy" [ref=e242] [cursor=pointer]
+              - code [ref=e244]:
+                - table [ref=e245]:
+                  - rowgroup [ref=e246]:
+                    - row "1 $ aws iam list-roles --query 'Roles[*].RoleName' | grep AWS" [ref=e247]:
+                      - cell "1" [ref=e248]:
+                        - generic [ref=e249]: "1"
+                      - cell "$ aws iam list-roles --query 'Roles[*].RoleName' | grep AWS" [ref=e250]:
+                        - generic [ref=e251]: $ aws iam list-roles --query 'Roles[*].RoleName' | grep AWS
+            - list [ref=e252]:
+              - listitem [ref=e253]:
+                - link "公式ドキュメント：AWS CLI 出力をフィルタリングする" [ref=e254] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-usage-filter.html
+            - heading "IAMロールを削除する" [level=3] [ref=e255]
+            - generic [ref=e256]:
+              - generic [ref=e257]:
+                - generic [ref=e258]: Shell
+                - button "copy" [ref=e259] [cursor=pointer]
+              - code [ref=e261]:
+                - table [ref=e262]:
+                  - rowgroup [ref=e263]:
+                    - row "1 $ aws iam delete-roles --role-name RoleName" [ref=e264]:
+                      - cell "1" [ref=e265]:
+                        - generic [ref=e266]: "1"
+                      - cell "$ aws iam delete-roles --role-name RoleName" [ref=e267]:
+                        - generic [ref=e268]: $ aws iam delete-roles --role-name RoleName
+            - paragraph [ref=e269]: もちろん、上記の方法でクエリも使用できます。公式のドキュメントでは最近のroleの使用状況も確認しております。適切な手順で間違えないように削除しましょう。
+            - list [ref=e270]:
+              - listitem [ref=e271]:
+                - link "公式ドキュメント：ロールまたはインスタンスプロファイルの削除" [ref=e272] [cursor=pointer]:
+                  - /url: https://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/id_roles_manage_delete.html
+          - generic [ref=e273]:
+            - link "TechBlog" [ref=e275] [cursor=pointer]:
+              - /url: /categories/techblog/
+            - generic [ref=e276]:
+              - link "Machine Learning Engineer" [ref=e277] [cursor=pointer]:
+                - /url: /tags/machine-learning-engineer/
+              - link "Data Scientist" [ref=e278] [cursor=pointer]:
+                - /url: /tags/data-scientist/
+              - link "AWS" [ref=e279] [cursor=pointer]:
+                - /url: /tags/aws/
+              - link "Cloud" [ref=e280] [cursor=pointer]:
+                - /url: /tags/cloud/
+            - generic [ref=e281]:
+              - generic [ref=e282]:
+                - text: この投稿は
+                - link "CC BY 4.0" [ref=e283] [cursor=pointer]:
+                  - /url: https://creativecommons.org/licenses/by/4.0/
+                - text: でライセンスされています。
+              - generic [ref=e284]: "シェア:"
+        - generic [ref=e285]:
+          - generic [ref=e286]:
+            - generic [ref=e287]:
+              - generic [ref=e288]: 最近の更新
+              - list [ref=e289]:
+                - listitem [ref=e290]:
+                  - 'link "💻 AWS ML Blog解説: Amazon Bedrockの構造化出力 - スキーマ準拠AI応答の実現" [ref=e291] [cursor=pointer]':
+                    - /url: /posts/techblog-aws-bedrock-structured-outputs/
+                    - generic [ref=e292]: 💻
+                    - generic [ref=e293]: "AWS ML Blog解説: Amazon Bedrockの構造化出力 - スキーマ準拠AI応答の実現"
+                  - generic [ref=e294]:
+                    - generic [ref=e295]:
+                      - text: 📅
+                      - emphasis [ref=e296]: 2026/02/14
+                    - link "TechBlog" [ref=e298] [cursor=pointer]:
+                      - /url: /categories/techblog/
+                    - generic [ref=e299]:
+                      - link "AWS" [ref=e300] [cursor=pointer]:
+                        - /url: /tags/aws/
+                      - link "Bedrock" [ref=e301] [cursor=pointer]:
+                        - /url: /tags/bedrock/
+                - listitem [ref=e302]:
+                  - 'link "📄 論文解説: Hallucination Detection and Mitigation - LLMハルシネーションの多面的検出と緩和戦略" [ref=e303] [cursor=pointer]':
+                    - /url: /posts/paper-2601-09929/
+                    - generic [ref=e304]: 📄
+                    - generic [ref=e305]: "論文解説: Hallucination Detection and Mitigation - LLMハルシネーションの多面的検出と緩和戦略"
+                  - generic [ref=e306]:
+                    - generic [ref=e307]:
+                      - text: 📅
+                      - emphasis [ref=e308]: 2026/02/14
+                    - link "TechBlog" [ref=e310] [cursor=pointer]:
+                      - /url: /categories/techblog/
+                    - generic [ref=e311]:
+                      - link "LLM" [ref=e312] [cursor=pointer]:
+                        - /url: /tags/llm/
+                      - link "Hallucination" [ref=e313] [cursor=pointer]:
+                        - /url: /tags/hallucination/
+                - listitem [ref=e314]:
+                  - 'link "📄 論文解説: STED and Consistency Scoring - LLM構造化出力の信頼性評価フレームワーク" [ref=e315] [cursor=pointer]':
+                    - /url: /posts/paper-2512-23712/
+                    - generic [ref=e316]: 📄
+                    - generic [ref=e317]: "論文解説: STED and Consistency Scoring - LLM構造化出力の信頼性評価フレームワーク"
+                  - generic [ref=e318]:
+                    - generic [ref=e319]:
+                      - text: 📅
+                      - emphasis [ref=e320]: 2026/02/14
+                    - link "TechBlog" [ref=e322] [cursor=pointer]:
+                      - /url: /categories/techblog/
+                    - generic [ref=e323]:
+                      - link "LLM" [ref=e324] [cursor=pointer]:
+                        - /url: /tags/llm/
+                      - link "Validation" [ref=e325] [cursor=pointer]:
+                        - /url: /tags/validation/
+                - listitem [ref=e326]:
+                  - 'link "📄 EMNLP 2024論文解説: MiniCheck - 高速・高精度なLLMファクトチェック" [ref=e327] [cursor=pointer]':
+                    - /url: /posts/conf-minicheck-emnlp2024/
+                    - generic [ref=e328]: 📄
+                    - generic [ref=e329]: "EMNLP 2024論文解説: MiniCheck - 高速・高精度なLLMファクトチェック"
+                  - generic [ref=e330]:
+                    - generic [ref=e331]:
+                      - text: 📅
+                      - emphasis [ref=e332]: 2026/02/14
+                    - link "TechBlog" [ref=e334] [cursor=pointer]:
+                      - /url: /categories/techblog/
+                    - generic [ref=e335]:
+                      - link "LLM" [ref=e336] [cursor=pointer]:
+                        - /url: /tags/llm/
+                      - link "FactChecking" [ref=e337] [cursor=pointer]:
+                        - /url: /tags/factchecking/
+                - listitem [ref=e338]:
+                  - 'link "📄 NeurIPS 2024論文解説: HaloScope - 未ラベルLLM生成データを活用したハルシネーション検出" [ref=e339] [cursor=pointer]':
+                    - /url: /posts/conf-haloscope-neurips2024/
+                    - generic [ref=e340]: 📄
+                    - generic [ref=e341]: "NeurIPS 2024論文解説: HaloScope - 未ラベルLLM生成データを活用したハルシネーション検出"
+                  - generic [ref=e342]:
+                    - generic [ref=e343]:
+                      - text: 📅
+                      - emphasis [ref=e344]: 2026/02/14
+                    - link "TechBlog" [ref=e346] [cursor=pointer]:
+                      - /url: /categories/techblog/
+                    - generic [ref=e347]:
+                      - link "LLM" [ref=e348] [cursor=pointer]:
+                        - /url: /tags/llm/
+                      - link "Hallucination" [ref=e349] [cursor=pointer]:
+                        - /url: /tags/hallucination/
+            - generic [ref=e350]:
+              - generic [ref=e351]: 人気のタグ
+              - generic [ref=e352]:
+                - link "Data Scientist" [ref=e353] [cursor=pointer]:
+                  - /url: /tags/data-scientist/
+                - link "Machine Learning" [ref=e354] [cursor=pointer]:
+                  - /url: /tags/machine-learning/
+                - link "LLM" [ref=e355] [cursor=pointer]:
+                  - /url: /tags/llm/
+                - link "arXiv" [ref=e356] [cursor=pointer]:
+                  - /url: /tags/arxiv/
+                - link "AWS" [ref=e357] [cursor=pointer]:
+                  - /url: /tags/aws/
+                - link "Career" [ref=e358] [cursor=pointer]:
+                  - /url: /tags/career/
+                - link "Hallucination" [ref=e359] [cursor=pointer]:
+                  - /url: /tags/hallucination/
+                - link "StructuredOutput" [ref=e360] [cursor=pointer]:
+                  - /url: /tags/structuredoutput/
+                - link "Bedrock" [ref=e361] [cursor=pointer]:
+                  - /url: /tags/bedrock/
+                - link "Blockchain" [ref=e362] [cursor=pointer]:
+                  - /url: /tags/blockchain/
+          - generic [ref=e363]:
+            - generic [ref=e364]: 目次
+            - navigation [ref=e365]:
+              - list [ref=e366]:
+                - listitem [ref=e367]:
+                  - link "逆引きコマンドチートシート" [ref=e368] [cursor=pointer]:
+                    - /url: "#逆引きコマンドチートシート"
+                - listitem [ref=e369]:
+                  - link "認証情報やアカウント切り替えなどの基礎コマンド" [ref=e370] [cursor=pointer]:
+                    - /url: "#認証情報やアカウント切り替えなどの基礎コマンド"
+                - listitem [ref=e371]:
+                  - link "aws iam の後によく使うコマンド" [ref=e372] [cursor=pointer]:
+                    - /url: "#aws-iam-の後によく使うコマンド"
+                  - list [ref=e373]:
+                    - listitem [ref=e374]:
+                      - link "IAMロールを作るとき" [ref=e375] [cursor=pointer]:
+                        - /url: "#iamロールを作るとき"
+                    - listitem [ref=e376]:
+                      - link "現在作成しているIAMロールの確認" [ref=e377] [cursor=pointer]:
+                        - /url: "#現在作成しているiamロールの確認"
+                    - listitem [ref=e378]:
+                      - link "IAMロールを削除する" [ref=e379] [cursor=pointer]:
+                        - /url: "#iamロールを削除する"
+              - list [ref=e380]:
+                - listitem [ref=e381]:
+                  - link "逆引きコマンドチートシート" [ref=e382] [cursor=pointer]:
+                    - /url: "#逆引きコマンドチートシート"
+                - listitem [ref=e383]:
+                  - link "認証情報やアカウント切り替えなどの基礎コマンド" [ref=e384] [cursor=pointer]:
+                    - /url: "#認証情報やアカウント切り替えなどの基礎コマンド"
+                - listitem [ref=e385]:
+                  - link "aws iam の後によく使うコマンド" [ref=e386] [cursor=pointer]:
+                    - /url: "#aws-iam-の後によく使うコマンド"
+                  - list [ref=e387]:
+                    - listitem [ref=e388]:
+                      - link "IAMロールを作るとき" [ref=e389] [cursor=pointer]:
+                        - /url: "#iamロールを作るとき"
+                    - listitem [ref=e390]:
+                      - link "現在作成しているIAMロールの確認" [ref=e391] [cursor=pointer]:
+                        - /url: "#現在作成しているiamロールの確認"
+                    - listitem [ref=e392]:
+                      - link "IAMロールを削除する" [ref=e393] [cursor=pointer]:
+                        - /url: "#iamロールを削除する"
+      - generic [ref=e395]:
+        - generic [ref=e396]:
+          - heading "関連記事" [level=3] [ref=e397]
+          - generic [ref=e398]:
+            - generic [ref=e400]:
+              - generic [ref=e401]:
+                - emphasis [ref=e402]: 2022/11/05
+                - link "References" [ref=e404] [cursor=pointer]:
+                  - /url: /categories/references/
+              - 'link "✍️ 参考図書まとめ 機械学習エンジニア(MLE)とデータサイエンティスト(DS)向けの本を紹介。ちなみにAmazon評価信者！！！それぞれの本を恐れ多くも、MLEとDSにオススメ度を5段階評価を表しいます。書籍自体の良し悪しを評価しているのでは決してありません。 機械学習 基礎 ★★☆☆☆: 多変量..." [ref=e405] [cursor=pointer]':
+                - /url: /posts/recommended_books/
+                - heading "✍️ 参考図書まとめ" [level=3] [ref=e406]:
+                  - generic [ref=e407]: ✍️
+                  - text: 参考図書まとめ
+                - paragraph [ref=e409]: "機械学習エンジニア(MLE)とデータサイエンティスト(DS)向けの本を紹介。ちなみにAmazon評価信者！！！それぞれの本を恐れ多くも、MLEとDSにオススメ度を5段階評価を表しいます。書籍自体の良し悪しを評価しているのでは決してありません。 機械学習 基礎 ★★☆☆☆: 多変量..."
+              - generic [ref=e410]:
+                - link "Machine Learning" [ref=e411] [cursor=pointer]:
+                  - /url: /tags/machine-learning/
+                - link "Data Scientist" [ref=e412] [cursor=pointer]:
+                  - /url: /tags/data-scientist/
+            - generic [ref=e414]:
+              - generic [ref=e415]:
+                - emphasis [ref=e416]: 2022/11/04
+                - link "References" [ref=e418] [cursor=pointer]:
+                  - /url: /categories/references/
+              - link "✍️ DS/MLEのためのおススメサイト 機械学習エンジニア（MLE/DS）におススメしたいサイトを紹介しています。おススメ度合いに合わせて星マークを付けています。仕事の参考になれば幸いです。ブログなどの記事はTwitterやRSSフィードを利用して、最新情報をキャッチアップできるとよいです。 機械学習 推薦システム ★★..." [ref=e419] [cursor=pointer]:
+                - /url: /posts/recommended_sites/
+                - heading "✍️ DS/MLEのためのおススメサイト" [level=3] [ref=e420]:
+                  - generic [ref=e421]: ✍️
+                  - text: DS/MLEのためのおススメサイト
+                - paragraph [ref=e423]: 機械学習エンジニア（MLE/DS）におススメしたいサイトを紹介しています。おススメ度合いに合わせて星マークを付けています。仕事の参考になれば幸いです。ブログなどの記事はTwitterやRSSフィードを利用して、最新情報をキャッチアップできるとよいです。 機械学習 推薦システム ★★...
+              - generic [ref=e424]:
+                - link "Machine Learning" [ref=e425] [cursor=pointer]:
+                  - /url: /tags/machine-learning/
+                - link "Data Scientist" [ref=e426] [cursor=pointer]:
+                  - /url: /tags/data-scientist/
+            - generic [ref=e428]:
+              - generic [ref=e429]:
+                - emphasis [ref=e430]: 2022/11/02
+                - link "TechBlog" [ref=e432] [cursor=pointer]:
+                  - /url: /categories/techblog/
+              - link "💻 2022年度11月現在：AI企業の募集要項とリンクまとめ JD(Job Description)を横並びに見ることで、業界の時流などを知ることが出来ます。この記事ではMLE/DSの募集サイトを列挙していきます。JDは頻繁に書き換えが行われるものではないので、それぞれの企業が重要としているスキルを確認しましょう。そして、共通するようなスキルがあれば、..." [ref=e433] [cursor=pointer]:
+                - /url: /posts/Machine-Learning_career/
+                - heading "💻 2022年度11月現在：AI企業の募集要項とリンクまとめ" [level=3] [ref=e434]:
+                  - generic [ref=e435]: 💻
+                  - text: 2022年度11月現在：AI企業の募集要項とリンクまとめ
+                - paragraph [ref=e437]: JD(Job Description)を横並びに見ることで、業界の時流などを知ることが出来ます。この記事ではMLE/DSの募集サイトを列挙していきます。JDは頻繁に書き換えが行われるものではないので、それぞれの企業が重要としているスキルを確認しましょう。そして、共通するようなスキルがあれば、...
+              - generic [ref=e438]:
+                - link "Machine Learning" [ref=e439] [cursor=pointer]:
+                  - /url: /tags/machine-learning/
+                - link "Data Scientist" [ref=e440] [cursor=pointer]:
+                  - /url: /tags/data-scientist/
+        - generic [ref=e441]:
+          - link "前へ 参考図書まとめ" [ref=e442] [cursor=pointer]:
+            - /url: /posts/recommended_books/
+            - text: 前へ
+            - paragraph [ref=e443]: 参考図書まとめ
+          - link "次へ 第３章補足：書籍『SolidityとEthereumによる実践スマートコントラクト開発 ―Truffle Suiteを用いた開発の基礎からデプロイまで』" [ref=e444] [cursor=pointer]:
+            - /url: /posts/blockchain-solidity-ethereum-dev-environment/
+            - text: 次へ
+            - paragraph [ref=e445]: 第３章補足：書籍『SolidityとEthereumによる実践スマートコントラクト開発 ―Truffle Suiteを用いた開発の基礎からデプロイまで』
+    - text: "# # # # # # # # # #"
+  - contentinfo [ref=e446]:
+    - generic [ref=e448]:
+      - paragraph [ref=e450]:
+        - text: © 2026
+        - link "0h-n0" [ref=e451] [cursor=pointer]:
+          - /url: https://github.com/0h-n0
+        - text: . 一部の権利を保有しています。
+      - paragraph [ref=e453]:
+        - link "Jekyll" [ref=e454] [cursor=pointer]:
+          - /url: https://jekyllrb.com
+        - text: と
+        - link "Chirpy" [ref=e455] [cursor=pointer]:
+          - /url: https://github.com/cotes2020/jekyll-theme-chirpy
+        - text: テーマで構築
+  - button "back-to-top" [ref=e456] [cursor=pointer]
+```

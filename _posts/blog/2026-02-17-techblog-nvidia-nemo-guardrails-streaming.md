@@ -87,6 +87,23 @@ streaming: True
 4. 同時にクライアントにトークンを配信（`stream_first: True`時）
 5. unsafe判定の場合、ストリームを即座に中断しエラー返却
 
+```mermaid
+graph LR
+    A[ユーザーリクエスト] --> B[LLMモデル]
+    B --> C[トークンバッファ\nchunk_size=200]
+    C --> D{バッファ満杯?}
+    D -- Yes --> E[チャンク生成]
+    D -- No --> B
+    E --> F[安全性NIM\nllama-3.1-nemoguard-8b]
+    E --> G[クライアントへ配信\nstream_first: True]
+    F --> H{safe/unsafe判定}
+    H -- safe --> I[次のチャンクへ継続]
+    H -- unsafe --> J[ストリーム中断\nJSONエラー挿入]
+    I --> B
+    C --> K[コンテキストバッファ\ncontext_size=50]
+    K --> F
+```
+
 ## パフォーマンス最適化（Performance）
 
 ### 実測値

@@ -45,6 +45,27 @@ Automated Reasoningは第3のアプローチとして、**形式論理に基づ�
 
 Automated Reasoningの検証は以下の3ステップで実行される：
 
+```mermaid
+flowchart TD
+    A[ドメイン知識の定義\n変数・ルールをポリシーとして符号化] --> B[ポリシーを形式論理に変換\n述語論理・命題論理]
+    B --> C[LLM出力テキスト]
+    C --> D[命題への分解\n各文を検証可能な命題に変換]
+    D --> E[形式論理による検証\nSAT/SMTソルバー]
+    E --> F{判定結果}
+    F --> G["Valid（整合）\nルールに基づき正しいと証明"]
+    F --> H["Invalid（不整合）\nルールと矛盾\n修正案を提示"]
+    F --> I["No Data（判定不能）\nルールでカバーされていない"]
+    G --> J[通過: LLM出力を返却]
+    H --> K[ブロック: 修正案を提示]
+    I --> L[警告付きで返却\nルールカバレッジ外]
+
+    style G fill:#ccffcc
+    style H fill:#ffcccc
+    style I fill:#ffffcc
+    style J fill:#ccffcc
+    style K fill:#ffcccc
+```
+
 **ステップ1: ポリシー定義**
 
 ドメイン知識を変数とルールで表現する。ルールは内部的に形式論理で表現されるが、ユーザーには自然言語で表示される。

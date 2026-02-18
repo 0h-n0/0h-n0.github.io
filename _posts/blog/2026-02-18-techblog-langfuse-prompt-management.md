@@ -66,6 +66,34 @@ Prompt
 
 **ラベルシステム**: バージョンにラベル（文字列タグ）を付与することで、アプリケーションは「バージョン番号」ではなく「ラベル」でプロンプトを取得できる。これにより、デプロイなしでのプロンプト切り替えが実現する。
 
+```mermaid
+graph LR
+    subgraph 開発サイクル["プロンプト開発サイクル"]
+        Dev["プロンプト編集\nLangfuse UI / API"] -->|"自動インクリメント"| V1["version 1"]
+        V1 --> V2["version 2"]
+        V2 --> V3["version 3 最新"]
+    end
+
+    subgraph ラベル管理["ラベル管理"]
+        V2 -->|"ラベル付与"| L_staging["staging ラベル"]
+        V3 -->|"ラベル付与"| L_prod["production ラベル"]
+        V2 -->|"A/Bテスト"| L_a["prod-a ラベル"]
+        V3 -->|"A/Bテスト"| L_b["prod-b ラベル"]
+    end
+
+    subgraph アプリ["アプリケーション"]
+        App["get_prompt\nlabel='production'"] -->|"キャッシュ TTL:60秒 経由"| L_prod
+        AB_App["A/Bテストロジック\nランダム選択"] --> L_a
+        AB_App --> L_b
+    end
+
+    subgraph トレーシング["オブザーバビリティ"]
+        L_prod -->|"リクエスト記録"| Trace["Langfuseトレース\nレイテンシ・トークン・品質スコア"]
+        L_a --> Trace
+        L_b --> Trace
+    end
+```
+
 ### SDK統合パターン
 
 #### Python SDK
