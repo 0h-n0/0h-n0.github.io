@@ -1,17 +1,18 @@
 ---
 layout: post
 title: "EMNLP 2024論文解説: MiniCheck - 高速・高精度なLLMファクトチェック"
-excerpt: "グラウンディングドキュメントに基づく効率的なファクトチェックモデル。BERTベース小型モデルで大規模LLMに匹敵する精度を実現"
-categories:
-  - TechBlog
-tags:
-  - LLM
-  - FactChecking
-  - EMNLP
-toc: true
-toc_sticky: true
+description: "グラウンディングドキュメントに基づく効率的なファクトチェックモデル。BERTベース小型モデルで大規模LLMに匹敵する精度を実現"
+categories: [blog, paper, conference]
+tags: [llm, fact-checking, emnlp, grounding]
+date: 2026-02-14 00:00:00 +0900
+source_type: conference
+conference: "EMNLP 2024"
+source_url: https://aclanthology.org/2024.emnlp-main.499/
+zenn_article: 0a8f4d0e7c71bf
+zenn_url: https://zenn.dev/0h_n0/articles/0a8f4d0e7c71bf
 math: true
 mermaid: true
+target_audience: "修士学生レベル"
 ---
 
 ## 論文概要（Abstract）

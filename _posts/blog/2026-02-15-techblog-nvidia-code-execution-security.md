@@ -2,7 +2,7 @@
 layout: post
 title: "NVIDIA研究解説: エージェントAIシステムのコード実行セキュリティ"
 description: "CVE-2024-12366を題材にしたAIコード生成の脆弱性と防御戦略の詳細解説"
-categories: [blog, tech_blog, nvidia]
+categories: [blog, tech_blog]
 tags: [security, code-execution, AI-agent, sandbox, vulnerability]
 date: 2026-02-15 13:00:00 +0900
 source_type: tech_blog

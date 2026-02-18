@@ -2,7 +2,7 @@
 layout: post
 title: "カンファレンス論文解説: AvaTaR - LLMエージェントのツール使用最適化"
 description: "NeurIPS 2024採択論文：対比推論によるエージェント性能改善手法の詳細解説"
-categories: [blog, conference, neurips]
+categories: [blog, paper, conference]
 tags: [LLM, agent, tool-use, optimization, contrastive-learning]
 date: 2026-02-15 12:00:00 +0900
 source_type: conference

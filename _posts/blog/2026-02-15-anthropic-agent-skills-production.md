@@ -2,7 +2,7 @@
 layout: post
 title: "Anthropic Agent Skills解説：プロダクション環境でのLLMエージェント拡張戦略"
 description: "Anthropic公式が提唱するAgent Skillsの設計思想と実装パターン。Progressive Disclosure、コンテキスト効率化、セキュリティ統合の3原則を修士レベルで解説"
-categories: [blog, tech_blog, anthropic]
+categories: [blog, tech_blog]
 tags: [LLM, agent, Claude, skills, context-optimization, production]
 date: 2026-02-15 23:19:50 +0900
 source_type: tech_blog

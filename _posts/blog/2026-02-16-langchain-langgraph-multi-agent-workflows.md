@@ -10,7 +10,7 @@ source_domain: blog.langchain.com
 source_url: https://blog.langchain.com/langgraph-multi-agent-workflows/
 zenn_article: 8487a08b378cf1
 zenn_url: https://zenn.dev/0h_n0/articles/8487a08b378cf1
-math: false
+math: true
 mermaid: true
 target_audience: "修士学生レベル"
 ---

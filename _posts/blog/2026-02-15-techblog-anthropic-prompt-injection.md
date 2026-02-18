@@ -2,7 +2,7 @@
 layout: post
 title: "Anthropic研究解説: プロンプトインジェクション防御の最前線"
 description: "Claude Opus 4.5の強化学習ベースプロンプトインジェクション対策と実装戦略"
-categories: [blog, tech_blog, anthropic]
+categories: [blog, tech_blog]
 tags: [security, prompt-injection, claude, reinforcement-learning, browser-agent]
 date: 2026-02-15 10:00:00 +0900
 source_type: tech_blog

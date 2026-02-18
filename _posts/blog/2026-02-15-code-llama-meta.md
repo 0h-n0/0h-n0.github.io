@@ -2,7 +2,7 @@
 layout: post
 title: "Meta Code Llama解説: オープンソースで実現する最先端コード生成"
 description: "Llama 2ベースの70Bパラメータモデルが、HumanEvalで53.7%を達成。100K トークンの拡張コンテキストで実用的なコード生成を実現"
-categories: [blog, tech_blog, meta]
+categories: [blog, tech_blog]
 tags: [LLM, code-generation, open-source, Code-Llama, Meta-AI]
 date: 2026-02-15 21:37:00 +0900
 source_type: tech_blog
