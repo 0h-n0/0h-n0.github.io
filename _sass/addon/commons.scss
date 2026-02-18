@@ -919,6 +919,17 @@ $sidebar-display: "sidebar-display";
   display: none;
 }
 
+#home-trigger {
+  display: none;
+  color: var(--topbar-text-color, inherit);
+  font-size: 1rem;
+  line-height: 1;
+
+  &:hover {
+    color: var(--link-color, #1e6bb8);
+  }
+}
+
 #search-wrapper {
   display: flex;
   width: 100%;
@@ -1332,6 +1343,10 @@ $sidebar-display: "sidebar-display";
   #topbar-title,
   #sidebar-trigger,
   #search-trigger {
+    display: block;
+  }
+
+  #home-trigger {
     display: block;
   }
 
