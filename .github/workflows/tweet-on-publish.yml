@@ -1,0 +1,25 @@
+name: Tweet on new blog post
+
+on:
+  push:
+    branches: [master]
+    paths: ['_posts/blog/**']
+
+jobs:
+  tweet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # HEAD と HEAD~1 の diff に必要
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install requests pyyaml
+
+      - run: python scripts/tweet_new_posts.py
+        env:
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+        continue-on-error: true  # ツイート失敗でもデプロイをブロックしない
