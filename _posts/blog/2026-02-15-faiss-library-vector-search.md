@@ -33,6 +33,24 @@ FAISSは以下の3つの設計原則に基づいています。
 
 FAISSのインデックスは、以下の3つのコンポーネントを組み合わせて構成されます。
 
+```mermaid
+graph TB
+    A[クエリベクトル] --> B{インデックス種別}
+    B --> C[IndexFlatL2<br/>完全一致 小規模]
+    B --> D[IndexHNSWFlat<br/>階層グラフ 中規模]
+    B --> E[IndexIVFFlat<br/>転置ファイル 大規模]
+    B --> F[IndexIVFPQ<br/>転置ファイル+量子化 超大規模]
+    C --> G[距離計算]
+    D --> G
+    E --> G
+    F --> G
+    G --> H[Top-k 近傍ベクトル]
+    I[GPU加速] --> G
+    J[Product Quantization<br/>64倍圧縮] --> F
+    K[IVF クラスタリング<br/>検索空間削減] --> E
+    K --> F
+```
+
 ```
 検索アルゴリズム × 量子化手法 × ハードウェア最適化
 ```

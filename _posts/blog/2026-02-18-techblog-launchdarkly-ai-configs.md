@@ -187,6 +187,21 @@ export async function summarize(
 
 Zenn記事で紹介した段階的ロールアウト（5%→25%→100%）の技術的実装:
 
+```mermaid
+flowchart TD
+    A["新プロンプト / モデル変更の準備\nVariation B を AI Config に追加"] --> B["LLM Playground\nデプロイ前に動作確認"]
+    B --> C["ステージ1: カナリアリリース 5%\nCanary Group のみ Variation B を適用\nメトリクスを監視"]
+    C --> D{品質・レイテンシ\nSLA 内か?}
+    D -->|"問題あり"| E["即座にロールバック\nFeature Flag を OFF に\nミリ秒単位で全インスタンスに伝播"]
+    D -->|"問題なし"| F["ステージ2: 段階拡大 25%\nrollout percentage=25\nbucket_by=user_id で一貫した割り当て"]
+    F --> G{統計的有意差\nあり?}
+    G -->|"有意差なし"| H["追加サンプル収集\n500リクエスト/バリアント以上"]
+    H --> G
+    G -->|"Variation B 優位"| I["ステージ3: フルロールアウト 100%\ndefault_variation=Variation B\nターゲティング OFF"]
+    I --> J["Langfuse で本番監視\nメトリクスを継続収集"]
+    J --> K["次回最適化サイクル\nDSPy / OPRO の訓練データとして還元"]
+```
+
 **ステージ1: カナリアリリース（5%）**
 ```
 ターゲティングルール:

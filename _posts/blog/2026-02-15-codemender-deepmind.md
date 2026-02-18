@@ -81,6 +81,18 @@ class DeepThinkReasoning:
 
 CodeMenderは以下の4層アーキテクチャで構成されます。
 
+```mermaid
+graph TB
+    A["オーケストレーション層<br/>Agentic Loop<br/>タスク計画・ツール選択・検証ループ"] --> B
+    B["LLM層<br/>Gemini Deep Think<br/>脆弱性分析・パッチ生成・批評・改善"] --> C
+    C["プログラム解析ツール層<br/>静的解析 SAST / 動的解析 DAST<br/>ファジング OSS-Fuzz / SMTソルバー Z3・CVC5"] --> D
+    D["検証層<br/>ユニットテスト実行 / 回帰テスト<br/>セキュリティプロパティ検証"]
+    style A fill:#f9f,stroke:#333
+    style B fill:#bbf,stroke:#333
+    style C fill:#bfb,stroke:#333
+    style D fill:#ffd,stroke:#333
+```
+
 ```
 ┌─────────────────────────────────────────────┐
 │       Orchestration Layer (Agentic Loop)    │

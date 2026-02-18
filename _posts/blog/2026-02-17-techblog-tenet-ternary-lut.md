@@ -54,6 +54,24 @@ $$
 
 TENETの中核は「Sparse Ternary LUT Core」と呼ばれる演算ユニットである。
 
+```mermaid
+graph TB
+    A[三値重み入力\nw ∈ {-1, 0, +1}] --> B[2ビット圧縮\nパッキングモジュール]
+    B --> C[DRAMストレージ\n圧縮率 64B:80B]
+    C --> D[展開モジュール]
+    D --> E[Sparse Ternary LUT Core]
+    F[活性化入力 x] --> G[N:M スパース選択\n動的TopK選択]
+    G --> E
+    E --> H{三値判定}
+    H -- w=+1 --> I[+x をアキュムレータへ]
+    H -- w=0 --> J[0をアキュムレータへ]
+    H -- w=-1 --> K[-x をアキュムレータへ]
+    I --> L[アキュムレータ\n加算器のみ]
+    J --> L
+    K --> L
+    L --> M[出力結果]
+```
+
 **従来のTensor Core（乗算ベース）との比較**:
 
 | 項目 | 従来のTensor Core | TENET LUT Core |

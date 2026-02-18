@@ -30,6 +30,22 @@ mermaid: true
 
 ## RAGアーキテクチャの4分類
 
+```mermaid
+graph TB
+    A[RAGアーキテクチャ] --> B[Retriever-Centric\n検索中心設計]
+    A --> C[Generator-Centric\n生成中心設計]
+    A --> D[Hybrid Design\nハイブリッド設計]
+    A --> E[Robustness-Oriented\n堅牢性重視設計]
+    B --> B1[Dense Retrieval最適化]
+    B --> B2[Query Expansion]
+    C --> C1[Fusion-in-Decoder]
+    C --> C2[Chain-of-Thought RAG]
+    D --> D1[End-to-End Training]
+    D --> D2[検索と生成の同時最適化]
+    E --> E1[Adversarial Training]
+    E --> E2[Noisy Document Filtering]
+```
+
 ### 1. Retriever-Centric Design（検索中心設計）
 
 **設計思想**: 検索品質がRAG性能を決定するという前提のもと、検索コンポーネントを最適化します。
@@ -446,6 +462,18 @@ def test_adversarial_robustness(rag_system):
 ## 実運用への応用
 
 ### Production-Ready RAG Architecture
+
+```mermaid
+flowchart TD
+    Q[ユーザークエリ] --> DR[Dense Retrieval\n検索]
+    DR --> NF{ノイズフィルタリング\n信頼スコア評価}
+    NF -->|フィルタ済み文書 >= 3| GEN[Robust Generator\n回答生成]
+    NF -->|フィルタ済み文書 < 3| FB[Fallback: BM25検索]
+    FB --> GEN
+    GEN --> ANS[最終回答]
+    GEN --> MON[メトリクス記録\nlatency / num_docs]
+    NF -->|フォールバック発生| LOG[fallback_triggered\nログ記録]
+```
 
 ```python
 class ProductionRAG:

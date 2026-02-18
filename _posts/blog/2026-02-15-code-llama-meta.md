@@ -55,6 +55,15 @@ code_llama = {
 
 Code Llamaの開発は、**継続的な学習アプローチ**を採用：
 
+```mermaid
+graph LR
+    A["Llama 2<br/>2Tトークン<br/>汎用テキスト"] --> B["Code Llama Base<br/>+500Bトークン<br/>コード特化"]
+    B --> C["Code Llama Python<br/>+100Bトークン<br/>Python特化"]
+    B --> D["Code Llama Instruct<br/>RLHF適用<br/>自然言語指示対応"]
+    C --> E["コンテキスト拡張<br/>4K→100Kトークン"]
+    D --> E
+```
+
 1. **Llama 2 (General Text):** 2T トークンで事前学習
 2. **Code Llama (Code-Specific):** さらに500B トークンのコードで学習
 3. **Code Llama - Python:** Python特化で100B トークン追加学習

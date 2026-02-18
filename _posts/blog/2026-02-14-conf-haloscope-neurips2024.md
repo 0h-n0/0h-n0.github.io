@@ -90,6 +90,22 @@ def sampling_consistency_check(
     }
 ```
 
+```mermaid
+flowchart TD
+    A[未ラベルLLM生成テキスト] --> B[同一プロンプトでN回サンプリング]
+    B --> C[セマンティック類似度計算]
+    B --> D[n-gramオーバーラップ計算]
+    C --> E{一貫性判定}
+    D --> E
+    E -->|一貫性高い| F[疑似ラベル: clean=0]
+    E -->|一貫性低い| G[疑似ラベル: hallucination=1]
+    F --> H[疑似ラベルデータセット]
+    G --> H
+    H --> I[BERTベース分類器の訓練]
+    I --> J[ハルシネーション検出器]
+    J --> K[新規テキストの推論]
+```
+
 ### アルゴリズム: 疑似ラベル生成
 
 ```python

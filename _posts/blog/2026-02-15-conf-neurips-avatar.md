@@ -170,6 +170,23 @@ class ComparatorLLM:
 
 ### アルゴリズムフロー
 
+```mermaid
+flowchart TD
+    A[訓練データ D] --> B[Actor LLM初期化 ベースプロンプト]
+    B --> C[タスク実行]
+    C --> D{正解判定}
+    D -->|正解| E[正例セット D+]
+    D -->|不正解| F[負例セット D-]
+    E --> G[Comparator LLM 対比分析]
+    F --> G
+    G --> H[エラーパターン特定]
+    H --> I[改善フィードバック生成]
+    I --> J[Actor プロンプト更新]
+    J --> K{収束判定}
+    K -->|未収束| C
+    K -->|収束| L[最適化済みActor LLM]
+```
+
 ```
 Input: 訓練データ D = {(task_i, ground_truth_i)}
 Output: 最適化されたActor LLM

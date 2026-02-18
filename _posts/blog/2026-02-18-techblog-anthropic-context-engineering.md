@@ -148,6 +148,27 @@ context = {
 
 ## 長期タスク向け3技法
 
+```mermaid
+graph TB
+    subgraph コンテキスト管理["コンテキスト管理の4レイヤー"]
+        L1["レイヤー1: System Prompt設計\nRight Altitude原則\n脆い極端・曖昧な極端を回避"]
+        L2["レイヤー2: Tool設計\n自己完結性・記述的パラメータ\nトークン効率的な返り値"]
+        L3["レイヤー3: Examples\nFew-Shot例示\n多様で代表的な例を厳選"]
+        L4["レイヤー4: メッセージ履歴\nJIT Just-in-Time アプローチ\nハイブリッド戦略"]
+    end
+
+    subgraph 長期タスク["長期タスク向け3技法"]
+        T1["技法1: Compaction\nコンテキスト85%閾値で圧縮\n重要情報を保持して要約"]
+        T2["技法2: 構造化ノートテイキング\n永続的ノートの書き出し\nセッション間で参照可能"]
+        T3["技法3: Sub-Agentアーキテクチャ\nクリーンなコンテキストで起動\n数万→1000〜2000トークンに圧縮"]
+    end
+
+    L4 -->|"コンテキスト増大"| Context_Rot["Context Rot\n性能劣化"]
+    Context_Rot --> T1
+    Context_Rot --> T2
+    Context_Rot --> T3
+```
+
 ### 技法1: Compaction（圧縮）
 
 コンテキスト制限に近づいたとき、会話内容を要約して圧縮する：

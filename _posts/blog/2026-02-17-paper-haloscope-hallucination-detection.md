@@ -78,6 +78,21 @@ $$
 3. **2クラスタリング**: GMM（Gaussian Mixture Model）で活性化ベクトルを2クラスタに分離
 4. **メンバーシップスコア**: 各クラスタへの所属確率をスコアとして使用
 
+```mermaid
+flowchart TD
+    A[LLMに多様な質問を与える\nラベルなしデータ収集] --> B[LLM推論\n中間層の活性化ベクトル h^l を抽出]
+    B --> C[PCA適用\n上位k個の主成分で\n部分空間 Sk を構築]
+    C --> D[射影行列 Pk を計算\nΣ vi vi^T]
+    D --> E[GMM 2クラスタリング\n活性化ベクトルを分離]
+    E --> F[クラスタ0: 事実的文\n正確な生成]
+    E --> G[クラスタ1: Hallucination文\n不正確な生成]
+    F --> H[Hallucinationスコア算出\ns = Pk h 2 / h 2]
+    G --> H
+    H --> I{スコア閾値判定}
+    I -- 高スコア --> J[Hallucination判定\n部分空間に強く射影]
+    I -- 低スコア --> K[事実的判定\n部分空間への射影が弱い]
+```
+
 ```python
 import numpy as np
 from sklearn.decomposition import PCA

@@ -42,6 +42,19 @@ EMNLP（Empirical Methods in Natural Language Processing）は、自然言語処
 
 ## 技術的詳細（Technical Details）
 
+```mermaid
+graph LR
+    A[主張 claim] --> D[RoBERTaトークナイザ]
+    B[証拠 evidence] --> D
+    D --> E["入力: CLS claim SEP evidence SEP"]
+    E --> F[RoBERTa-base 110Mパラメータ]
+    F --> G[分類ヘッド]
+    G --> H{ラベル判定}
+    H -->|supported| I[支持 ✓]
+    H -->|contradicted| J[矛盾 ✗]
+    H -->|neutral| K[中立 −]
+```
+
 ### アーキテクチャ: RoBERTa-based Classifier
 
 ```python

@@ -43,6 +43,25 @@ HyPA-RAGは、これらの課題を**ハイブリッド検索**と**適応的パ
 
 HyPA-RAGは以下の4つのコンポーネントから構成されます。
 
+```mermaid
+flowchart TD
+    A[ユーザークエリ] --> B[クエリ複雑度分類器 BERTベース]
+    B -->|Low| C1[BM25 Top-3<br/>Dense Top-3<br/>KG Depth=1]
+    B -->|Medium| C2[BM25 Top-5<br/>Dense Top-5<br/>KG Depth=2]
+    B -->|High| C3[BM25 Top-10<br/>Dense Top-10<br/>KG Depth=3]
+    C1 --> D[スコア統合 重み付け和]
+    C2 --> D
+    C3 --> D
+    D --> E[BM25 Sparse検索]
+    D --> F[Dense ベクトル検索]
+    D --> G[Knowledge Graph検索]
+    E --> H[コンテキスト統合]
+    F --> H
+    G --> H
+    H --> I[LLM生成]
+    I --> J[最終回答]
+```
+
 ```
 クエリ複雑度分類器 → ハイブリッド検索 → コンテキスト統合 → LLM生成
 ```

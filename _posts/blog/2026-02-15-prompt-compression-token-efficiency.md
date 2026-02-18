@@ -110,6 +110,24 @@ def compress_prompt(prompt: str, compression_ratio: float = 0.6) -> str:
     return " ".join([sentences[i] for i in selected_indices])
 ```
 
+```mermaid
+flowchart LR
+    元プロンプト["元プロンプト\n(100% トークン)"]
+    文分割["文単位に分割\nsplit_into_sentences()"]
+    エンコード["BERTエンコード\nencode_sentences()"]
+    重要度計算["重要度スコア計算\ncalculate_salience()"]
+    上位選択["上位K文を選択\n(compression_ratio=60%)"]
+    順序維持["元の順序に並び替え\nsorted(selected_indices)"]
+    圧縮プロンプト["圧縮プロンプト\n(40-60% トークン)"]
+
+    元プロンプト --> 文分割
+    文分割 --> エンコード
+    エンコード --> 重要度計算
+    重要度計算 --> 上位選択
+    上位選択 --> 順序維持
+    順序維持 --> 圧縮プロンプト
+```
+
 #### ベイズ最適化フレームワーク
 
 ```python

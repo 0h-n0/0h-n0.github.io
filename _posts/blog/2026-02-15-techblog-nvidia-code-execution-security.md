@@ -65,6 +65,19 @@ Result → User
 
 ## 攻撃ベクトルの詳細分析
 
+```mermaid
+flowchart TD
+    UI[ユーザー入力\n自然言語] --> L1{Layer 1\nガードレール検査}
+    L1 -->|回避成功| L2{Layer 2\nプロンプトインジェクション}
+    L1 -->|検出| BLK1[ブロック]
+    L2 -->|注入成功| L3[Layer 3\n悪意あるコード生成\nLLMが攻撃コードを出力]
+    L2 -->|検出| BLK2[ブロック]
+    L3 --> L4[Layer 4\nペイロードエンコーディング\nBase64 / XOR / 文字列結合]
+    L4 --> L5{Layer 5\nサンドボックスなし実行}
+    L5 -->|侵害成功| PWND[システム侵害\nデータ窃取 / バックドア / 横展開]
+    L5 -->|サンドボックスあり| CONT[コンテナ隔離\n被害を局所化]
+```
+
 ### Layer 1: ガードレール回避
 
 AIシステムは通常、危険なプロンプトを検出する **ガードレール** を実装しています。攻撃者はこれを以下の手法で回避:
@@ -418,6 +431,17 @@ class SegmentedSandbox:
 ### 多層防御戦略
 
 サンドボックスは **最後の砦** であり、他の防御層と組み合わせます:
+
+```mermaid
+graph TB
+    INPUT[ユーザー入力\nLLMへのリクエスト] --> IV[Layer 1: Input Validation\nプロンプトインジェクション検出\nサニタイズ]
+    IV --> LV[Layer 2: LLM Verification\n生成コードを別LLMでレビュー\n危険パターン検出]
+    LV --> SA[Layer 3: Static Analysis\nAST解析\nホワイトリストチェック]
+    SA --> SB[Layer 4: Sandboxing\nVM / コンテナ隔離\nネットワーク・FS制限]
+    SB --> ML[Layer 5: Monitoring & Logging\n実行トレース記録\n異常検知]
+    ML --> RESULT[安全な実行結果]
+    SB -->|エスケープ試行| ALERT[セキュリティアラート]
+```
 
 ```
 ┌─────────────────────────────────────────┐

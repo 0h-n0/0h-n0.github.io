@@ -97,6 +97,29 @@ Segmentation (chunks of 2048 tokens)
 Output (next segment)
 ```
 
+```mermaid
+graph TB
+    入力["入力シーケンス (最大1Mトークン)"]
+    セグメント化["セグメント化\n2048トークン単位"]
+
+    subgraph Infini-Attention層["Infini-Attention Layer"]
+        ローカルAttn["ローカルAttention\n(セグメント内: intra-seg)"]
+        メモリ取得["圧縮メモリからRetrieval\n(セグメント間: cross-seg)"]
+        ゲート["学習可能ゲート σ\n重み付き結合"]
+        メモリ更新["圧縮メモリ更新\nEMAによる減衰"]
+    end
+
+    入力 --> セグメント化
+    セグメント化 --> ローカルAttn
+    セグメント化 --> メモリ取得
+    ローカルAttn --> ゲート
+    メモリ取得 --> ゲート
+    ゲート --> 出力["セグメント出力"]
+    ゲート --> メモリ更新
+    メモリ更新 --> メモリ取得
+    出力 --> 次のセグメント["次のセグメント処理"]
+```
+
 ### 数式定義
 
 #### 標準Self-Attention（復習）

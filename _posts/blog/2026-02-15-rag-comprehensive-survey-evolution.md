@@ -84,6 +84,15 @@ P(y|x) = ∫ P(y|x,d) P(d|x) dd
 
 ## RAGアーキテクチャの進化
 
+```mermaid
+graph LR
+    P1[Phase 1\nNaive RAG\n2020-2021] --> P2[Phase 2\nAdvanced RAG\n2022-2023]
+    P2 --> P3[Phase 3\nModular RAG\n2024-現在]
+    P1 --> P1A[チャンク分割\nベクトル検索\nLLM入力]
+    P2 --> P2A[クエリ変換\nハイブリッド検索\n再ランキング\nコンテキスト圧縮]
+    P3 --> P3A[動的モジュール選択\n複雑度適応\n再構成可能設計]
+```
+
 ### Phase 1: Naive RAG（2020-2021）
 
 **基本構成**:
@@ -322,6 +331,21 @@ Modular RAGは、RAGシステムを再構成可能なモジュールとして設
          │  - Chain-of-      │
          │    Thought       │
          └──────────────────┘
+```
+
+```mermaid
+graph TB
+    UQ[ユーザークエリ] --> ORC[Orchestrator\n質問複雑度分析\n実行計画生成]
+    ORC --> DR[Dense Retriever]
+    ORC --> SR[Sparse Retriever]
+    ORC --> GR[Graph Retriever]
+    ORC --> TR[Table Retriever]
+    DR --> RR[Re-ranker\n精密スコアリング]
+    SR --> RR
+    GR --> RR
+    TR --> RR
+    RR --> GEN[Generator\nStandard / Speculative\nChain-of-Thought]
+    GEN --> ANS[最終回答]
 ```
 
 **動的モジュール選択の例**:
