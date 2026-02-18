@@ -47,6 +47,12 @@
 
     <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
 
+    {% unless page.layout == 'home' %}
+    <a id="home-trigger" href="{{ '/' | relative_url }}" aria-label="back to home">
+      <i class="fas fa-home fa-fw"></i>
+    </a>
+    {% endunless %}
+
     <div id="topbar-title">
       {% if page.layout == 'home' %}
         {{- site.data.locales[site.lang].title | default: site.title -}}
