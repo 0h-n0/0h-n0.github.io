@@ -5,14 +5,20 @@ Detects newly added _posts/blog/*.md files in the latest commit,
 parses their frontmatter, and posts a tweet for each one.
 
 Usage:
-    TWITTER_BEARER_TOKEN=<token> python scripts/tweet_new_posts.py
+    TWITTER_API_KEY=... TWITTER_API_SECRET=... \
+    TWITTER_ACCESS_TOKEN=... TWITTER_ACCESS_TOKEN_SECRET=... \
+    python scripts/tweet_new_posts.py
 """
 
+import hashlib
+import hmac
 import os
 import re
 import subprocess
 import sys
 import time
+import urllib.parse
+import uuid
 from pathlib import Path
 
 import requests
@@ -86,12 +92,48 @@ def build_tweet_text(title: str, description: str, url: str, tags: list[str]) ->
     return text
 
 
-def post_tweet(text: str, bearer_token: str) -> None:
-    """Post a single tweet via X API v2."""
+def _oauth1_header(method: str, url: str, api_key: str, api_secret: str,
+                   access_token: str, access_token_secret: str) -> str:
+    """Build OAuth 1.0a Authorization header."""
+    params = {
+        "oauth_consumer_key": api_key,
+        "oauth_nonce": uuid.uuid4().hex,
+        "oauth_signature_method": "HMAC-SHA1",
+        "oauth_timestamp": str(int(time.time())),
+        "oauth_token": access_token,
+        "oauth_version": "1.0",
+    }
+    # Signature base string
+    encoded_params = "&".join(
+        f"{urllib.parse.quote(k, safe='')}={urllib.parse.quote(v, safe='')}"
+        for k, v in sorted(params.items())
+    )
+    base = "&".join([
+        method.upper(),
+        urllib.parse.quote(url, safe=""),
+        urllib.parse.quote(encoded_params, safe=""),
+    ])
+    signing_key = f"{urllib.parse.quote(api_secret, safe='')}&{urllib.parse.quote(access_token_secret, safe='')}"
+    signature = hmac.new(signing_key.encode(), base.encode(), hashlib.sha1)
+    params["oauth_signature"] = urllib.parse.quote(
+        __import__("base64").b64encode(signature.digest()).decode(), safe=""
+    )
+    header_value = "OAuth " + ", ".join(
+        f'{k}="{v}"' for k, v in sorted(params.items())
+    )
+    return header_value
+
+
+def post_tweet(text: str, api_key: str, api_secret: str,
+               access_token: str, access_token_secret: str) -> None:
+    """Post a single tweet via X API v2 with OAuth 1.0a."""
+    auth_header = _oauth1_header(
+        "POST", TWEET_API_URL, api_key, api_secret, access_token, access_token_secret
+    )
     response = requests.post(
         TWEET_API_URL,
         headers={
-            "Authorization": f"Bearer {bearer_token}",
+            "Authorization": auth_header,
             "Content-Type": "application/json",
         },
         json={"text": text},
@@ -101,9 +143,19 @@ def post_tweet(text: str, bearer_token: str) -> None:
 
 
 def main() -> None:
-    bearer_token = os.environ.get("TWITTER_BEARER_TOKEN")
-    if not bearer_token:
-        print("Error: TWITTER_BEARER_TOKEN is not set.", file=sys.stderr)
+    api_key = os.environ.get("TWITTER_API_KEY")
+    api_secret = os.environ.get("TWITTER_API_SECRET")
+    access_token = os.environ.get("TWITTER_ACCESS_TOKEN")
+    access_token_secret = os.environ.get("TWITTER_ACCESS_TOKEN_SECRET")
+
+    missing = [k for k, v in {
+        "TWITTER_API_KEY": api_key,
+        "TWITTER_API_SECRET": api_secret,
+        "TWITTER_ACCESS_TOKEN": access_token,
+        "TWITTER_ACCESS_TOKEN_SECRET": access_token_secret,
+    }.items() if not v]
+    if missing:
+        print(f"Error: {', '.join(missing)} is not set.", file=sys.stderr)
         sys.exit(1)
 
     new_files = get_new_post_files()
@@ -136,7 +188,7 @@ def main() -> None:
         print(f"  chars={len(tweet_text)}")
 
         try:
-            post_tweet(tweet_text, bearer_token)
+            post_tweet(tweet_text, api_key, api_secret, access_token, access_token_secret)
             print("  -> OK")
         except requests.HTTPError as exc:
             msg = f"Failed to tweet {file_path.name}: {exc} | body={exc.response.text}"
