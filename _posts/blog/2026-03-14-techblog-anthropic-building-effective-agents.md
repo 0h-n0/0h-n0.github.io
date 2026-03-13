@@ -202,6 +202,105 @@ def read_file(absolute_path: str) -> str:
 2. フレームワークの抽象化レイヤーの中身を理解する
 3. 本番環境では抽象化レイヤーを削減し、制御可能性を確保する
 
+## Production Deployment Guide
+
+### AWS実装パターン（コスト最適化重視）
+
+Anthropicのワークフローパターンに基づくエージェントシステムをAWS上に構築する構成を示す。
+
+**トラフィック量別の推奨構成**:
+
+| 規模 | 月間リクエスト | 推奨パターン | 月額コスト概算 | 主要サービス |
+|------|--------------|-------------|-------------|------------|
+| **Small** | ~3,000 (100/日) | Prompt Chaining | $60-180 | Lambda + Bedrock + SQS |
+| **Medium** | ~30,000 (1,000/日) | Routing + Workers | $400-1,200 | Step Functions + ECS + Bedrock |
+| **Large** | 300,000+ (10,000/日) | Orchestrator-Workers | $3,000-8,000 | EKS + Bedrock Batch + ElastiCache |
+
+**Small構成の詳細**（月額$60-180）:
+- **Lambda**: 各ワークフローステップを独立関数化（$15/月）
+- **Bedrock**: Claude 3.5 Haiku（ルーティング判定）+ Claude 3.5 Sonnet（生成）（$120/月）
+- **SQS**: ステップ間の非同期メッセージング（$5/月）
+- **DynamoDB**: 会話状態・ツール実行結果の保存（$10/月）
+
+**コスト削減テクニック**:
+- Routingパターンで軽量モデル（Haiku）に振り分けることで平均コストを50-70%削減
+- Prompt Cachingでシステムプロンプト固定部分のコスト30-90%削減
+- SQSバッファリングによるBedrock APIのバースト制御
+
+**コスト試算の注意事項**: 上記は2026年3月時点のAWS ap-northeast-1料金に基づく概算値です。
+
+### Terraformインフラコード
+
+**Prompt Chaining構成: Lambda Chain + SQS**
+
+```hcl
+# --- Lambda関数（チェーンの各ステップ） ---
+resource "aws_lambda_function" "chain_step" {
+  for_each      = toset(["classifier", "generator", "evaluator"])
+  filename      = "${each.key}_lambda.zip"
+  function_name = "agent-${each.key}"
+  role          = aws_iam_role.agent_lambda.arn
+  handler       = "${each.key}.handler"
+  runtime       = "python3.12"
+  timeout       = 120
+  memory_size   = 1024
+
+  environment {
+    variables = {
+      BEDROCK_REGION  = "ap-northeast-1"
+      ROUTING_MODEL   = "anthropic.claude-3-5-haiku-20241022-v1:0"
+      GENERATOR_MODEL = "anthropic.claude-3-5-sonnet-20241022-v2:0"
+      STATE_TABLE     = aws_dynamodb_table.agent_state.name
+    }
+  }
+}
+
+# --- SQS（ステップ間メッセージング） ---
+resource "aws_sqs_queue" "chain_queue" {
+  for_each                  = toset(["classify-to-generate", "generate-to-evaluate"])
+  name                      = "agent-chain-${each.key}"
+  visibility_timeout_seconds = 300
+  message_retention_seconds  = 86400
+
+  redrive_policy = jsonencode({
+    deadLetterTargetArn = aws_sqs_queue.dlq.arn
+    maxReceiveCount     = 3
+  })
+}
+
+resource "aws_sqs_queue" "dlq" {
+  name = "agent-chain-dlq"
+}
+
+# --- DynamoDB（エージェント状態管理） ---
+resource "aws_dynamodb_table" "agent_state" {
+  name         = "agent-conversation-state"
+  billing_mode = "PAY_PER_REQUEST"
+  hash_key     = "session_id"
+
+  attribute {
+    name = "session_id"
+    type = "S"
+  }
+
+  ttl {
+    attribute_name = "expire_at"
+    enabled        = true
+  }
+}
+```
+
+### コスト最適化チェックリスト
+
+- [ ] Routingパターンで軽量モデル（Haiku）への振り分け率を70%以上に設定
+- [ ] Prompt Caching有効化（システムプロンプト固定部分）
+- [ ] SQSデッドレターキューで失敗リクエストの再処理コスト削減
+- [ ] Evaluator-Optimizerの最大反復回数を制限（3回以下推奨）
+- [ ] CloudWatch Budgetsで月額予算アラート設定
+- [ ] Bedrock Batch APIを非リアルタイム処理に適用（50%割引）
+- [ ] Lambda Provisioned Concurrencyは不使用（コスト増大防止）
+- [ ] DynamoDB TTLで古い会話状態を自動削除
+
 ## 学術研究との関連（Academic Connection）
 
 - **ReAct**（Yao et al., 2023）: 推論と行動を交互に行うエージェントパターン。Anthropicの「自律エージェント」パターンはReActの実装ガイドラインと位置づけられる
