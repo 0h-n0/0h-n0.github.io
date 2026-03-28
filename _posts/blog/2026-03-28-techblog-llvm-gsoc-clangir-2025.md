@@ -161,6 +161,33 @@ cir.try {
 
 LLVM IRでの例外処理は`invoke`/`landingpad`命令で表現されますが、これらは低レベルの制御フロー構造であり、C++の例外セマンティクスを復元するのが困難です。CIRの`cir.try`構造を経由することで、例外の型情報が保持されたまま最適化パイプラインを通過できます。
 
+## CIRからLLVM IRへの降下（Lowering）パイプライン
+
+ClangIRの重要な設計要素として、CIR DialectからLLVM IRへの降下パイプラインがあります。この降下は段階的に行われます。
+
+### 降下の流れ
+
+```mermaid
+graph TB
+    A[CIR Dialect<br>高レベルC++セマンティクス] --> B[CIR最適化パス<br>脱仮想化・定数畳み込み等]
+    B --> C[CIR → LLVM Dialect<br>MLIRのLLVM Dialectに変換]
+    C --> D[LLVM Dialect → LLVM IR<br>MLIRからLLVM IRに変換]
+    D --> E[LLVM最適化パス<br>既存のO2/O3パイプライン]
+```
+
+CIR最適化パスでは、C++の型情報が保持された状態で以下の最適化が可能です。
+
+- **脱仮想化（Devirtualization）**: CIRレベルで型が確定している仮想関数呼び出しを直接呼び出しに変換
+- **定数畳み込み**: VectorType/ComplexTypeのコンパイル時評価
+- **例外の到達性解析**: 到達不能なcatchブロックの検出と除去
+- **RAII最適化**: デストラクタ呼び出しの最適化
+
+従来のLLVM IRベースの最適化では、これらの情報は失われているため適用が困難でした。
+
+### GSoC 2024からの継続
+
+GSoC 2024ではZhi Ma（Ma Zhi）によるOpenCL CサポートのClangIR対応が行われており、CIRからSPIR-Vバックエンドへの降下パスの基盤が構築されています。これにより、ClangIRは従来のCPU向けだけでなく、GPU向けのコンパイルパイプラインとしても機能する可能性が示されています。
+
 ## Classic Clangのバグ発見
 
 ブログでは、ComplexTypeの型昇格テスト中に、Clang本体（classic codegen）で有効なコードがクラッシュするバグが発見されたことが報告されています。修正はPR #160583として提出され、Clang 22リリースに含まれています（PR #160609）。
