@@ -236,6 +236,39 @@ def test_cache_isolation(
     }
 ```
 
+## エージェント開発におけるセキュリティ設計指針
+
+本論文の知見を踏まえ、プロンプトキャッシュを活用するエージェントシステムでは以下のセキュリティ設計を検討すべきである。
+
+### プロバイダ選択マトリクス
+
+| 要件 | 推奨プロバイダタイプ | 理由 |
+|:---:|:---:|:---:|
+| コスト最優先 | グローバルキャッシュ対応 | ユーザー間のキャッシュ共有で最大効率 |
+| プライバシー重視 | ユーザー別キャッシュ | 他ユーザーへのタイミング情報漏洩なし |
+| 機密プロンプト使用 | 自己ホスト | キャッシュポリシーを完全制御 |
+
+### 防御的プロンプト設計
+
+```python
+def secure_cache_config(sensitivity_level: str) -> dict:
+    """機密レベルに応じたキャッシュ設定"""
+    configs = {
+        "public": {
+            "cache_control": {"type": "ephemeral"},
+            "ttl": "1h",
+        },
+        "internal": {
+            "cache_control": {"type": "ephemeral"},
+            "ttl": "5m",  # 短いTTL = 小さい攻撃ウィンドウ
+        },
+        "confidential": {
+            # キャッシュを使わない（コスト増だがプライバシー確保）
+        },
+    }
+    return configs.get(sensitivity_level, configs["internal"])
+```
+
 ## 関連研究（Related Work）
 
 - **"Don't Break the Cache" (2601.06007)**: プロンプトキャッシュの「効果」に焦点を当てた研究。本論文はキャッシュの「リスク」を評価する補完的研究
