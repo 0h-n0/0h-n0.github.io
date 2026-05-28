@@ -195,6 +195,23 @@ def instrument_code(source_code: str) -> str:
 
 **LangSmithとの接続ポイント**: TraceCoder的なコードトレースをLangSmithの実行トレースと統合することで、「エージェントのどのステップで」「生成されたコードのどの行が」問題だったかを一元的に分析可能になります。
 
+## Production Deployment Guide
+
+### CI/CDパイプラインへの統合パターン
+
+TraceCoderのコード自動修正をCI/CDに組み込む場合の推奨構成です。
+
+| 規模 | 月間コード生成タスク | 推奨構成 | 月額コスト目安 |
+|------|------------------|---------|-------------|
+| **Small** | ~200 | Lambda + Bedrock | $100-300 |
+| **Medium** | ~2,000 | CodeBuild + Bedrock | $500-1,500 |
+
+**Small構成**: GitHub Actions → Lambda（計装+テスト実行）→ Bedrock（分析+修正）。PR単位でトリガーし、LLM生成コードの品質ゲートとして機能します。
+
+**Medium構成**: CodeBuild（サンドボックス実行環境）→ Bedrock Batch API（50%割引）。バッチ処理でコスト効率を最大化。HLLMの教訓ログはDynamoDBに永続化し、チーム共有のバグパターンナレッジベースとして活用します。
+
+**コスト試算の注意事項**: 上記は2026年5月時点のAWS ap-northeast-1料金に基づく概算です。TraceCoderは反復修正（平均2-3回）を行うため、1タスクあたりのLLM API呼び出し回数は単純なコード生成の3-5倍になります。Bedrock Batch APIの50%割引の適用を推奨します。
+
 ## 実運用への応用（Practical Applications）
 
 TraceCoderのアプローチは、LLMを活用したコード生成パイプラインの品質保証に適用できます：
