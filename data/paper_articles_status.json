@@ -1,0 +1,3901 @@
+{
+  "processed_articles": [
+    {
+      "zenn_article_id": "a32342e48355ae",
+      "zenn_title": "Claude Codeスキル作成完全ガイド：Production-Ready実装の7原則",
+      "processed_at": "2026-02-15T13:30:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2308.10848",
+          "title": "AgentBench: Evaluating LLMs as Agents",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/32",
+          "article_url": "https://0h-n0.github.io/blog/2026/02/15/paper-agentbench-2308-10848.html"
+        },
+        {
+          "rank": 2,
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com",
+          "title": "Anthropic: プロンプトインジェクション防御の最前線",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/33",
+          "article_url": "https://0h-n0.github.io/blog/2026/02/15/techblog-anthropic-prompt-injection.html"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2404.07143",
+          "title": "Infini-attention: 無限長コンテキストを実現する圧縮メモリ機構",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/34",
+          "article_url": "https://0h-n0.github.io/blog/2026/02/15/paper-infini-attention-2404-07143.html"
+        },
+        {
+          "rank": 4,
+          "source_type": "conference",
+          "source_id": "NeurIPS 2024",
+          "title": "AvaTaR: LLMエージェントのツール使用最適化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/35",
+          "article_url": "https://0h-n0.github.io/blog/2026/02/15/conf-neurips-avatar.html"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "NVIDIA: エージェントAIのコード実行セキュリティ",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/36",
+          "article_url": "https://0h-n0.github.io/blog/2026/02/15/techblog-nvidia-code-execution-security.html"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/78",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/34"
+    },
+    {
+      "zenn_article_id": "8487a08b378cf1",
+      "zenn_title": "LangGraphで作るマルチエージェント：30分で構築する実践ガイド",
+      "processed_at": "2026-02-16T07:30:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2210.03629",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/40",
+          "article_url": "https://0h-n0.github.io/blog/react-reasoning-acting-language-models/"
+        },
+        {
+          "rank": 2,
+          "source_type": "tech_blog",
+          "source_id": "elastic.co",
+          "title": "ElasticsearchとLangGraphで構築するマルチエージェントシステム：Reflectionパターンの実践",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/41",
+          "article_url": "https://0h-n0.github.io/blog/elasticsearch-langgraph-multi-agent-reflection/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "blog.langchain.com",
+          "title": "LangChain公式解説：LangGraphマルチエージェントワークフローの3パターン",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/42",
+          "article_url": "https://0h-n0.github.io/blog/langchain-langgraph-multi-agent-workflows/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2502.02311",
+          "title": "MAGNNET: GNNとPPOによるマルチエージェント分散タスク割り当て",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/43",
+          "article_url": "https://0h-n0.github.io/blog/magnnet-graph-neural-network-multi-agent-task-allocation/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "research.google",
+          "title": "Google Research最新論文：マルチエージェントシステムのスケーリング法則 - いつ、なぜ有効か",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/44",
+          "article_url": "https://0h-n0.github.io/blog/google-research-scaling-agent-systems/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/93",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/41"
+    },
+    {
+      "zenn_article_id": "f3d8b80351ae7b",
+      "zenn_title": "BM25×ベクトル検索のハイブリッド実装：RRFで検索精度を30%向上させる実践ガイド",
+      "processed_at": "2026-02-20T12:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2210.11934",
+          "title": "An Analysis of Fusion Functions for Hybrid Retrieval",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/159",
+          "article_url": "https://0h-n0.github.io/posts/paper-2210-11934/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2402.03367",
+          "title": "RAG-Fusion: マルチクエリ生成×RRFでRAG検索の網羅性を向上",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/160",
+          "article_url": "https://0h-n0.github.io/posts/paper-2402-03367/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2404.07220",
+          "title": "Blended RAG: セマンティック×BM25×メタデータフィルタリングで検索精度84.6%達成",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/161",
+          "article_url": "https://0h-n0.github.io/posts/paper-2404-07220/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "aws.amazon.com",
+          "title": "AWS OpenSearch Serviceでスパース×デンスベクトルを統合したRAGハイブリッド検索",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/162",
+          "article_url": "https://0h-n0.github.io/posts/techblog-opensearch-hybrid-rag/"
+        },
+        {
+          "rank": 5,
+          "source_type": "conference",
+          "source_id": "SIGIR 2009",
+          "title": "Reciprocal Rank Fusion outperforms Condorcet and individual Rank Learning Methods",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/163",
+          "article_url": "https://0h-n0.github.io/posts/conf-reciprocal-rank-fusion/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/192",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/93"
+    },
+    {
+      "zenn_article_id": "a7935e0412571c",
+      "zenn_title": "Gemini 3.1 Proで構築するマルチエージェント協調コーディングの実践手法",
+      "processed_at": "2026-02-20T16:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2308.00352",
+          "title": "論文解説: MetaGPT — SOP駆動マルチエージェント協調フレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/164",
+          "article_url": "https://0h-n0.github.io/posts/paper-2308-00352/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2402.09171",
+          "title": "論文解説: SWE-agent — ACI設計による自動バグ修正",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/165",
+          "article_url": "https://0h-n0.github.io/posts/paper-2402-09171/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "developers.googleblog.com",
+          "title": "Google ADK解説: マルチエージェント構築フレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/166",
+          "article_url": "https://0h-n0.github.io/posts/techblog-google-adk-multi-agent/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com",
+          "title": "Anthropic解説: マルチエージェントリサーチシステムの設計",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/167",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-multi-agent-research/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2406.14928",
+          "title": "論文解説: MASAI — モジュラーマルチエージェントSEシステム",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/168",
+          "article_url": "https://0h-n0.github.io/posts/paper-2406-14928/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/197",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/96"
+    },
+    {
+      "zenn_article_id": "4c869d366e5200",
+      "zenn_title": "LangGraph Agentic RAGで社内検索の回答精度を78%改善する実装手法",
+      "processed_at": "2026-02-20T18:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2401.15884",
+          "title": "論文解説: Corrective Retrieval Augmented Generation (CRAG)",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/169",
+          "article_url": "https://0h-n0.github.io/posts/paper-2401-15884/"
+        },
+        {
+          "rank": 2,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "NVIDIA解説: Self-Corrective RAG with LangGraph + Nemotron",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/170",
+          "article_url": "https://0h-n0.github.io/posts/techblog-nvidia-self-corrective-rag-nemotron/"
+        },
+        {
+          "rank": 3,
+          "source_type": "conference",
+          "source_id": "EMNLP 2023",
+          "title": "論文解説: Query Rewriting for Retrieval-Augmented LLMs",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/171",
+          "article_url": "https://0h-n0.github.io/posts/paper-2305-14283/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "aws.amazon.com",
+          "title": "AWS解説: LangGraph × Amazon Bedrock マルチエージェントRAG",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/172",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aws-langgraph-bedrock-multi-agent/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2412.04235",
+          "title": "論文解説: Structured RAG (SRAG) for Multi-Hop QA",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/173",
+          "article_url": "https://0h-n0.github.io/posts/paper-2412-04235/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/198",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/97"
+    },
+    {
+      "zenn_article_id": "3b9f2fd87ffb09",
+      "zenn_title": "LangGraph動的検索ルーティング実装：クエリ分類×マルチリトリーバーでQA精度を向上させる",
+      "processed_at": "2026-02-20T21:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2501.17663",
+          "title": "論文解説: AdaptiveRAG — クエリ分類×適応的検索戦略",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/174",
+          "article_url": "https://0h-n0.github.io/posts/paper-2501-17663/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2501.09136",
+          "title": "論文解説: Query Routing for Homogeneous Tools — 同種ツール間の軽量ルーティング",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/175",
+          "article_url": "https://0h-n0.github.io/posts/paper-2501-09136/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2502.09601",
+          "title": "論文解説: CoRAG — 反復的クエリ再構成でマルチホップQA精度向上",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/176",
+          "article_url": "https://0h-n0.github.io/posts/paper-2502-09601/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2501.09039",
+          "title": "論文解説: Multi-Document RAGにおけるBM25/Dense/Hybrid検索の体系的比較",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/177",
+          "article_url": "https://0h-n0.github.io/posts/paper-2501-09039/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "docs.langchain.com",
+          "title": "LangChain公式解説: LangGraph Adaptive RAG実装パターン",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/178",
+          "article_url": "https://0h-n0.github.io/posts/techblog-langgraph-adaptive-rag/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/201",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/99"
+    },
+    {
+      "zenn_article_id": "8d05ea9be7e0f3",
+      "zenn_title": "2026年版プロンプトテクニック大全：8手法の使い分けとコンテキスト設計",
+      "processed_at": "2026-02-21T12:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2201.11903",
+          "title": "論文解説: Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/179",
+          "article_url": "https://0h-n0.github.io/posts/paper-2201-11903/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2203.11171",
+          "title": "論文解説: Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/180",
+          "article_url": "https://0h-n0.github.io/posts/paper-2203-11171/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2305.10601",
+          "title": "論文解説: Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/181",
+          "article_url": "https://0h-n0.github.io/posts/paper-2305-10601/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com",
+          "title": "Anthropic解説: コンテキストエンジニアリング — LLMの情報環境設計",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/182",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-context-engineering/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2205.11916",
+          "title": "論文解説: Large Language Models are Zero-Shot Reasoners",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/183",
+          "article_url": "https://0h-n0.github.io/posts/paper-2205-11916/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/204",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/101"
+    },
+    {
+      "zenn_article_id": "32bc8fd091100d",
+      "zenn_title": "LangGraph×Claude Sonnet 4.6エージェント型RAGの精度評価と最適化",
+      "processed_at": "2026-02-21T14:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2310.11511",
+          "title": "論文解説: Self-RAG — 反省トークンによる自己批評型検索拡張生成",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/184",
+          "article_url": "https://0h-n0.github.io/posts/paper-2310-11511/"
+        },
+        {
+          "rank": 2,
+          "source_type": "conference",
+          "source_id": "2309.15217",
+          "title": "論文解説: RAGAS — RAGシステムの自動評価フレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/185",
+          "article_url": "https://0h-n0.github.io/posts/paper-2309-15217/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2501.00353",
+          "title": "サーベイ解説: Agentic RAG — エージェント型検索拡張生成の体系的分類",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/186",
+          "article_url": "https://0h-n0.github.io/posts/paper-2501-00353/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2408.15712",
+          "title": "論文解説: RAGLAB — RAGアルゴリズムの公平比較フレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/187",
+          "article_url": "https://0h-n0.github.io/posts/paper-2408-15712/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "blog.langchain.com",
+          "title": "ブログ解説: LangChain Self-Reflective RAG with LangGraph",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/188",
+          "article_url": "https://0h-n0.github.io/posts/techblog-langchain-self-reflective-rag-langgraph/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/209",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/103"
+    },
+    {
+      "zenn_article_id": "cdb9712312bdbf",
+      "zenn_title": "LLMエージェント評価ベンチマーク完全ガイド：SWE-bench・GAIA・τ-benchの選び方と実践",
+      "processed_at": "2026-02-21T18:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2310.06770",
+          "title": "論文解説: SWE-bench — 実世界GitHubイシューでLLMのSE能力を評価する",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/189",
+          "article_url": "https://0h-n0.github.io/posts/paper-2310-06770/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2406.12045",
+          "title": "論文解説: τ-bench — ツール・エージェント・ユーザー三者間対話の信頼性ベンチマーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/190",
+          "article_url": "https://0h-n0.github.io/posts/paper-2406-12045/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2311.12983",
+          "title": "論文解説: GAIA — 汎用AIアシスタントの実力を測る466タスクベンチマーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/191",
+          "article_url": "https://0h-n0.github.io/posts/paper-2311-12983/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2410.07095",
+          "title": "論文解説: MLE-bench — 75のKaggleコンペでMLエンジニアリングエージェントを評価する",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/192",
+          "article_url": "https://0h-n0.github.io/posts/paper-2410-07095/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2307.13854",
+          "title": "論文解説: WebArena — 812タスクの現実的Web環境で自律エージェントを評価する",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/193",
+          "article_url": "https://0h-n0.github.io/posts/paper-2307-13854/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/212",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/105"
+    },
+    {
+      "zenn_article_id": "e4a4b18478c692",
+      "zenn_title": "LangGraphマルチソースRAGの本番構築：権限制御×HITLで社内検索を安全運用",
+      "processed_at": "2026-02-21T22:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2412.10743",
+          "title": "論文解説: DeepRAG — MDP適応型検索判断で知識集約型QAを改善",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/194",
+          "article_url": "https://0h-n0.github.io/posts/paper-2412-10743/"
+        },
+        {
+          "rank": 2,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "NVIDIA解説: NIM + LangGraphによるHuman-in-the-Loop AIエージェント構築",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/195",
+          "article_url": "https://0h-n0.github.io/posts/techblog-nvidia-hitl-ai-agent-nim/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2409.11598",
+          "title": "サーベイ解説: Trustworthy RAG — 信頼性6次元フレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/196",
+          "article_url": "https://0h-n0.github.io/posts/paper-2409-11598/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2407.01219",
+          "title": "論文解説: Searching for Best Practices in RAG — 1,406実験の最適構成",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/197",
+          "article_url": "https://0h-n0.github.io/posts/paper-2407-01219/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com",
+          "title": "Anthropic解説: Contextual Retrieval — チャンク文脈付与で検索失敗率67%削減",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/198",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-contextual-retrieval/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/216",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/106"
+    },
+    {
+      "zenn_article_id": "11f63b83aabde7",
+      "zenn_title": "LangGraph×Claude APIで構築するリランキング付きエージェントRAG実装",
+      "processed_at": "2026-02-21T23:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "conference",
+          "source_id": "2407.02485",
+          "title": "論文解説: RankRAG — LLM統合リランキングでRAG精度を大幅向上",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/199",
+          "article_url": "https://0h-n0.github.io/posts/paper-2407-02485/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2512.16236",
+          "title": "サーベイ解説: Evolution of Reranking — リランキング手法の体系的分類",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/200",
+          "article_url": "https://0h-n0.github.io/posts/paper-2512-16236/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "NVIDIA解説: Enhancing RAG Pipelines with Re-Ranking",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/201",
+          "article_url": "https://0h-n0.github.io/posts/techblog-nvidia-enhancing-rag-reranking/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2602.03442",
+          "title": "論文解説: A-RAG — エージェント型リランキングで検索精度を最適化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/202",
+          "article_url": "https://0h-n0.github.io/posts/paper-2602-03442/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "NVIDIA解説: NIM Microservicesリランキングモデル活用ガイド",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/203",
+          "article_url": "https://0h-n0.github.io/posts/techblog-nvidia-reranking-microservice/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/224",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/109"
+    },
+    {
+      "zenn_article_id": "36c21c12e32239",
+      "zenn_title": "Claude Code Security完全ガイド：3層防御モデルとゼロデイ検出で開発を守る",
+      "processed_at": "2026-02-21T23:30:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2601.17548",
+          "title": "論文解説: Prompt Injection Attacks on Agentic Coding Assistants — 5製品の実証評価",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/204",
+          "article_url": "https://0h-n0.github.io/posts/paper-2601-17548/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2302.12173",
+          "title": "論文解説: Not What You've Signed Up For — 間接プロンプトインジェクションの体系的脅威分析",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/205",
+          "article_url": "https://0h-n0.github.io/posts/paper-2302-12173/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com",
+          "title": "Anthropic解説: Mitigating Prompt Injections in Browser Use — 強化学習による防御の最前線",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/206",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-prompt-injection-defense/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2404.02151",
+          "title": "論文解説: Benchmarking Large Language Models for Vulnerability Detection — LLM脆弱性検出の定量評価",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/207",
+          "article_url": "https://0h-n0.github.io/posts/paper-2404-02151/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "NVIDIA解説: Agent Morpheus — 生成AIによるエンタープライズCVE分析の自動化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/208",
+          "article_url": "https://0h-n0.github.io/posts/techblog-nvidia-cve-analysis-agent-morpheus/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/227",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/111"
+    },
+    {
+      "zenn_article_id": "5698ef2dfcbc61",
+      "zenn_title": "Claude Sonnet 4.6のExtended Thinkingでコードレビューエージェントを構築する",
+      "processed_at": "2026-02-21T19:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "conference",
+          "source_id": "EMNLP 2024",
+          "title": "EMNLP 2024論文解説: CodeAgent — 自律型マルチエージェントLLMコードレビュー",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/209",
+          "article_url": "https://0h-n0.github.io/posts/conf-codeagent-autonomous-code-review/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2501.18099",
+          "title": "論文解説: LLM4CR — RAGと反復洗練によるLLMコードレビュー",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/210",
+          "article_url": "https://0h-n0.github.io/posts/paper-2501-18099/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2502.04463",
+          "title": "論文解説: Reasoning Language Models Blueprint — 推論特化型LLMの設計青写真",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/211",
+          "article_url": "https://0h-n0.github.io/posts/paper-2502-04463/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "microsoft.com",
+          "title": "Microsoft Research解説: CORE — LLMによるコード品質問題の自動修正",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/212",
+          "article_url": "https://0h-n0.github.io/posts/techblog-microsoft-core-code-quality/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "NVIDIA解説: Teacher-Studentパラダイムによるコードレビュー用小規模LLMのファインチューニング",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/213",
+          "article_url": "https://0h-n0.github.io/posts/techblog-nvidia-fine-tuning-code-review/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/231",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/113"
+    },
+    {
+      "zenn_article_id": "a5be5c172a5a99",
+      "zenn_title": "LangChain LCEL実践ガイド：LLMチェーンのレイテンシを50%削減する最適化手法",
+      "processed_at": "2026-02-23T12:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2403.05676",
+          "title": "論文解説: PipeRAG — パイプライン並列化によるRAG生成高速化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/289",
+          "article_url": "https://0h-n0.github.io/posts/paper-2403-05676/"
+        },
+        {
+          "rank": 2,
+          "source_type": "tech_blog",
+          "source_id": "blog.langchain.com",
+          "title": "ブログ解説: LangChain LCEL公式ブログ — Runnable APIの設計思想",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/292",
+          "article_url": "https://0h-n0.github.io/posts/techblog-langchain-lcel/"
+        },
+        {
+          "rank": 3,
+          "source_type": "conference",
+          "source_id": "CIDR 2025",
+          "title": "論文解説: AOP — LLMパイプライン自動最適化フレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/297",
+          "article_url": "https://0h-n0.github.io/posts/conf-aop-llm-pipeline/"
+        },
+        {
+          "rank": 4,
+          "source_type": "conference",
+          "source_id": "ISCA 2025",
+          "title": "論文解説: RAGO — RAGサービング最適化フレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/301",
+          "article_url": "https://0h-n0.github.io/posts/conf-rago-rag-optimization/"
+        },
+        {
+          "rank": 5,
+          "source_type": "conference",
+          "source_id": "OSDI 2024",
+          "title": "論文解説: Sarathi-Serve — Chunked-PrefillsによるLLM推論最適化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/307",
+          "article_url": "https://0h-n0.github.io/posts/conf-sarathi-serve/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/340",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/164"
+    },
+    {
+      "zenn_article_id": "c06ff696c6d2b5",
+      "zenn_title": "CLAUDE.md最適化の最前線：開発者が実践する5つのプロンプト設計戦略",
+      "processed_at": "2026-02-24T12:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2402.14658",
+          "title": "論文解説: Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/382",
+          "article_url": "https://0h-n0.github.io/posts/paper-2402-14658/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2407.11686",
+          "title": "論文解説: The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/383",
+          "article_url": "https://0h-n0.github.io/posts/paper-2407-11686/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2407.01178",
+          "title": "論文解説: Lost in the Middle: How Language Models Use Long Contexts",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/384",
+          "article_url": "https://0h-n0.github.io/posts/paper-2407-01178/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com/claude-code-best-practices",
+          "title": "Anthropic解説: Claude Code Best Practices for Agentic Coding",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/385",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-claude-code-best-practices/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com/context-engineering",
+          "title": "Anthropic解説: Effective Context Engineering for AI Agents",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/386",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-context-engineering-agents/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/376",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/185"
+    },
+    {
+      "zenn_article_id": "742c2fd216e035",
+      "zenn_title": "LangGraph×Claude APIエージェント型RAGの精度-コストPareto最適化実装",
+      "processed_at": "2026-02-24T12:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2505.20266",
+          "title": "論文解説: syftr — Bayesian最適化によるRAGパイプラインのPareto最適構成探索",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/387",
+          "article_url": "https://0h-n0.github.io/posts/paper-2505-20266/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2406.02378",
+          "title": "論文解説: RouteLLM — 選好データから学習するLLMルーターで推論コストを2倍以上削減",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/388",
+          "article_url": "https://0h-n0.github.io/posts/paper-2406-02378/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2309.15025",
+          "title": "論文解説: FrugalGPT — LLMカスケード・プロンプト適応・近似の3戦略で最大98%コスト削減",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/389",
+          "article_url": "https://0h-n0.github.io/posts/paper-2309-15025/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2502.14051",
+          "title": "論文解説: プロンプトキャッシュ戦略の体系的分析 — Claude/GPT-4/GeminiのAPIコスト60-80%削減",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/390",
+          "article_url": "https://0h-n0.github.io/posts/paper-2502-14051/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2502.01618",
+          "title": "論文解説: AdaptiveRAG — クエリ複雑度分類器でRAG構成を動的適応し35%コスト削減",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/391",
+          "article_url": "https://0h-n0.github.io/posts/paper-2502-01618/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/381",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/187"
+    },
+    {
+      "zenn_article_id": "92f41b4fdc7b49",
+      "zenn_title": "LangGraph×Claude 4.6で推論精度と応答速度を両立するマルチエージェントRAG",
+      "processed_at": "2026-02-24T12:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2504.04603",
+          "title": "論文解説: MARA — Multi-Agent RAG Architecture",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/392",
+          "article_url": "https://0h-n0.github.io/posts/paper-2504-04603/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2404.19756",
+          "title": "論文解説: Adaptive-RAG — Learning to Adapt Retrieval-Augmented Large Language Models",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/393",
+          "article_url": "https://0h-n0.github.io/posts/paper-2404-19756/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2501.12599",
+          "title": "論文解説: Efficient Inference for Large Reasoning Models: A Survey",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/394",
+          "article_url": "https://0h-n0.github.io/posts/paper-2501-12599/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2502.13957",
+          "title": "論文解説: RAG-Gym — Unified Optimization for Retrieval Augmented Generation",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/395",
+          "article_url": "https://0h-n0.github.io/posts/paper-2502-13957/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "blog.langchain.dev",
+          "title": "テックブログ解説: LangGraphマルチエージェントワークフローの3設計パターン",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/396",
+          "article_url": "https://0h-n0.github.io/posts/techblog-langgraph-multi-agent-workflows/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/388",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/191"
+    },
+    {
+      "zenn_article_id": "98fc937127592e",
+      "zenn_title": "Guidance 0.3×llguidance実践ガイド：vLLM/SGLang連携で本番運用",
+      "processed_at": "2026-02-24T18:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2501.10868",
+          "title": "論文解説: JSONSchemaBench — 構造化出力ベンチマークの詳細分析",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/397",
+          "article_url": "https://0h-n0.github.io/posts/paper-2501-10868/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2411.15100",
+          "title": "論文解説: XGrammar — ボキャブラリ分割による高速構造化出力",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/398",
+          "article_url": "https://0h-n0.github.io/posts/paper-2411-15100/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "blog.squeezebits.com",
+          "title": "SqueezeBits解説: vLLM/SGLangガイデッドデコーディング性能比較",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/399",
+          "article_url": "https://0h-n0.github.io/posts/techblog-squeezebits-guided-decoding-benchmark/"
+        },
+        {
+          "rank": 4,
+          "source_type": "conference",
+          "source_id": "ICML 2025",
+          "title": "ICML 2025論文解説: Grammar-Constrained Decodingの理論と実践",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/400",
+          "article_url": "https://0h-n0.github.io/posts/conf-icml2025-grammar-constrained-decoding/"
+        },
+        {
+          "rank": 5,
+          "source_type": "conference",
+          "source_id": "NeurIPS 2024",
+          "title": "NeurIPS 2024論文解説: SGLang — RadixAttentionによる高効率LLM推論",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/401",
+          "article_url": "https://0h-n0.github.io/posts/conf-neurips2024-sglang/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/393",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/194"
+    },
+    {
+      "zenn_article_id": "47425e25dcdf30",
+      "zenn_title": "Claude Sonnet 4.6の1Mコンテキストで構築するエージェント型RAGとレイテンシ最適化",
+      "processed_at": "2026-02-24T11:30:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2501.00353",
+          "title": "論文解説: CAG — KVキャッシュ事前計算によるRAGレイテンシ排除",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/402",
+          "article_url": "https://0h-n0.github.io/posts/paper-2501-00353/"
+        },
+        {
+          "rank": 2,
+          "source_type": "conference",
+          "source_id": "ICML 2025",
+          "title": "ICML 2025論文解説: LaRA — RAGとLong-Context LLMのベンチマーク比較",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/403",
+          "article_url": "https://0h-n0.github.io/posts/conf-icml2025-lara-rag-long-context/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2501.15372",
+          "title": "論文解説: Agentic RAG — 自律エージェント型RAGアーキテクチャのサーベイ",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/404",
+          "article_url": "https://0h-n0.github.io/posts/paper-2501-15372/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2311.04934",
+          "title": "論文解説: Prompt Cache — モジュール型Attention再利用による低レイテンシ推論",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/405",
+          "article_url": "https://0h-n0.github.io/posts/paper-2311-04934/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "databricks.com",
+          "title": "Databricks Research解説: Long Context RAGにおけるLLM性能の大規模ベンチマーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/406",
+          "article_url": "https://0h-n0.github.io/posts/techblog-databricks-long-context-rag/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/402"
+    },
+    {
+      "zenn_article_id": "7a4b0b4ff37caa",
+      "zenn_title": "ReAct+CoT推論の5大実装パターン：Reflexion・LATS・ReWOOをLangGraphで構築する",
+      "processed_at": "2026-02-24T22:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2303.11366",
+          "title": "論文解説: Reflexion — 言語エージェントにおける自己反省型強化学習フレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/407",
+          "article_url": "https://0h-n0.github.io/posts/paper-2303-11366/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2310.04406",
+          "title": "論文解説: LATS — モンテカルロ木探索による言語エージェントの統合的推論・行動・計画フレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/408",
+          "article_url": "https://0h-n0.github.io/posts/paper-2310-04406/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2305.18323",
+          "title": "論文解説: ReWOO — 観測なし推論による効率的なツール利用エージェントフレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/409",
+          "article_url": "https://0h-n0.github.io/posts/paper-2305-18323/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2402.01817",
+          "title": "論文解説: CodeAct — 実行可能Pythonコードによるエージェント行動の統一フレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/410",
+          "article_url": "https://0h-n0.github.io/posts/paper-2402-01817/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "research.google",
+          "title": "Google Research解説: ReAct — 推論と行動のシナジーによるLLMエージェントの基盤パラダイム",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/411",
+          "article_url": "https://0h-n0.github.io/posts/techblog-google-react-reasoning-acting/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/407",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/198"
+    },
+    {
+      "zenn_article_id": "96b758789bcc95",
+      "zenn_title": "Ollama 0.17でオンプレLLM推論環境を構築する実践ガイド",
+      "processed_at": "2026-02-24T23:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "conference",
+          "source_id": "2309.06180",
+          "title": "論文解説: vLLM PagedAttention — OS仮想メモリ着想のKV Cacheメモリ管理で推論スループット最大24倍",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/412",
+          "article_url": "https://0h-n0.github.io/posts/paper-2309-06180/"
+        },
+        {
+          "rank": 2,
+          "source_type": "conference",
+          "source_id": "2401.18079",
+          "title": "論文解説: KVQuant — Per-Channel Key量子化とNon-Uniform量子化でLLM長コンテキスト推論を実現",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/413",
+          "article_url": "https://0h-n0.github.io/posts/paper-2401-18079/"
+        },
+        {
+          "rank": 3,
+          "source_type": "conference",
+          "source_id": "2306.00978",
+          "title": "論文解説: AWQ — 活性化を考慮した重み量子化でLLM推論を高速化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/414",
+          "article_url": "https://0h-n0.github.io/posts/paper-2306-00978/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "ai.meta.com",
+          "title": "Meta AI解説: 量子化Llamaモデル — QATとSpinQuantで推論速度2.5倍・モデルサイズ56%削減",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/415",
+          "article_url": "https://0h-n0.github.io/posts/techblog-meta-quantized-llama/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "NVIDIA解説: NVFP4 KV Cacheで長コンテキストLLM推論を最適化 — メモリ50%削減・TTFT 3倍高速化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/416",
+          "article_url": "https://0h-n0.github.io/posts/techblog-nvidia-nvfp4-kv-cache/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/414",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/203"
+    },
+    {
+      "zenn_article_id": "f2b8b891c9f1d6",
+      "zenn_title": "OpenAI・Anthropic・Gemini プロンプトキャッシュ実装比較2026",
+      "processed_at": "2026-02-24T21:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2601.06007",
+          "title": "論文解説: Don't Break the Cache — 3プロバイダーKVキャッシュ比較評価",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/417",
+          "article_url": "https://0h-n0.github.io/posts/paper-2601-06007/"
+        },
+        {
+          "rank": 2,
+          "source_type": "conference",
+          "source_id": "2311.04934",
+          "title": "論文解説: Prompt Cache — Modular Attention Reuse (MLSys 2024)",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/418",
+          "article_url": "https://0h-n0.github.io/posts/paper-2311-04934/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2312.07104",
+          "title": "論文解説: SGLang — RadixAttention によるKVキャッシュ自動共有",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/419",
+          "article_url": "https://0h-n0.github.io/posts/paper-2312-07104/"
+        },
+        {
+          "rank": 4,
+          "source_type": "conference",
+          "source_id": "2310.07240",
+          "title": "論文解説: CacheGen — KVキャッシュ圧縮とストリーミング (SIGCOMM 2024)",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/420",
+          "article_url": "https://0h-n0.github.io/posts/paper-2310-07240/"
+        },
+        {
+          "rank": 5,
+          "source_type": "conference",
+          "source_id": "2402.15220",
+          "title": "論文解説: ChunkAttention — プレフィックスKVキャッシュ共有 (ACL 2024)",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/421",
+          "article_url": "https://0h-n0.github.io/posts/paper-2402-15220/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/419",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/206"
+    },
+    {
+      "zenn_article_id": "db325cb1cb2e24",
+      "zenn_title": "自社データで実践するEmbeddingモデル精度評価パイプライン構築",
+      "processed_at": "2026-02-24T23:30:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2502.13595",
+          "title": "論文解説: MMTEB — Massive Multitask Embedding Benchmark",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/422",
+          "article_url": "https://0h-n0.github.io/posts/paper-mmteb-2502-13595/"
+        },
+        {
+          "rank": 2,
+          "source_type": "tech_blog",
+          "source_id": "databricks.com",
+          "title": "Databricks解説: Embedding Model Fine-tuningによるRAG検索精度改善",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/423",
+          "article_url": "https://0h-n0.github.io/posts/techblog-databricks-embedding-finetuning-rag/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "blog.voyageai.com",
+          "title": "Voyage AI解説: Voyage 4 — MoEアーキテクチャによるEmbeddingモデルの革新",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/424",
+          "article_url": "https://0h-n0.github.io/posts/techblog-voyage-4-moe-embedding/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "tech.preferred.jp",
+          "title": "Preferred Networks解説: PLaMo-Embedding-1B — LLM2Vec+TIES-Mergingによる日本語Embedding",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/425",
+          "article_url": "https://0h-n0.github.io/posts/techblog-plamo-embedding-1b/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2506.05176",
+          "title": "論文解説: Qwen3-Embedding — 3段階学習パイプラインによる多言語Embeddingモデル",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/426",
+          "article_url": "https://0h-n0.github.io/posts/paper-qwen3-embedding/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/424",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/209"
+    },
+    {
+      "zenn_article_id": "b1c2ee45a42db3",
+      "zenn_title": "Qwen3.5×RTX 3090でバイブコーディング環境を構築する実践ガイド",
+      "processed_at": "2026-02-27T13:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2401.06066",
+          "title": "論文解説: DeepSeek-V2 — MoE+MLAアーキテクチャによるKVキャッシュ93.3%削減",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/427",
+          "article_url": "https://0h-n0.github.io/posts/paper-2401-06066/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2312.11514",
+          "title": "論文解説: PowerInfer — コンシューマGPUでのLLM高速推論 Hot/Coldニューロン分離",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/428",
+          "article_url": "https://0h-n0.github.io/posts/paper-2312-11514/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2409.12186",
+          "title": "論文解説: Qwen2.5-Coder Technical Report — コード生成特化LLMの設計と学習",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/429",
+          "article_url": "https://0h-n0.github.io/posts/paper-2409-12186/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "テックブログ解説: NVIDIA llama.cpp CUDA Graphs — カーネル起動オーバーヘッド削減",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/430",
+          "article_url": "https://0h-n0.github.io/posts/techblog-nvidia-llama-cpp-cuda-graphs/"
+        },
+        {
+          "rank": 5,
+          "source_type": "conference",
+          "source_id": "NeurIPS 2024",
+          "title": "論文解説: NeurIPS 2024 MoE推論最適化 — Dynamic Gating・Expert Buffering・Load Balancing",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/431",
+          "article_url": "https://0h-n0.github.io/posts/conf-neurips2024-moe-inference/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/430",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/211"
+    },
+    {
+      "zenn_article_id": "63cf472bad8ea7",
+      "zenn_title": "Claude Codeコマンド完全ガイド：3モード×30+コマンドで開発効率を最大化する",
+      "processed_at": "2026-02-28T13:30:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2406.14898",
+          "title": "SWE-agent: Agent-Computer Interface設計がLLMエージェントのSE性能を決める",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/432",
+          "article_url": "https://0h-n0.github.io/posts/paper-2406-14898/"
+        },
+        {
+          "rank": 2,
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com",
+          "title": "Anthropic Research: AIコーディング支援がスキル形成に与える影響",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/433",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-ai-coding-skills/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "research.google",
+          "title": "Google Research: AIによるソフトウェアエンジニアリングの変革",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/434",
+          "article_url": "https://0h-n0.github.io/posts/techblog-google-ai-software-engineering/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2406.12843",
+          "title": "Agentless: エージェント不要のシンプルパイプラインでSWE-benchを解く",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/435",
+          "article_url": "https://0h-n0.github.io/posts/paper-2406-12843/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2502.00975",
+          "title": "SWE-RL: 強化学習によるLLMのSE推論能力強化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/436",
+          "article_url": "https://0h-n0.github.io/posts/paper-2502-00975/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/435"
+    },
+    {
+      "zenn_article_id": "10d67026af2a27",
+      "zenn_title": "セマンティック検索精度を向上させる5つの実装テクニック",
+      "processed_at": "2026-02-28T09:40:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2205.13147",
+          "title": "論文解説: Matryoshka Representation Learning — 可変次元Embeddingで検索コストを14倍削減",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/437",
+          "article_url": "https://0h-n0.github.io/posts/paper-2205-13147/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2112.01488",
+          "title": "論文解説: ColBERTv2 — Residual Compressionで実現する軽量Late Interaction検索",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/438",
+          "article_url": "https://0h-n0.github.io/posts/paper-2112-01488/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2212.10496",
+          "title": "論文解説: HyDE — LLM生成の仮想ドキュメントでゼロショット検索精度を改善",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/439",
+          "article_url": "https://0h-n0.github.io/posts/paper-2212-10496/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2109.10086",
+          "title": "論文解説: SPLADE v2 — 学習型スパース検索で転置インデックスにセマンティック拡張を導入",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/440",
+          "article_url": "https://0h-n0.github.io/posts/paper-2109-10086/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2408.11119",
+          "title": "論文解説: Mistral-SPLADE — LLMのEcho EmbeddingでBEIRスパース検索SOTAを達成",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/441",
+          "article_url": "https://0h-n0.github.io/posts/paper-2408-11119/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/440"
+    },
+    {
+      "zenn_article_id": "4d161bc6646df4",
+      "zenn_title": "プロンプトインジェクション検出を自動化する：Promptfoo×Garakで継続的レッドチーミングをCI/CDに組み込む",
+      "processed_at": "2026-03-01T13:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2410.05451",
+          "title": "論文解説: Prompt Injection Attacks and Defenses in LLM-Integrated Applications",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/442",
+          "article_url": "https://0h-n0.github.io/posts/paper-2410-05451/"
+        },
+        {
+          "rank": 2,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "NVIDIA技術ブログ解説: Stored Prompt Injectionの脅威と5つの緩和戦略",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/443",
+          "article_url": "https://0h-n0.github.io/posts/techblog-nvidia-stored-prompt-injection/"
+        },
+        {
+          "rank": 3,
+          "source_type": "conference",
+          "source_id": "2503.00061",
+          "title": "NAACL 2025論文解説: 間接プロンプトインジェクション防御を突破する適応的攻撃",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/444",
+          "article_url": "https://0h-n0.github.io/posts/conf-naacl-adaptive-attacks-ipi/"
+        },
+        {
+          "rank": 4,
+          "source_type": "conference",
+          "source_id": "2411.00348",
+          "title": "NAACL 2025論文解説: Attention Trackerによるプロンプトインジェクション検出",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/445",
+          "article_url": "https://0h-n0.github.io/posts/conf-naacl-attention-tracker/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "NVIDIA技術ブログ解説: LangChainのプロンプトインジェクション脆弱性3件とLLMセキュリティの教訓",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/446",
+          "article_url": "https://0h-n0.github.io/posts/techblog-nvidia-securing-llm-langchain/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/443"
+    },
+    {
+      "zenn_article_id": "e1bcdc3fb9b21e",
+      "zenn_title": "ベクトルDBインデックス戦略の実測比較：HNSW・IVF・DiskANNのチューニング実践",
+      "processed_at": "2026-03-02T09:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2502.11593",
+          "title": "論文解説: Rethinking HNSW — HNSWの階層構造は本当に必要か？",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/447",
+          "article_url": "https://0h-n0.github.io/posts/paper-2502-11593/"
+        },
+        {
+          "rank": 2,
+          "source_type": "conference",
+          "source_id": "NeurIPS 2019",
+          "title": "NeurIPS 2019論文解説: DiskANN — 10億規模のベクトル検索を単一ノードで実現",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/448",
+          "article_url": "https://0h-n0.github.io/posts/conf-diskann-neurips2019/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "engineering.fb.com",
+          "title": "Meta Engineering解説: FaissへのNVIDIA cuVS統合によるGPUベクトル検索の高速化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/449",
+          "article_url": "https://0h-n0.github.io/posts/techblog-meta-faiss-cuvs/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "NVIDIA技術ブログ解説: cuVS IVF-PQ Deep Dive — GPU上のベクトル量子化検索の最適化技法",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/450",
+          "article_url": "https://0h-n0.github.io/posts/techblog-nvidia-cuvs-ivf-pq/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "research.google",
+          "title": "Google Research解説: SOAR — 直交性残差によるベクトル検索を高速化するScaNN新アルゴリズム",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/451",
+          "article_url": "https://0h-n0.github.io/posts/techblog-google-soar-scann/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/450"
+    },
+    {
+      "zenn_article_id": "699355af9f8dab",
+      "zenn_title": "AIエージェントで運用保守を変革する：Agentic SREの実装と4段階導入戦略",
+      "processed_at": "2026-03-03T09:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2503.00455",
+          "title": "論文解説: SRE-Agent — LLMマルチエージェントによるSREタスク自動化フレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/452",
+          "article_url": "https://0h-n0.github.io/posts/paper-2503-00455/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2411.04536",
+          "title": "論文解説: Multi-Agent Self-Healing — 4層階層マルチエージェントによるクラウド自己修復システム",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/453",
+          "article_url": "https://0h-n0.github.io/posts/paper-2411-04536/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2410.17033",
+          "title": "論文解説: ARES — IBM Researchによるエージェント型クラウドインシデント自動対応システム",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/454",
+          "article_url": "https://0h-n0.github.io/posts/paper-2410-17033/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "microsoft.com",
+          "title": "Microsoft Research AIOpsLab: AIOps手法の標準化ベンチマーク評価フレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/455",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aiopslab/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "github.com/awslabs",
+          "title": "AWS Bedrock AgentCore SREエージェント: LangGraphマルチエージェントによるKubernetes運用自動化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/456",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aws-bedrock-sre/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/455"
+    },
+    {
+      "zenn_article_id": "244adaf3ac915e",
+      "zenn_title": "生成AIで創薬はどう変わるか：AlphaFold3からIsoDDEまで2026年最前線",
+      "processed_at": "2026-03-04T18:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "alphafold3-nature-2024",
+          "title": "論文解説: AlphaFold3 — 生体分子間相互作用の汎用構造予測",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/457",
+          "article_url": "https://0h-n0.github.io/blog/paper/arxiv/2026/03/04/paper-alphafold3-biomolecular-interactions/"
+        },
+        {
+          "rank": 2,
+          "source_type": "tech_blog",
+          "source_id": "isomorphiclabs.com",
+          "title": "技術ブログ解説: IsoDDE — Isomorphic Labs Drug Design Engine",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/458",
+          "article_url": "https://0h-n0.github.io/blog/techblog/isomorphic/2026/03/04/techblog-isodde-drug-design/"
+        },
+        {
+          "rank": 3,
+          "source_type": "conference",
+          "source_id": "2501.06158",
+          "title": "ICML 2025 論文解説: GenMol — 離散拡散モデルによる分子生成",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/459",
+          "article_url": "https://0h-n0.github.io/blog/conference/icml/2026/03/04/conf-icml2025-genmol-discrete-diffusion/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2412.10966",
+          "title": "論文解説: FlowDock — フローマッチングによるタンパク質-リガンドドッキング",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/460",
+          "article_url": "https://0h-n0.github.io/blog/paper/arxiv/2026/03/04/paper-2412-10966/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2406.08511",
+          "title": "論文解説: 拡散モデルによるDe Novo創薬 — 手法の体系的レビュー",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/461",
+          "article_url": "https://0h-n0.github.io/blog/paper/arxiv/2026/03/04/paper-2406-08511/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/462"
+    },
+    {
+      "zenn_article_id": "3a80f7fd58cc8e",
+      "zenn_title": "Embedding Fine-tuning実践：合成データと評価ループでRAG検索精度を改善する",
+      "processed_at": "2026-03-04T15:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2402.16829",
+          "title": "論文解説: GISTEmbed — ガイドモデルによる学習負例選択でEmbedding Fine-tuningを改善",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/462",
+          "article_url": "https://0h-n0.github.io/posts/paper-2402-16829/"
+        },
+        {
+          "rank": 2,
+          "source_type": "conference",
+          "source_id": "ACL 2024",
+          "title": "論文解説: Text Embeddings by Weakly-Supervised Contrastive Pre-training (E5-mistral)",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/463",
+          "article_url": "https://0h-n0.github.io/posts/conf-acl2024-text-embeddings-llm/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "aws.amazon.com",
+          "title": "AWS公式ブログ解説: BGE埋め込みモデルの合成データFine-tuning with Amazon Bedrock",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/464",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aws-bge-synthetic-data-bedrock/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2205.13147",
+          "title": "論文解説: Matryoshka Representation Learning — 入れ子構造で柔軟な次元数の埋め込み表現を学習",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/465",
+          "article_url": "https://0h-n0.github.io/posts/paper-2205-13147/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "NVIDIA公式ブログ解説: NeMo Curatorによるデータキュレーションで埋め込みモデル精度改善",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/466",
+          "article_url": "https://0h-n0.github.io/posts/techblog-nvidia-embedding-data-curation/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/467",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/233"
+    },
+    {
+      "zenn_article_id": "82a9ebe3d96a89",
+      "zenn_title": "拡散言語モデル2026年動向：Mercury・LLaDA・MoE統合の実装と展望",
+      "processed_at": "2026-03-04T14:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2502.09992",
+          "title": "論文解説: LLaDA — マスク拡散で実現する大規模言語モデルの新パラダイム",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/467",
+          "article_url": "https://0h-n0.github.io/posts/paper-2502-09992/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2512.15745",
+          "title": "論文解説: LLaDA 2.0 — 拡散言語モデルを100Bパラメータにスケーリングする技術",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/468",
+          "article_url": "https://0h-n0.github.io/posts/paper-2512-15745/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2506.17298",
+          "title": "論文解説: Mercury — 拡散ベースの超高速言語モデルの推論技術",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/469",
+          "article_url": "https://0h-n0.github.io/posts/paper-2506-17298/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2509.24389",
+          "title": "論文解説: LLaDA-MoE — Sparse MoEと拡散言語モデルの初統合",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/470",
+          "article_url": "https://0h-n0.github.io/posts/paper-2509-24389/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2508.10875",
+          "title": "論文解説: 拡散言語モデルのサーベイ — 手法分類・課題・今後の研究方向",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/471",
+          "article_url": "https://0h-n0.github.io/posts/paper-2508-10875/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/471",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/235"
+    },
+    {
+      "zenn_article_id": "5713e817b39187",
+      "zenn_title": "LLM MoEアーキテクチャの発展とスケーリング戦略を体系的に理解する",
+      "processed_at": "2026-03-04T22:55:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2412.19437",
+          "title": "DeepSeek-V3 Technical Report — 671B MoEモデルの設計と効率的学習",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/472",
+          "article_url": "https://0h-n0.github.io/posts/paper-2412-19437/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2401.06066",
+          "title": "DeepSeekMoE — Fine-grained Expert SegmentationとShared Expert Isolation",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/473",
+          "article_url": "https://0h-n0.github.io/posts/paper-2401-06066/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2408.03314",
+          "title": "Scaling LLM Test-Time Compute — 推論時間計算量の最適配分",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/474",
+          "article_url": "https://0h-n0.github.io/posts/paper-2408-03314/"
+        },
+        {
+          "rank": 4,
+          "source_type": "conference",
+          "source_id": "ICLR 2025",
+          "title": "ReMoE — ReLUルーティングによる完全微分可能なMoE",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/475",
+          "article_url": "https://0h-n0.github.io/posts/paper-2412-14711/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "NVIDIA Blackwell MoE推論最適化 — DeepSeek-R1での高速推論技術",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/476",
+          "article_url": "https://0h-n0.github.io/posts/techblog-nvidia-moe-blackwell-inference/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/474",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/237"
+    },
+    {
+      "zenn_article_id": "94c9275955bb60",
+      "zenn_title": "AI Agentのtool最適化実装ガイド：選択キャッシュからアウトプット管理まで",
+      "processed_at": "2026-03-05T13:30:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2506.14852",
+          "title": "論文解説: Agentic Plan Caching — LLMエージェントのコスト削減テスト時計画キャッシュ",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/477",
+          "article_url": "https://0h-n0.github.io/posts/paper-2506-14852/"
+        },
+        {
+          "rank": 2,
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com",
+          "title": "Anthropic Advanced Tool Use解説: Tool Search Tool・Programmatic Tool Calling",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/478",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-advanced-tool-use/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2601.06007",
+          "title": "論文解説: Don't Break the Cache — プロンプトキャッシュ最適設計",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/479",
+          "article_url": "https://0h-n0.github.io/posts/paper-2601-06007/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2410.14594",
+          "title": "論文解説: Toolshed — RAGベース大規模ツール選択",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/480",
+          "article_url": "https://0h-n0.github.io/posts/paper-2410-14594/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2511.14650",
+          "title": "論文解説: AutoTool — グラフベースの効率的ツール選択",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/481",
+          "article_url": "https://0h-n0.github.io/posts/paper-2511-14650/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/479"
+    },
+    {
+      "zenn_article_id": "b2bc25d92f46fb",
+      "zenn_title": "Azure OpenAIマルチリージョン負荷分散：Front Door×APIM×PTUで高可用性を設計する",
+      "processed_at": "2026-03-05T12:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "tech_blog",
+          "source_id": "techcommunity.microsoft.com",
+          "title": "Azure APIM Unified AI Gatewayデザインパターン",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/482",
+          "article_url": "https://0h-n0.github.io/posts/techblog-azure-apim-unified-ai-gateway/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2502.03771",
+          "title": "SemCache: Semantics-Aware Caching for LLM",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/483",
+          "article_url": "https://0h-n0.github.io/posts/paper-2502-03771/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "portkey.ai",
+          "title": "Retries, Fallbacks, and Circuit Breakers in LLM Apps",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/484",
+          "article_url": "https://0h-n0.github.io/posts/techblog-portkey-circuit-breakers-llm/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "redis.io",
+          "title": "LLM Token Optimization: Cut Costs & Latency",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/485",
+          "article_url": "https://0h-n0.github.io/posts/techblog-redis-llm-token-optimization/"
+        },
+        {
+          "rank": 5,
+          "source_type": "conference",
+          "source_id": "2503.10657",
+          "title": "RouterEval: LLMルーティングベンチマーク (EMNLP 2025)",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/486",
+          "article_url": "https://0h-n0.github.io/posts/conf-emnlp2025-routereval/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/485"
+    },
+    {
+      "zenn_article_id": "46d801df9b61de",
+      "zenn_title": "BM25×ベクトル検索のハイブリッド実装ガイド：RRFとalpha調整でRAG精度を30%向上させる",
+      "processed_at": "2026-03-06T14:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2503.23013",
+          "title": "DAT: Dynamic Alpha Tuning for Hybrid Retrieval in RAG",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/487",
+          "article_url": "https://0h-n0.github.io/posts/paper-dat-dynamic-alpha-tuning/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2402.03216",
+          "title": "BGE M3-Embedding: Dense/Sparse/ColBERTハイブリッド検索を1モデルで実現",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/488",
+          "article_url": "https://0h-n0.github.io/posts/paper-bge-m3-embedding/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com",
+          "title": "Anthropic Contextual Retrieval: BM25×Embeddingで検索失敗率49%削減",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/489",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-contextual-retrieval/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2401.05501",
+          "title": "SPLADE-v3: BM25を超える学習型スパース検索モデル",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/490",
+          "article_url": "https://0h-n0.github.io/posts/paper-splade-v3/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "elastic.co",
+          "title": "Elasticsearch Linear Retriever: RRFの限界を超えるスコアベース統合",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/491",
+          "article_url": "https://0h-n0.github.io/posts/techblog-elastic-linear-retriever/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/491"
+    },
+    {
+      "zenn_article_id": "65bb6e56bbe88b",
+      "zenn_title": "AIエージェント時代のKubernetes進化とEKS・GKE・AKSクラウドネイティブ比較",
+      "processed_at": "2026-03-06T13:30:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "tech_blog",
+          "source_id": "kubernetes.io",
+          "title": "Kubernetes v1.34 DRA GA解説: GPUの動的リソース割り当てが安定版に",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/492",
+          "article_url": "https://0h-n0.github.io/posts/techblog-kubernetes-v134-dra-ga/"
+        },
+        {
+          "rank": 2,
+          "source_type": "tech_blog",
+          "source_id": "cncf.io",
+          "title": "kagent解説: CNCF SandboxのKubernetesネイティブAIエージェントフレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/493",
+          "article_url": "https://0h-n0.github.io/posts/techblog-cncf-kagent-agentic-ai/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "aws.amazon.com",
+          "title": "Amazon EKS 100Kノード解説: 超大規模AI/MLワークロードを支えるアーキテクチャ",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/494",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aws-eks-100k-nodes/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "blog.kubeflow.org",
+          "title": "Kubeflow Trainer V2解説: KubernetesネイティブなAIモデル分散学習の民主化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/495",
+          "article_url": "https://0h-n0.github.io/posts/techblog-kubeflow-trainer-v2/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "blog.aks.azure.com",
+          "title": "AKS MIG+DRA解説: Multi-Instance GPUとDynamic Resource Allocationによる効率的なGPU共有",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/496",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aks-mig-dra/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/496",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/250"
+    },
+    {
+      "zenn_article_id": "d10139cd09e957",
+      "zenn_title": "Claude CodeとCursor IDEの併用で自動コーディング精度を高める実践手法",
+      "processed_at": "2026-03-06T07:44:33.583851+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2602.11988",
+          "title": "論文解説: Evaluating AGENTS.md",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/497",
+          "article_url": "https://0h-n0.github.io/posts/paper-2602-11988/"
+        },
+        {
+          "rank": 2,
+          "source_type": "tech_blog",
+          "source_id": "engineering.atspotify.com",
+          "title": "Spotify Honk コンテキストエンジニアリング",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/498",
+          "article_url": "https://0h-n0.github.io/posts/techblog-spotify-honk-context-engineering/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2602.20478",
+          "title": "論文解説: Codified Context",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/499",
+          "article_url": "https://0h-n0.github.io/posts/paper-2602-20478/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com",
+          "title": "Anthropic コンテキストエンジニアリング",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/500",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-context-engineering/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2507.09089",
+          "title": "論文解説: AIコーディング生産性RCT",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/501",
+          "article_url": "https://0h-n0.github.io/posts/paper-2507-09089/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/501"
+    },
+    {
+      "zenn_article_id": "43fd3b0e65a835",
+      "zenn_title": "Bedrock AgentCoreエピソード記憶で顧客サポートの応答一貫性を向上させる",
+      "processed_at": "2026-03-06T15:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "tech_blog",
+          "source_id": "aws.amazon.com",
+          "title": "AWS公式ブログ解説: Bedrock AgentCoreエピソード記憶でエージェントに経験学習能力を付与する",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/502",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aws-agentcore-episodic-memory/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2504.19413",
+          "title": "論文解説: Mem0 - 本番対応AIエージェントのためのスケーラブル長期記憶",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/503",
+          "article_url": "https://0h-n0.github.io/posts/paper-2504-19413/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2304.03442",
+          "title": "論文解説: Generative Agents - エピソード記憶とリフレクションによる信頼性のある行動シミュレーション",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/504",
+          "article_url": "https://0h-n0.github.io/posts/paper-2304-03442/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2502.12110",
+          "title": "NeurIPS 2025論文解説: A-MEM - Zettelkasten方式によるLLMエージェントの動的メモリ管理",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/505",
+          "article_url": "https://0h-n0.github.io/posts/paper-2502-12110/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2308.10144",
+          "title": "AAAI 2024論文解説: ExpeL - 経験学習によるLLMエージェントの自律的知識獲得",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/506",
+          "article_url": "https://0h-n0.github.io/posts/paper-2308-10144/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/504",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/255"
+    },
+    {
+      "zenn_article_id": "5f7f36e631d6b0",
+      "zenn_title": "LLMバッチ処理の並列最適化：asyncio×キュー×トークンバジェットで処理速度を8倍にする",
+      "processed_at": "2026-03-07T09:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2309.06180",
+          "title": "論文解説: PagedAttention - vLLMのKVキャッシュメモリ管理最適化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/507",
+          "article_url": "https://0h-n0.github.io/posts/pagedattention-vllm-kv-cache-memory-management/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2412.03594",
+          "title": "論文解説: BatchLLM - 大規模バッチLLM推論の最適化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/508",
+          "article_url": "https://0h-n0.github.io/posts/paper-2412-03594/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2312.07104",
+          "title": "論文解説: SGLang - RadixAttentionとZero-Overhead Scheduler",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/509",
+          "article_url": "https://0h-n0.github.io/posts/paper-2312-07104-scheduling/"
+        },
+        {
+          "rank": 4,
+          "source_type": "conference",
+          "source_id": "OSDI 2022",
+          "title": "OSDI 2022論文解説: Orca - Iteration-Level Scheduling",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/510",
+          "article_url": "https://0h-n0.github.io/posts/conf-osdi22-orca-llm-serving/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "NVIDIA技術ブログ解説: LLM推論最適化テクニック",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/511",
+          "article_url": "https://0h-n0.github.io/posts/techblog-nvidia-llm-inference-optimization/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/509",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/258"
+    },
+    {
+      "zenn_article_id": "80554aca49f2ed",
+      "zenn_title": "OpenAI Assistants APIのThread管理とResponses API移行実践ガイド",
+      "processed_at": "2026-03-08T14:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "tech_blog",
+          "source_id": "developers.openai.com",
+          "title": "OpenAI Responses API設計思想の解説",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/516",
+          "article_url": "https://0h-n0.github.io/posts/techblog-openai-responses-api-design/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2312.05516",
+          "title": "論文解説: Stateful Large Language Model Serving with Pensieve",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/513",
+          "article_url": "https://0h-n0.github.io/posts/paper-pensieve-2312-05516/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2408.04682",
+          "title": "論文解説: ToolSandbox - LLMツール利用ベンチマーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/512",
+          "article_url": "https://0h-n0.github.io/posts/paper-toolsandbox-2408-04682/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com",
+          "title": "Anthropic Model Context Protocol (MCP)解説",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/514",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-mcp/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2405.16444",
+          "title": "論文解説: CacheBlend - RAG向けKVキャッシュ融合",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/515",
+          "article_url": "https://0h-n0.github.io/posts/paper-cacheblend-2405-16444/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/514",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/260"
+    },
+    {
+      "zenn_article_id": "3a91fb8a02cdc4",
+      "zenn_title": "Ollama本番運用ガイド：Kubernetes・認証・監視で構築するオンプレLLM基盤",
+      "processed_at": "2026-03-08T08:44:44.844568+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "tech_blog",
+          "source_id": "developers.redhat.com",
+          "title": "Red Hat: vLLM+GuideLLMのKubernetesデプロイとベンチマーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/517",
+          "article_url": "https://0h-n0.github.io/posts/techblog-redhat-vllm-guidellm-kubernetes/"
+        },
+        {
+          "rank": 2,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "NVIDIA: Triton+TensorRT-LLMのKubernetesスケーリング",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/518",
+          "article_url": "https://0h-n0.github.io/posts/techblog-nvidia-triton-tensorrt-llm-kubernetes/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "NVIDIA: Run:ai+DynamoによるマルチノードLLM推論スケジューリング",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/519",
+          "article_url": "https://0h-n0.github.io/posts/techblog-nvidia-runai-dynamo-multi-node/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "www.cncf.io",
+          "title": "CNCF: AIプラットフォームのKubernetes収斂",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/520",
+          "article_url": "https://0h-n0.github.io/posts/techblog-cncf-ai-kubernetes-convergence/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2411.00136",
+          "title": "論文解説: LLM-Inference-Bench",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/521",
+          "article_url": "https://0h-n0.github.io/posts/paper-2411-00136/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/517",
+      "zenn_pr_url": "https://github.com/0h-n0/zenn-contents/pull/262"
+    },
+    {
+      "zenn_article_id": "18db4ca22ca14d",
+      "zenn_title": "Portkey AI Gatewayで実現するLLMルーティング・フォールバック・コスト最適化",
+      "processed_at": "2026-07-10T15:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "conference",
+          "source_id": "NAACL 2025",
+          "title": "NAACL 2025論文解説: MixLLM — 動的コンテキストバンディットによるLLMルーティング最適化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1478",
+          "article_url": "https://0h-n0.github.io/posts/paper-2502-18482/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2504.02268",
+          "title": "論文解説: Advancing Semantic Caching for LLMs — ドメイン特化Embeddingによるキャッシュ最適化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1477",
+          "article_url": "https://0h-n0.github.io/posts/paper-2504-02268/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2510.00202",
+          "title": "論文解説: RouterArena — LLMルーター包括的ベンチマークプラットフォーム",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1480",
+          "article_url": "https://0h-n0.github.io/posts/paper-2510-00202/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2601.22438",
+          "title": "論文解説: KevlarFlow — フォールトトレラントLLMサービングアーキテクチャ",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1479",
+          "article_url": "https://0h-n0.github.io/posts/paper-2601-22438/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2510.19169",
+          "title": "論文解説: OpenGuardrails — 構成可能・統一的なLLMガードレールプラットフォーム",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1481",
+          "article_url": "https://0h-n0.github.io/posts/paper-2510-19169/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1354"
+    },
+    {
+      "zenn_article_id": "ae604dd7a92cc9",
+      "zenn_title": "Bedrock AgentCoreで社内ヘルプデスクエージェントのツール選択精度と応答速度を最適化する",
+      "processed_at": "2026-07-10T14:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "conference",
+          "source_id": "EMNLP 2024",
+          "title": "EMNLP 2024論文解説: Re-Invoke — マルチビュー類似度ランキングによるゼロショットツール検索",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1486",
+          "article_url": "https://0h-n0.github.io/posts/paper-2408-01875/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2507.21428",
+          "title": "論文解説: MemTool — LLMエージェントの動的ツールコンテキスト管理",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1482",
+          "article_url": "https://0h-n0.github.io/posts/paper-2507-21428/"
+        },
+        {
+          "rank": 3,
+          "source_type": "conference",
+          "source_id": "ACL 2026",
+          "title": "ACL 2026論文解説: JTPRO — ツール-プロンプト共最適化フレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1483",
+          "article_url": "https://0h-n0.github.io/posts/paper-2604-19821/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2606.17016",
+          "title": "論文解説: TokenPilot — キャッシュ効率的コンテキスト管理",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1484",
+          "article_url": "https://0h-n0.github.io/posts/paper-2606-17016/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "aws.amazon.com",
+          "title": "AWS公式ブログ解説: S3 Vectors×Bedrockによるツール選択最適化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1485",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aws-s3-vectors-tool-selection/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1357"
+    },
+    {
+      "zenn_article_id": "798fe16c7d13cd",
+      "zenn_title": "Gemini 3.5 Flash×CRAGで社内検索の誤回答を検索評価ループで削減する",
+      "processed_at": "2026-07-11T14:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2603.16169",
+          "title": "論文解説: CRAG再現と説明可能性分析 — 検索評価器はエンティティ照合器だった",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1487",
+          "article_url": "https://0h-n0.github.io/posts/paper-2603-16169/"
+        },
+        {
+          "rank": 2,
+          "source_type": "conference",
+          "source_id": "ICLR 2025",
+          "title": "ICLR 2025論文解説: Speculative RAG — ドラフト並列生成×検証で高速・高精度RAG",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1488",
+          "article_url": "https://0h-n0.github.io/posts/conf-speculative-rag-iclr2025/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2604.00865",
+          "title": "論文解説: Doctor-RAG — 失敗診断×最小コスト修復でAgentic RAGの自己修正を実現",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1490",
+          "article_url": "https://0h-n0.github.io/posts/paper-2604-00865/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2512.07015",
+          "title": "論文解説: FVA-RAG — 反証検索による確認バイアス抑制でCRAG精度を8ポイント上回る",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1489",
+          "article_url": "https://0h-n0.github.io/posts/paper-2512-07015/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2506.05167",
+          "title": "論文解説: ECoRAG — エビデンス性に基づく適応的文書圧縮でRAGの精度とコストを両立",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1491",
+          "article_url": "https://0h-n0.github.io/posts/paper-2506-05167/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1360"
+    },
+    {
+      "zenn_article_id": "a2ff7f18b0266b",
+      "zenn_title": "OpenAI・Anthropic・Gemini会話管理パターン比較と統一設計",
+      "processed_at": "2026-07-11T18:00:00+09:00",
+      "sources_generated": [
+        {
+          "source_type": "arxiv",
+          "arxiv_id": "2601.06007",
+          "title": "Don't Break the Cache: KVキャッシュ再利用戦略",
+          "slug": "paper-2601-06007-conversation",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1492",
+          "article_url": "https://0h-n0.github.io/posts/paper-2601-06007-conversation/"
+        },
+        {
+          "source_type": "arxiv",
+          "arxiv_id": "2511.02230",
+          "title": "Continuum: マルチターン会話LLM連続学習",
+          "slug": "paper-2511-02230",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1493",
+          "article_url": "https://0h-n0.github.io/posts/paper-2511-02230/"
+        },
+        {
+          "source_type": "arxiv",
+          "arxiv_id": "2606.16135",
+          "title": "SwiftCache: トークンレベル適応KVキャッシュ圧縮",
+          "slug": "paper-2606-16135",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1494",
+          "article_url": "https://0h-n0.github.io/posts/paper-2606-16135/"
+        },
+        {
+          "source_type": "conference",
+          "title": "PORT: NeurIPS 2025 マルチLLMオンラインルーティング",
+          "slug": "conf-port-neurips2025",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1495",
+          "article_url": "https://0h-n0.github.io/posts/conf-port-neurips2025/"
+        },
+        {
+          "source_type": "tech_blog",
+          "title": "AWS Bedrock LLM Gateway マルチプロバイダ統合設計",
+          "slug": "techblog-aws-bedrock-llm-gateway",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1496",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aws-bedrock-llm-gateway/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1363"
+    },
+    {
+      "zenn_article_id": "adcdb688d73a8b",
+      "zenn_title": "Embeddingモデルの精度評価を自社データで実践する：500ペア評価・合成データ・LLM-as-Judge",
+      "zenn_topics": [
+        "embedding",
+        "rag",
+        "llm",
+        "python",
+        "machinelearning"
+      ],
+      "processed_at": "2026-07-12T22:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2605.28190",
+          "title": "論文解説: HTEB — 多次元ロバスト性評価でEmbeddingモデルの隠れた弱点を検出",
+          "slug": "paper-2605-28190",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1497",
+          "article_url": "https://0h-n0.github.io/posts/paper-2605-28190/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2606.19544",
+          "title": "論文解説: Reliability without Validity — LLM-as-Judgeの信頼性を541,000判定で検証",
+          "slug": "paper-2606-19544",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1498",
+          "article_url": "https://0h-n0.github.io/posts/paper-2606-19544/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "futureagi.com",
+          "title": "FutureAGI解説: 500ペア評価プロトコルによるEmbeddingモデル選定",
+          "slug": "techblog-futureagi-evaluating-embedding-models",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1499",
+          "article_url": "https://0h-n0.github.io/posts/techblog-futureagi-evaluating-embedding-models/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "milvus.io",
+          "title": "Milvus解説: CCKMベンチマークで検証するRAG用Embeddingモデル比較2026",
+          "slug": "techblog-milvus-embedding-model-rag",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1500",
+          "article_url": "https://0h-n0.github.io/posts/techblog-milvus-embedding-model-rag/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2601.21817",
+          "title": "論文解説: Judge-Aware Ranking Framework — ジャッジ信頼性を考慮したLLM評価",
+          "slug": "paper-2601-21817",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1501",
+          "article_url": "https://0h-n0.github.io/posts/paper-2601-21817/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1366"
+    },
+    {
+      "zenn_article_id": "81a560d7731697",
+      "zenn_title": "MCPサーバー自作でトークン消費94%削減：ツール定義設計の実装パターン",
+      "processed_at": "2026-07-13T09:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2605.04107",
+          "title": "論文解説: TSCG — JSON Schemaの決定論的コンパイルでLLMツール定義トークンを52%削減",
+          "slug": "paper-2605-04107",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1502",
+          "article_url": "https://0h-n0.github.io/posts/paper-2605-04107/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2506.01056",
+          "title": "論文解説: MCP-Zero — 能動的ツール探索でMCPトークン消費を98%削減",
+          "slug": "paper-2506-01056",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1503",
+          "article_url": "https://0h-n0.github.io/posts/paper-2506-01056/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2605.26165",
+          "title": "論文解説: ツールスキーマ圧縮がコンテキスト制約下のAgentic RAGを可能にする",
+          "slug": "paper-2605-26165",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1505",
+          "article_url": "https://0h-n0.github.io/posts/paper-2605-26165/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "atlassian.com",
+          "title": "Atlassian Labs解説: mcp-compressorでMCPツール定義トークンを70-97%削減",
+          "slug": "techblog-atlassian-mcp-compressor",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1504",
+          "article_url": "https://0h-n0.github.io/posts/techblog-atlassian-mcp-compressor/"
+        },
+        {
+          "rank": 5,
+          "source_type": "conference",
+          "source_id": "ICLR 2025",
+          "title": "ICLR 2025論文解説: ToolACE — 自動データ合成で8BモデルのFunction Calling精度を大幅向上",
+          "slug": "conf-toolace-iclr2025",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1506",
+          "article_url": "https://0h-n0.github.io/posts/conf-toolace-iclr2025/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1371"
+    },
+    {
+      "zenn_article_id": "bd095b4bd8a798",
+      "zenn_title": "Gemini Embedding×Contextual Retrieval×クエリ拡張でセマンティック検索精度を段階的に改善する",
+      "processed_at": "2026-07-13T18:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2409.04701",
+          "title": "論文解説: Late Chunking — 長文脈Embeddingモデルによる文脈付きチャンクEmbedding",
+          "slug": "paper-2409-04701",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1507",
+          "article_url": "https://0h-n0.github.io/posts/paper-2409-04701/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2503.07891",
+          "title": "論文解説: Gemini Embedding — MTEB多言語1位の汎用Embeddingモデル",
+          "slug": "paper-2503-07891",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1508",
+          "article_url": "https://0h-n0.github.io/posts/paper-2503-07891/"
+        },
+        {
+          "rank": 3,
+          "source_type": "conference",
+          "source_id": "NAACL 2025",
+          "title": "NAACL 2025論文解説: Knowledge-Aware Query Expansion",
+          "slug": "conf-naacl2025-knowledge-aware-query-expansion",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1510",
+          "article_url": "https://0h-n0.github.io/posts/conf-naacl2025-knowledge-aware-query-expansion/"
+        },
+        {
+          "rank": 4,
+          "source_type": "conference",
+          "source_id": "ECIR 2025",
+          "title": "ECIR 2025論文解説: Set-Encoder — 順序不変なCross-Encoderリランキング",
+          "slug": "conf-ecir2025-set-encoder-reranking",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1509",
+          "article_url": "https://0h-n0.github.io/posts/conf-ecir2025-set-encoder-reranking/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2410.02525",
+          "title": "論文解説: Contextual Document Embeddings — 周辺文書文脈を活用した高精度Embedding",
+          "slug": "paper-2410-02525",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1511",
+          "article_url": "https://0h-n0.github.io/posts/paper-2410-02525/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1374"
+    },
+    {
+      "zenn_article_id": "d16764d2f38be3",
+      "zenn_title": "Function Callingコスト最適化入門：トークン消費を70%削減する5つの実装テクニック",
+      "processed_at": "2026-07-15T18:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2605.04107",
+          "title": "論文解説: Tool-Schema Compression for Cost-Efficient LLM Tool Calling",
+          "slug": "paper-2605-04107",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1512",
+          "article_url": "https://0h-n0.github.io/posts/paper-2605-04107/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2604.21816",
+          "title": "論文解説: Attention-Driven Tool Selection for LLM Tool Calling",
+          "slug": "paper-2604-21816",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1513",
+          "article_url": "https://0h-n0.github.io/posts/paper-2604-21816/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2603.04445",
+          "title": "論文解説: A Survey on Dynamic Model Routing for LLM Workloads",
+          "slug": "paper-2603-04445",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1514",
+          "article_url": "https://0h-n0.github.io/posts/paper-2603-04445/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2512.17052",
+          "title": "論文解説: Dynamic Tool-Demand-aware Routing for LLMs",
+          "slug": "paper-2512-17052",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1515",
+          "article_url": "https://0h-n0.github.io/posts/paper-2512-17052/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2603.29919",
+          "title": "論文解説: SkillReducer: Efficient Tool Selection for LLM Agents",
+          "slug": "paper-2603-29919",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1516",
+          "article_url": "https://0h-n0.github.io/posts/paper-2603-29919/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1381"
+    },
+    {
+      "zenn_article_id": "f76764a6501cf4",
+      "zenn_title": "LangGraphステートマシンの本番設計：永続化・並列実行・動的グラフ構成",
+      "processed_at": "2026-07-16T18:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "techblog",
+          "source_id": "langchain-delta-channels",
+          "title": "LangChain Delta Channels 解説記事",
+          "slug": "techblog-langchain-delta-channels",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1517",
+          "article_url": "https://0h-n0.github.io/posts/techblog-langchain-delta-channels/"
+        },
+        {
+          "rank": 2,
+          "source_type": "conference",
+          "source_id": "2312.04511",
+          "title": "ICML 2024論文解説: LLMCompiler — DAGスケジューリングによる並列Function Calling",
+          "slug": "paper-2312-04511",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1518",
+          "article_url": "https://0h-n0.github.io/posts/paper-2312-04511/"
+        },
+        {
+          "rank": 3,
+          "source_type": "conference",
+          "source_id": "2507.22606",
+          "title": "ICML 2025論文解説: MetaAgent — FSMによるマルチエージェント形式化",
+          "slug": "paper-2507-22606",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1519",
+          "article_url": "https://0h-n0.github.io/posts/paper-2507-22606/"
+        },
+        {
+          "rank": 4,
+          "source_type": "conference",
+          "source_id": "2503.07675",
+          "title": "ICAPS 2025論文解説: DynTaskMAS — 動的タスクグラフによる非同期並列MAS",
+          "slug": "paper-2503-07675",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1520",
+          "article_url": "https://0h-n0.github.io/posts/paper-2503-07675/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2509.02121",
+          "title": "論文解説: Halo — エージェントワークフローのバッチクエリ処理とDAG最適化",
+          "slug": "paper-2509-02121",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1521",
+          "article_url": "https://0h-n0.github.io/posts/paper-2509-02121/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1386"
+    },
+    {
+      "zenn_article_id": "ba05271cd9ca43",
+      "zenn_title": "LLMの長いコンテキストを活かす最適解：Context Rot対策からハイブリッド設計まで",
+      "processed_at": "2026-07-16T18:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2404.14469",
+          "title": "SnapKV: LLM Knows What You Are Looking For Before Generation",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1525",
+          "article_url": "https://0h-n0.github.io/posts/paper-2404-14469/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2309.17453",
+          "title": "Efficient Streaming Language Models with Attention Sinks (StreamingLLM)",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1523",
+          "article_url": "https://0h-n0.github.io/posts/paper-2309-17453/"
+        },
+        {
+          "rank": 3,
+          "source_type": "conference",
+          "source_id": "2402.02750",
+          "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache (ICML 2024)",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1526",
+          "article_url": "https://0h-n0.github.io/posts/conf-kivi-icml2024/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2406.02069",
+          "title": "PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1524",
+          "article_url": "https://0h-n0.github.io/posts/paper-2406-02069/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2306.14048",
+          "title": "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1522",
+          "article_url": "https://0h-n0.github.io/posts/paper-2306-14048/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1389"
+    },
+    {
+      "zenn_article_id": "90a6baf5521a3a",
+      "zenn_title": "LLMプロンプト設計の失敗パターン7選：Before/Afterで学ぶ体系的改善手法",
+      "processed_at": "2026-07-17T18:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2509.14404",
+          "title": "A Taxonomy of Prompt Defects in Large Language Model Systems",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1527",
+          "article_url": "https://0h-n0.github.io/posts/paper-2509-14404/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2604.23027",
+          "title": "A Systematic Approach for Large Language Models Debugging",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1528",
+          "article_url": "https://0h-n0.github.io/posts/paper-2604-23027/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2601.22025",
+          "title": "When Generic Prompt Improvements Hurt: Evaluation-Driven Prompt Iteration",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1529",
+          "article_url": "https://0h-n0.github.io/posts/paper-2601-22025/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2507.13334",
+          "title": "A Survey of Context Engineering for Large Language Models",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1530",
+          "article_url": "https://0h-n0.github.io/posts/paper-2507-13334/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2503.05070",
+          "title": "PromptPex: Automatic Test Generation for Language Model Prompts",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1531",
+          "article_url": "https://0h-n0.github.io/posts/paper-2503-05070/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1394"
+    },
+    {
+      "zenn_article_id": "c94e21f061ebbb",
+      "zenn_title": "Assistants API Thread移行実践：肥大化対策からConversations API再設計まで",
+      "processed_at": "2026-07-18T13:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2310.08560",
+          "title": "MemGPT: OS仮想メモリに着想を得たLLM会話コンテキスト管理",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1532",
+          "article_url": "https://0h-n0.github.io/posts/paper-2310-08560/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2510.00615",
+          "title": "ACON: 長期LLMエージェントのためのコンテキスト圧縮最適化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1533",
+          "article_url": "https://0h-n0.github.io/posts/paper-2510-00615/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "openai.com",
+          "title": "OpenAI Responses/Conversations/Compaction API設計と移行パターン",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1534",
+          "article_url": "https://0h-n0.github.io/posts/techblog-openai-responses-conversations/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2601.00821",
+          "title": "Verbatim Chunks vs Extracted Artifacts: LLM会話メモリの保持戦略",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1535",
+          "article_url": "https://0h-n0.github.io/posts/paper-2601-00821/"
+        },
+        {
+          "rank": 5,
+          "source_type": "conference",
+          "source_id": "2407.16833",
+          "title": "RAG vs Long-Context LLMs: Self-Routeによるコスト65%削減 (EMNLP 2024)",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1536",
+          "article_url": "https://0h-n0.github.io/posts/conf-rag-vs-long-context/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1399"
+    },
+    {
+      "zenn_article_id": "6f9791a8984999",
+      "zenn_title": "AIエージェントのツールオーケストレーション設計：選択・実行制御・安全性の実装パターン",
+      "processed_at": "2026-07-19T09:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2603.20313",
+          "title": "Semantic Tool Discovery for Large Language Models",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1538",
+          "article_url": "https://0h-n0.github.io/blog/2026/07/19/paper-2603-20313.html"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2603.23802",
+          "title": "How are AI Agents used? Evidence from 177,000 MCP tools",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1537",
+          "article_url": "https://0h-n0.github.io/blog/2026/07/19/paper-2603-23802.html"
+        },
+        {
+          "rank": 3,
+          "source_type": "conference",
+          "source_id": "acl2026-safemcp",
+          "title": "SafeMCP: Proactive Power Regulation for LLM Agent Defense",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1539",
+          "article_url": "https://0h-n0.github.io/blog/2026/07/19/conf-safemcp-acl2026.html"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2601.10156",
+          "title": "ToolSafe: Enhancing Tool Invocation Safety in LLM Agents",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1540",
+          "article_url": "https://0h-n0.github.io/blog/2026/07/19/paper-2601-10156.html"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "anthropic-advanced-tool-use",
+          "title": "Anthropic Advanced Tool Use - Tool Search & Programmatic Calling",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1541",
+          "article_url": "https://0h-n0.github.io/blog/2026/07/19/techblog-anthropic-advanced-tool-use.html"
+        }
+      ],
+      "tracking_issue": "https://github.com/0h-n0/zen-auto-create-article/issues/1402"
+    },
+    {
+      "zenn_article_id": "a2fe642a5473c9",
+      "zenn_title": "MCPサーバー自作で社内データ基盤に認可制御と監査ログを実装する",
+      "processed_at": "2026-07-20T14:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2511.20920",
+          "title": "論文解説: Securing the Model Context Protocol — MCPの脅威モデルと防御制御フレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1542",
+          "article_url": "https://0h-n0.github.io/posts/paper-2511-20920/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2605.22333",
+          "title": "論文解説: 実運用MCPサーバー7,973台の認証セキュリティ実態調査",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1545",
+          "article_url": "https://0h-n0.github.io/posts/paper-2605-22333/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "cerbos.dev",
+          "title": "Cerbos公式解説: MCPサーバーへのポリシーベース認可制御",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1546",
+          "article_url": "https://0h-n0.github.io/posts/techblog-cerbos-mcp-authorization/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "opentelemetry.io",
+          "title": "OpenTelemetry公式解説: AIエージェント可観測性の標準化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1543",
+          "article_url": "https://0h-n0.github.io/posts/techblog-otel-ai-agent-observability/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2604.05119",
+          "title": "論文解説: GAAT — ガバナンス対応エージェントテレメトリ",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1544",
+          "article_url": "https://0h-n0.github.io/posts/paper-2604-05119/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1409"
+    },
+    {
+      "zenn_article_id": "5165b29d849e3f",
+      "zenn_title": "Bedrock AgentCore×Step Functionsで業務エージェントの耐障害ワークフローを設計する",
+      "processed_at": "2026-07-21T17:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "tech_blog",
+          "source_id": "aws.amazon.com",
+          "title": "AWS公式ブログ解説: Amazon Bedrock AgentCore harness GA",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1547",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aws-agentcore-harness-ga/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2605.03409",
+          "title": "論文解説: Robust Agent Compensation (RAC)",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1548",
+          "article_url": "https://0h-n0.github.io/posts/paper-2605-03409/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "aws.amazon.com",
+          "title": "AWS公式ブログ解説: Lambda Durable Functions耐障害ワークフロー",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1549",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aws-lambda-durable-fault-tolerant/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2511.10400",
+          "title": "論文解説: マルチエージェントシステムのビザンチン障害耐性",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1550",
+          "article_url": "https://0h-n0.github.io/posts/paper-2511-10400/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2601.13671",
+          "title": "論文解説: マルチエージェントオーケストレーション",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1551",
+          "article_url": "https://0h-n0.github.io/posts/paper-2601-13671/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1412"
+    },
+    {
+      "zenn_article_id": "766a44e8aa95a2",
+      "zenn_title": "RAGシステムのIndirect Prompt Injection対策：文書汚染から守る実装",
+      "processed_at": "2026-07-21T22:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2402.07867",
+          "title": "論文解説: PoisonedRAG — RAG知識データベースへの汚染攻撃とその脅威",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1556",
+          "article_url": "https://0h-n0.github.io/posts/paper-2402-07867/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2403.14720",
+          "title": "論文解説: SpotLight — Data Markingによる間接プロンプトインジェクション防御",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1552",
+          "article_url": "https://0h-n0.github.io/posts/paper-2403-14720/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2505.14534",
+          "title": "論文解説: Defending Gemini — Google DeepMindの間接プロンプトインジェクション防御戦略",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1554",
+          "article_url": "https://0h-n0.github.io/posts/paper-2505-14534/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "blog.google",
+          "title": "Google Security Blog解説: プロンプトインジェクション5層防御戦略",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1553",
+          "article_url": "https://0h-n0.github.io/posts/techblog-google-prompt-injection-defense/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2605.00460",
+          "title": "論文解説: CleanBase — 類似度グラフによるRAG知識DB汚染文書検出",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1555",
+          "article_url": "https://0h-n0.github.io/posts/paper-2605-00460/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1415"
+    },
+    {
+      "zenn_article_id": "2456f07d38fc2e",
+      "zenn_title": "LangGraph×Sagaパターンで実装するAIワークフローの補償トランザクション設計",
+      "zenn_url": "https://zenn.dev/0h_n0/articles/2456f07d38fc2e",
+      "processed_at": "2026-07-22T09:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2607.00269",
+          "title": "論文解説: Mnemosyne — エージェント型トランザクション処理によるAI生成ワークフローの検証と修復",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1557",
+          "article_url": "https://0h-n0.github.io/posts/paper-2607-00269/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2602.14849",
+          "title": "論文解説: Atomix — Progress-Awareトランザクションによる信頼性の高いエージェントワークフロー",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1558",
+          "article_url": "https://0h-n0.github.io/posts/paper-2602-14849/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2606.17573",
+          "title": "論文解説: Cordon — ツール利用LLMエージェントのためのセマンティックトランザクション",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1559",
+          "article_url": "https://0h-n0.github.io/posts/paper-2606-17573/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2605.22781",
+          "title": "論文解説: DeltaBox — ミリ秒レベルのサンドボックスCheckpoint/Rollbackでステートフルなエージェントをスケール",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1561",
+          "article_url": "https://0h-n0.github.io/posts/paper-2605-22781/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "docs.aws.amazon.com",
+          "title": "AWS解説: Sagaパターンによるエージェント型AIワークフローの障害復旧設計",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1560",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aws-saga-patterns-agentic-ai/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1418"
+    },
+    {
+      "zenn_article_id": "a21229e9c893f0",
+      "zenn_title": "vLLM Multi-LoRAで複数タスク特化モデルを1台のGPUに集約するルーティング設計",
+      "processed_at": "2026-07-22T09:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2310.18547",
+          "title": "論文解説: Punica — SGMVカーネルによるMulti-Tenant LoRAサービング",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1563",
+          "article_url": "https://0h-n0.github.io/posts/paper-2310-18547/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2604.07173",
+          "title": "論文解説: InfiniLoRA — 分離アーキテクチャによるMulti-LoRAサービングのスケーリング",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1562",
+          "article_url": "https://0h-n0.github.io/posts/paper-2604-07173/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2604.06370",
+          "title": "論文解説: ForkKV — Copy-on-Write KVキャッシュによるMulti-LoRAエージェントサービング",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1565",
+          "article_url": "https://0h-n0.github.io/posts/paper-2604-06370/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2512.17910",
+          "title": "論文解説: Activated LoRA — Cross-Model KVキャッシュ再利用によるMulti-Adapter高速化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1564",
+          "article_url": "https://0h-n0.github.io/posts/paper-2512-17910/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2505.03756",
+          "title": "論文解説: FastLibra — 依存関係認識キャッシュ管理によるMulti-LoRA推論最適化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1566",
+          "article_url": "https://0h-n0.github.io/posts/paper-2505-03756/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1421"
+    },
+    {
+      "zenn_article_id": "3decfdf91e40bf",
+      "zenn_title": "AIエージェントのツール定義設計原則：スキーマ品質で成功率を変える7つの実践手法",
+      "processed_at": "2026-07-23T18:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2602.14878",
+          "title": "MCP Tool Descriptions Are Smelly! — MCPツール記述の品質欠陥と改善手法",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1567",
+          "article_url": "https://0h-n0.github.io/posts/paper-2602-14878/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2508.20453",
+          "title": "MCP-Bench — MCPサーバーを用いたLLMエージェントのツール使用ベンチマーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1568",
+          "article_url": "https://0h-n0.github.io/posts/paper-2508-20453/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "aws.amazon.com",
+          "title": "AWS解説: MCPツール設計の実践的アプローチとトレードオフ",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1569",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aws-mcp-tool-design/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2602.15945",
+          "title": "From Tool Orchestration to Code Execution — MCP設計選択のセキュリティ分析",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1570",
+          "article_url": "https://0h-n0.github.io/posts/paper-2602-15945/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2602.18914",
+          "title": "From Docs to Descriptions — MCPサーバー記述の品質評価フレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1571",
+          "article_url": "https://0h-n0.github.io/posts/paper-2602-18914/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1424"
+    },
+    {
+      "zenn_article_id": "93ea7afbeb3a96",
+      "zenn_title": "LangfuseとOpenTelemetryで実装するLLMアプリの本番監視",
+      "processed_at": "2026-07-24T18:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2607.14309",
+          "title": "論文解説: Traccia — OpenTelemetryベースのAIガバナンスプラットフォーム",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1573",
+          "article_url": "https://0h-n0.github.io/posts/paper-2607-14309/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2411.05285",
+          "title": "論文解説: AgentOps — LLMエージェントオブザーバビリティのタクソノミー",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1572",
+          "article_url": "https://0h-n0.github.io/posts/paper-2411-05285/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2604.26152",
+          "title": "論文解説: LLMシステムの多層AIオブザーバビリティ分析",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1574",
+          "article_url": "https://0h-n0.github.io/posts/paper-2604-26152/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "clickhouse.com",
+          "title": "テックブログ解説: ClickHouse × Langfuse — LLMオブザーバビリティの未来",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1576",
+          "article_url": "https://0h-n0.github.io/posts/techblog-clickhouse-langfuse-llm-observability/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "opentelemetry.io",
+          "title": "テックブログ解説: OpenTelemetry GenAI Semantic ConventionsによるLLMオブザーバビリティ",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1575",
+          "article_url": "https://0h-n0.github.io/posts/techblog-otel-genai-observability/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1429"
+    },
+    {
+      "zenn_article_id": "23e4f1a8fc45e9",
+      "zenn_title": "Haystack Agent APIで会話型QAを構築する：Tool統合・State管理・MCP連携",
+      "processed_at": "2026-07-26T09:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2603.22862",
+          "title": "論文解説: The Evolution of Tool Use in LLM Agents",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1577",
+          "article_url": "https://0h-n0.github.io/posts/paper-2603-22862/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2507.21428",
+          "title": "論文解説: MemTool - LLMエージェントの動的ツール呼び出し短期記憶管理",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1578",
+          "article_url": "https://0h-n0.github.io/posts/paper-2507-21428/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2603.07379",
+          "title": "論文解説: SoK - Agentic RAGの分類体系とアーキテクチャ",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1579",
+          "article_url": "https://0h-n0.github.io/posts/paper-2603-07379/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "aws.amazon.com",
+          "title": "MCPツール設計の実践パターン：AWSが提案する6段階アプローチ",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1580",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aws-mcp-tool-design/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "www.anthropic.com",
+          "title": "Anthropicが提案するMCPコード実行アーキテクチャ",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1581",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-mcp-code-execution/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1436"
+    },
+    {
+      "zenn_article_id": "2cd2c26ec816f5",
+      "zenn_title": "ベクトルDB選定を自社データで検証する：5軸ベンチマーク設計と再現可能な評価手法",
+      "processed_at": "2026-07-27T09:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2602.11443",
+          "title": "論文解説: Filtered ANN Search in Vector Databases",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1582",
+          "article_url": "https://0h-n0.github.io/posts/paper-2602-11443/"
+        },
+        {
+          "rank": 2,
+          "source_type": "conference",
+          "source_id": "sigmod2026-pgvector",
+          "title": "論文解説: Filter-Agnostic Vector Search on PostgreSQL (SIGMOD 2026)",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1583",
+          "article_url": "https://0h-n0.github.io/posts/conf-sigmod2026-pgvector-filtered-search/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2607.00768",
+          "title": "論文解説: RACORN-1 — ルール支援型フィルタ付きANNインデックス",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1584",
+          "article_url": "https://0h-n0.github.io/posts/paper-2607-00768/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2506.00812",
+          "title": "論文解説: VecFlow — GPU高速フィルタ付きベクトル検索",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1585",
+          "article_url": "https://0h-n0.github.io/posts/paper-2506-00812/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2606.19898",
+          "title": "論文解説: Query-aware Routing — ML自動選択フィルタ付きANN",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1586",
+          "article_url": "https://0h-n0.github.io/posts/paper-2606-19898/"
+        }
+      ]
+    },
+    {
+      "zenn_article_id": "763bb6a7397e5c",
+      "zenn_title": "Mem0×pgvectorでセッション横断の長期記憶を持つCSエージェントを構築する",
+      "processed_at": "2026-07-27T14:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2504.19413",
+          "title": "論文解説: Mem0 — スケーラブルな長期記憶によるプロダクションレディAIエージェント",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1587",
+          "article_url": "https://0h-n0.github.io/posts/paper-2504-19413/"
+        },
+        {
+          "rank": 2,
+          "source_type": "tech_blog",
+          "source_id": "aws.amazon.com",
+          "title": "AWS解説: pgvector 0.8.0がAurora PostgreSQLにもたらすベクトル検索の性能革新",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1588",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aws-pgvector-080-aurora/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2604.01670",
+          "title": "論文解説: HMO — ユーザーペルソナ駆動の階層的メモリオーケストレーション",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1589",
+          "article_url": "https://0h-n0.github.io/posts/paper-2604-01670/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "effoma.com",
+          "title": "ベンチマーク解説: 2026年ベクトルDB性能比較 — pgvectorscale StreamingDiskANNの実力",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1590",
+          "article_url": "https://0h-n0.github.io/posts/techblog-effoma-vector-db-benchmark-2026/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2603.07670",
+          "title": "サーベイ解説: LLMエージェントのメモリ機構 — 5つのメカニズムファミリーと未解決課題",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1591",
+          "article_url": "https://0h-n0.github.io/posts/paper-2603-07670/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1442"
+    },
+    {
+      "zenn_article_id": "7cfcf58c6bcf9a",
+      "zenn_title": "LangGraph Pregel実行モデルで理解するステートマシン設計原則",
+      "processed_at": "2026-07-28T09:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "conference",
+          "source_id": "SIGMOD 2010",
+          "title": "Pregel: A System for Large-Scale Graph Processing",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1592",
+          "article_url": "https://0h-n0.github.io/posts/conf-sigmod2010-pregel-large-scale-graph/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2606.30306",
+          "title": "Always-On Agents: A Survey of Persistent Memory, State, and Governance in LLM Agents",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1593",
+          "article_url": "https://0h-n0.github.io/posts/paper-2606-30306/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2605.22566",
+          "title": "GraphFlow: A Graph-Based Workflow Management for Efficient LLM-Agent Serving",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1594",
+          "article_url": "https://0h-n0.github.io/posts/paper-2605-22566/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2606.26924",
+          "title": "A Deterministic Control Plane for LLM Coding Agents",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1595",
+          "article_url": "https://0h-n0.github.io/posts/paper-2606-26924/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2512.19769",
+          "title": "A Declarative Language for Building And Orchestrating LLM-Powered Agent Workflows",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1596",
+          "article_url": "https://0h-n0.github.io/posts/paper-2512-19769/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1447"
+    },
+    {
+      "zenn_article_id": "918cb94b30191e",
+      "zenn_title": "AWS Bedrock Knowledge Basesベクトルストア3択と本番RAG構成の設計指針",
+      "processed_at": "2026-07-29T09:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "tech_blog",
+          "source_id": "aws.amazon.com",
+          "title": "AWS公式解説: TerraformによるBedrock Knowledge Bases RAGデプロイの自動化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1597",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aws-bedrock-kb-terraform-rag/"
+        },
+        {
+          "rank": 2,
+          "source_type": "tech_blog",
+          "source_id": "aws.amazon.com",
+          "title": "AWS公式解説: Bedrock Knowledge Basesマルチテナント RAGの3設計パターン",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1598",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aws-bedrock-multi-tenant-rag/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "aws.amazon.com",
+          "title": "AWS公式解説: Bedrock Knowledge Base評価によるRAG品質保証パイプライン",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1600",
+          "article_url": "https://0h-n0.github.io/posts/techblog-aws-bedrock-rag-evaluation/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2606.00881",
+          "title": "論文解説: RAGチャンキング手法8種の体系的評価",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1599",
+          "article_url": "https://0h-n0.github.io/posts/paper-2606-00881/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2603.26667",
+          "title": "論文解説: M-RAG — セマンティックKey-Valueインデキシングで検索と生成のギャップを解消",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1601",
+          "article_url": "https://0h-n0.github.io/posts/paper-2603-26667/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1450"
+    },
+    {
+      "zenn_article_id": "1707bd6149514c",
+      "zenn_title": "セマンティックキャッシュの類似度閾値チューニングとベクトルDB別性能比較",
+      "processed_at": "2026-07-30T09:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2606.19719",
+          "title": "Closing the Calibration Gap in Semantic Caching",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1602",
+          "article_url": "https://0h-n0.github.io/posts/paper-calibration-gap-semantic-caching/"
+        },
+        {
+          "rank": 2,
+          "source_type": "conference",
+          "source_id": "ICML 2026",
+          "title": "MVR-cache: Optimizing Semantic Caching via Multi-Vector Retrieval and Learned Prompt Segmentation",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1603",
+          "article_url": "https://0h-n0.github.io/posts/conf-icml-mvr-cache/"
+        },
+        {
+          "rank": 3,
+          "source_type": "conference",
+          "source_id": "IEEE IPDPS 2025",
+          "title": "MeanCache: User-Centric Semantic Caching for LLM Web Services",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1604",
+          "article_url": "https://0h-n0.github.io/posts/conf-ipdps-meancache/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2504.02268",
+          "title": "Advancing Semantic Caching for LLMs with Domain-Specific Embeddings and Synthetic Data",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1605",
+          "article_url": "https://0h-n0.github.io/posts/paper-domain-specific-embeddings-semantic-caching/"
+        },
+        {
+          "rank": 5,
+          "source_type": "conference",
+          "source_id": "IEEE INFOCOM 2026",
+          "title": "Semantic Caching for Low-Cost LLM Serving: From Offline Learning to Online Adaptation",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1606",
+          "article_url": "https://0h-n0.github.io/posts/conf-infocom-semantic-caching-low-cost/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1455"
+    },
+    {
+      "zenn_article_id": "1b83773e95e02c",
+      "zenn_title": "DSPy v3.2 Metric設計とOptimizer選定で実現するプロンプト自動最適化",
+      "processed_at": "2026-07-30T08:54:54.534432+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2507.19457",
+          "title": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1608",
+          "article_url": "https://0h-n0.github.io/posts/paper-2507-19457/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2310.03714",
+          "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1611",
+          "article_url": "https://0h-n0.github.io/posts/paper-2310-03714/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2412.15298",
+          "title": "A Comparative Study of DSPy Teleprompter Algorithms for Aligning LLM Evaluation Metrics to Human Evaluation",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1607",
+          "article_url": "https://0h-n0.github.io/posts/paper-2412-15298/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2604.04869",
+          "title": "Optimizing LLM Prompt Engineering with DSPy Based Declarative Learning",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1609",
+          "article_url": "https://0h-n0.github.io/posts/paper-2604-04869/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2407.10930",
+          "title": "Fine-Tuning and Prompt Optimization: Two Great Steps that Work Better Together",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1610",
+          "article_url": "https://0h-n0.github.io/posts/paper-2407-10930/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1458"
+    },
+    {
+      "zenn_article_id": "cfc6a5ad9e22fd",
+      "zenn_title": "LLMコンテキストエンジニアリング実践：圧縮・ルーティングで1Mトークンを制御",
+      "processed_at": "2026-07-31T08:30:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2605.10235",
+          "title": "Route Before Retrieve (Pre-Route): 検索前ルーティングによるコンテキスト制御",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1612",
+          "article_url": "https://0h-n0.github.io/posts/paper-route-before-retrieve-pre-route/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2605.23296",
+          "title": "Parallel Context Compaction: 並列コンテキスト圧縮",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1613",
+          "article_url": "https://0h-n0.github.io/posts/paper-2605-23296-parallel-context-compaction/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2606.10209",
+          "title": "Less Context, Better Agents: エージェントの効率的コンテキスト管理",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1616",
+          "article_url": "https://0h-n0.github.io/posts/paper-2606-10209/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2503.17407",
+          "title": "A Comprehensive Survey on Long Context Language Modeling: ロングコンテキストLLMの全体像",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1614",
+          "article_url": "https://0h-n0.github.io/posts/paper-2503-17407/"
+        },
+        {
+          "rank": 5,
+          "source_type": "conference",
+          "source_id": "2407.08892",
+          "title": "Characterizing Prompt Compression Methods: プロンプト圧縮手法の体系的比較",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1615",
+          "article_url": "https://0h-n0.github.io/posts/conf-icml2024-prompt-compression-characterization/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1461"
+    },
+    {
+      "zenn_article_id": "cbb9a0aa58e88c",
+      "zenn_title": "AIエージェントのツール設計8原則：Function Callingを本番で安定稼働させる",
+      "processed_at": "2026-08-01T09:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com",
+          "title": "Anthropic Engineering解説: AIエージェントのための効果的なツール設計",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1620",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-writing-tools-for-agents/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2604.22985",
+          "title": "論文解説: Uncertainty Quantification for LLM Function-Calling",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1621",
+          "article_url": "https://0h-n0.github.io/posts/paper-2604-22985/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2508.07575",
+          "title": "論文解説: MCPToolBench++ — 大規模MCPツール使用ベンチマーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1619",
+          "article_url": "https://0h-n0.github.io/posts/paper-2508-07575/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2505.06416",
+          "title": "論文解説: ScaleMCP — 動的MCPツール選択と自動同期フレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1618",
+          "article_url": "https://0h-n0.github.io/posts/paper-2505-06416/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "developers.openai.com",
+          "title": "OpenAI Function Calling公式ガイド解説: Strict Modeとツール設計パターン",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1617",
+          "article_url": "https://0h-n0.github.io/posts/techblog-openai-function-calling-guide/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1468"
+    },
+    {
+      "zenn_article_id": "682460acc2a5a9",
+      "zenn_title": "Gemini 3.6 Flash×Mem0で構築するCSエージェント長期メモリとLongMemEval-V2評価",
+      "processed_at": "2026-08-02T18:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2504.19413",
+          "title": "論文解説: Mem0 — AI向け自己改善型メモリレイヤーのExtraction-Updateパイプライン",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1622",
+          "article_url": "https://0h-n0.github.io/posts/paper-2504-19413/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2606.30306",
+          "title": "論文解説: Always-On Agents — 常時稼働AIエージェントの包括的サーベイ",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1623",
+          "article_url": "https://0h-n0.github.io/posts/paper-2606-30306/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2602.14038",
+          "title": "論文解説: FluxMem — Beta混合モデルによる適応的メモリ構造選択",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1624",
+          "article_url": "https://0h-n0.github.io/posts/paper-2602-14038/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2502.12110",
+          "title": "論文解説: A-MEM — Zettelkasten法に基づくエージェント型メモリ自己組織化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1625",
+          "article_url": "https://0h-n0.github.io/posts/paper-2502-12110/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2602.13933",
+          "title": "論文解説: HyMem — デュアル粒度ハイブリッドメモリと動的検索スケジューリング",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1626",
+          "article_url": "https://0h-n0.github.io/posts/paper-2602-13933/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1473"
+    },
+    {
+      "zenn_article_id": "7aa294dedf0f90",
+      "zenn_title": "Anthropic Claude API実践活用：モデル選定からコスト最適化まで",
+      "processed_at": "2026-08-03T09:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2603.04445",
+          "title": "論文解説: Dynamic Model Routing and Cascading for Efficient LLM Inference: A Survey",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1627",
+          "article_url": "https://0h-n0.github.io/posts/paper-2603-04445/"
+        },
+        {
+          "rank": 2,
+          "source_type": "conference",
+          "source_id": "ICML 2025",
+          "title": "ICML 2025論文解説: Berkeley Function Calling Leaderboard (BFCL)",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1628",
+          "article_url": "https://0h-n0.github.io/posts/conf-bfcl-function-calling/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2507.02076",
+          "title": "論文解説: Reasoning on a Budget — LLM推論の適応的計算制御サーベイ",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1629",
+          "article_url": "https://0h-n0.github.io/posts/paper-2507-02076/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com",
+          "title": "Anthropic解説: Claude APIトークン節約アップデート",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1630",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-token-saving/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com",
+          "title": "Anthropic解説: Claude Prompt Caching — 入力コスト90%削減の仕組みと実装",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1631",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-prompt-caching/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1476"
+    },
+    {
+      "zenn_article_id": "0a13a0901b1752",
+      "zenn_title": "Agents SDK SessionsとHandoffで設計するマルチエージェント会話管理",
+      "zenn_url": "https://zenn.dev/0h_n0/articles/0a13a0901b1752",
+      "processed_at": "2026-08-04T13:00:00+09:00",
+      "sources_generated": [
+        {
+          "source_type": "tech_blog",
+          "source_id": "openai.com",
+          "title": "OpenAI Cookbook解説: Orchestrating Agents — Routinesパターンの設計と実装",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1632",
+          "article_url": "https://0h-n0.github.io/posts/techblog-openai-orchestrating-agents-handoffs/"
+        },
+        {
+          "source_type": "arxiv",
+          "source_id": "2601.13671",
+          "title": "論文解説: A Multi-Agent Orchestration Framework (arXiv 2601.13671)",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1633",
+          "article_url": "https://0h-n0.github.io/posts/paper-2601-13671/"
+        },
+        {
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com",
+          "title": "Anthropic解説: マルチエージェントリサーチシステムの構築",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1634",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-multi-agent-research-system/"
+        },
+        {
+          "source_type": "arxiv",
+          "source_id": "2512.13564",
+          "title": "論文解説: Memory in the Age of AI Agents (arXiv 2512.13564)",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1635",
+          "article_url": "https://0h-n0.github.io/posts/paper-2512-13564/"
+        },
+        {
+          "source_type": "conference",
+          "source_id": "2505.19591",
+          "title": "論文解説: Multi-Agent Collaboration via Evolving Orchestration (NeurIPS 2025)",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1636",
+          "article_url": "https://0h-n0.github.io/posts/conf-neurips2025-evolving-orchestration/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1481"
+    },
+    {
+      "zenn_article_id": "4a7afb7286ce41",
+      "zenn_title": "Semantic Kernel × A2AプロトコルでAIエージェントの異種連携を実装する",
+      "processed_at": "2026-08-05T18:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2604.02369",
+          "title": "論文解説: Beyond Message Passing — エージェント通信プロトコルの3層セマンティック分析",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1640",
+          "article_url": "https://0h-n0.github.io/posts/paper-2604-02369/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2601.13671",
+          "title": "論文解説: マルチエージェントオーケストレーション — MCP・A2Aプロトコルとエンタープライズ導入",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1637",
+          "article_url": "https://0h-n0.github.io/posts/paper-2601-13671/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "developers.googleblog.com",
+          "title": "Google公式解説: Agent2Agent (A2A) プロトコル — AIエージェント相互運用の標準規格",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1639",
+          "article_url": "https://0h-n0.github.io/posts/techblog-google-a2a-protocol-announcement/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "devblogs.microsoft.com",
+          "title": "Microsoft公式解説: Semantic Kernelマルチエージェントオーケストレーション — 5つの協調パターン",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1638",
+          "article_url": "https://0h-n0.github.io/posts/techblog-microsoft-sk-multi-agent-orchestration/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2511.19699",
+          "title": "論文解説: Internet of Agents — エージェント通信の2層プロトコルアーキテクチャ",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1641",
+          "article_url": "https://0h-n0.github.io/posts/paper-2511-19699/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1486"
+    },
+    {
+      "zenn_article_id": "cd7ffbe0cec21e",
+      "zenn_title": "OWASP×NISTで体系化するプロンプトインジェクション：攻撃分類とリスク評価",
+      "processed_at": "2026-08-06T09:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2604.03598",
+          "title": "論文解説: AttackEval — プロンプトインジェクション攻撃の体系的実証評価",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1642",
+          "article_url": "https://0h-n0.github.io/posts/paper-2604-03598/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2602.10453",
+          "title": "論文解説: LLMエージェントにおけるプロンプトインジェクション脅威の全体像",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1643",
+          "article_url": "https://0h-n0.github.io/posts/paper-2602-10453/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2511.15759",
+          "title": "論文解説: AIエージェントのプロンプトインジェクション防御 — 多層防御でASRを73%から9%に低減",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1646",
+          "article_url": "https://0h-n0.github.io/posts/paper-2511-15759/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2505.03574",
+          "title": "論文解説: LlamaFirewall — MetaのオープンソースAIエージェント向けガードレールシステム",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1645",
+          "article_url": "https://0h-n0.github.io/posts/paper-2505-03574/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2601.09625",
+          "title": "論文解説: プロンプトウェアキルチェーン — プロンプトインジェクションのマルチステップマルウェア化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1644",
+          "article_url": "https://0h-n0.github.io/posts/paper-2601-09625/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1491"
+    },
+    {
+      "zenn_article_id": "c184032fcd6908",
+      "zenn_title": "Portkey AIゲートウェイで複数LLMを統合する本番構築ガイド2026",
+      "processed_at": "2026-08-06T18:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "conference",
+          "source_id": "ICLR 2025 / 2406.18665",
+          "title": "ICLR 2025論文解説: RouteLLM — 人間嗜好データによるLLMルーティングの最適化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1647",
+          "article_url": "https://0h-n0.github.io/posts/paper-2406-18665/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2411.05276",
+          "title": "論文解説: GPT Semantic Cache — セマンティック埋め込みキャッシュによるLLMコスト削減",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1648",
+          "article_url": "https://0h-n0.github.io/posts/paper-2411-05276/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2603.04445",
+          "title": "論文解説: Dynamic Model Routing — LLMルーティング手法の体系的サーベイ",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1649",
+          "article_url": "https://0h-n0.github.io/posts/paper-2603-04445/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2504.08848",
+          "title": "論文解説: X-Guard — 132言語対応の多言語ガードエージェント",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1650",
+          "article_url": "https://0h-n0.github.io/posts/paper-2504-08848/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "paloaltonetworks.com",
+          "title": "Prisma AIRS AI Gateway GA発表: Palo Alto Networks × Portkey統合の全貌",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1651",
+          "article_url": "https://0h-n0.github.io/posts/techblog-prisma-airs-ai-gateway/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1494"
+    },
+    {
+      "zenn_article_id": "b0d404e4bc8675",
+      "zenn_title": "LangGraph Command APIで設計する宣言的ステートマシン実装パターン",
+      "processed_at": "2026-08-07T14:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2403.11322",
+          "title": "論文解説: StateFlow — 状態駆動ワークフローによるLLMタスク解決の効率化",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1652",
+          "article_url": "https://0h-n0.github.io/posts/paper-2403-11322/"
+        },
+        {
+          "rank": 2,
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com",
+          "title": "Anthropic解説: Building Effective Agents — 5つのワークフローパターンとエージェント設計原則",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1656",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-effective-agents/"
+        },
+        {
+          "rank": 3,
+          "source_type": "arxiv",
+          "source_id": "2502.11133",
+          "title": "論文解説: MasRouter — マルチエージェントシステムのための学習ベースLLMルーティング",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1654",
+          "article_url": "https://0h-n0.github.io/posts/paper-2502-11133/"
+        },
+        {
+          "rank": 4,
+          "source_type": "tech_blog",
+          "source_id": "langchain.com",
+          "title": "LangChain解説: interrupt()で実現するHuman-in-the-Loopエージェント設計",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1653",
+          "article_url": "https://0h-n0.github.io/posts/techblog-langchain-hitl-interrupt/"
+        },
+        {
+          "rank": 5,
+          "source_type": "arxiv",
+          "source_id": "2604.11378",
+          "title": "論文解説: Graph Harness — スケジューリング理論に基づくLLMエージェント実行フレームワーク",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1655",
+          "article_url": "https://0h-n0.github.io/posts/paper-2604-11378/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1497"
+    },
+    {
+      "zenn_article_id": "2f22a86203839b",
+      "zenn_title": "LLMロングコンテキスト活用の実装戦略：圧縮・配置・キャッシュの最適解",
+      "processed_at": "2026-08-08T18:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "conference",
+          "source_id": "2502.09977",
+          "title": "ICML 2025論文解説: LaRA – RAGとロングコンテキストLLMのベンチマーク比較",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1657",
+          "article_url": "https://0h-n0.github.io/posts/conf-lara-2502-09977/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2307.03172",
+          "title": "論文解説: Lost in the Middle – 言語モデルはロングコンテキストをどう使うか",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1659",
+          "article_url": "https://0h-n0.github.io/posts/paper-2307-03172/"
+        },
+        {
+          "rank": 3,
+          "source_type": "conference",
+          "source_id": "2404.06654",
+          "title": "COLM 2024論文解説: RULER – ロングコンテキストLLMの実効コンテキスト長評価",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1658",
+          "article_url": "https://0h-n0.github.io/posts/conf-ruler-2404-06654/"
+        },
+        {
+          "rank": 4,
+          "source_type": "conference",
+          "source_id": "2410.12388",
+          "title": "NAACL 2025論文解説: プロンプト圧縮サーベイ – LLM入力コスト削減手法の体系的分類",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1660",
+          "article_url": "https://0h-n0.github.io/posts/conf-prompt-compression-survey/"
+        },
+        {
+          "rank": 5,
+          "source_type": "tech_blog",
+          "source_id": "anthropic.com",
+          "title": "Anthropic解説: AIエージェントのためのコンテキストエンジニアリング実践ガイド",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1661",
+          "article_url": "https://0h-n0.github.io/posts/techblog-anthropic-context-engineering/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1502"
+    },
+    {
+      "zenn_article_id": "d1e65e3e69c087",
+      "zenn_title": "Gemini 2.5のマルチモーダル入力理解を活用した実践パターン4選",
+      "processed_at": "2026-08-09T17:00:00+09:00",
+      "sources_generated": [
+        {
+          "rank": 1,
+          "source_type": "arxiv",
+          "source_id": "2507.06261",
+          "title": "論文解説: Gemini 2.5 — マルチモーダル推論・長コンテキスト・エージェント能力の統合",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1665",
+          "article_url": "https://0h-n0.github.io/posts/paper-2507-06261/"
+        },
+        {
+          "rank": 2,
+          "source_type": "arxiv",
+          "source_id": "2409.12191",
+          "title": "論文解説: Qwen2-VL — 任意解像度で世界を知覚するVision-Language Model",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1666",
+          "article_url": "https://0h-n0.github.io/posts/paper-2409-12191/"
+        },
+        {
+          "rank": 3,
+          "source_type": "tech_blog",
+          "source_id": "developer.nvidia.com",
+          "title": "NVIDIA解説: NIMマイクロサービスによるマルチモーダルVisual AIエージェント構築",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1662",
+          "article_url": "https://0h-n0.github.io/posts/techblog-nvidia-multimodal-visual-ai-agents/"
+        },
+        {
+          "rank": 4,
+          "source_type": "arxiv",
+          "source_id": "2408.03326",
+          "title": "論文解説: LLaVA-OneVision — 画像・動画・マルチ画像を統一モデルで処理するオープンソースVLM",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1664",
+          "article_url": "https://0h-n0.github.io/posts/paper-2408-03326/"
+        },
+        {
+          "rank": 5,
+          "source_type": "conference",
+          "source_id": "ICLR 2025",
+          "title": "ICLR 2025論文解説: Multi-modal Agent Tuning — VLMによるツール使用エージェントの構築",
+          "pr_url": "https://github.com/0h-n0/0h-n0.github.io/pull/1663",
+          "article_url": "https://0h-n0.github.io/posts/conf-iclr2025-multimodal-agent-tuning/"
+        }
+      ],
+      "issue_url": "https://github.com/0h-n0/zen-auto-create-article/issues/1507"
+    }
+  ]
+}
